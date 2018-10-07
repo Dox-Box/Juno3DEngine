@@ -2,6 +2,7 @@ package environment;
 
 
 import static org.lwjgl.glfw.GLFW.*;
+
 import org.joml.Vector3f;
 
 import engine.KeyboardHandler;
@@ -44,7 +45,6 @@ public class Focus extends PhysicsObject {
 		if(keyboardHandler.isKeyDown(GLFW_KEY_W)) {
 			deltaZ += MOVE_SPEED;
 		}
-		
 		if(keyboardHandler.isKeyDown(GLFW_KEY_S)) {
 			deltaZ -= MOVE_SPEED;
 		}
@@ -86,8 +86,20 @@ public class Focus extends PhysicsObject {
 	
 	}
 	
+	
+	public void move() {
+
+		deltaX = -(float) (Math.sin(Math.toRadians(dRotX)) * MOVE_SPEED);
+		deltaZ = -(float) (Math.cos(Math.toRadians(dRotY)) * MOVE_SPEED);
+		deltaX += (float) (Math.cos(Math.toRadians(dRotX)) * MOVE_SPEED);
+		deltaZ += -(float) (Math.sin(Math.toRadians(dRotZ)) * MOVE_SPEED);
+
+			
+		}
+	
 	public void update() {
 		input();
+		move();
 		changePosition(deltaX, deltaY, deltaZ);
 		changeRotation(dRotX, dRotY, dRotZ);
 		dRotX = 0;

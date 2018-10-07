@@ -36,7 +36,6 @@ public class Camera {
 		pitch = 0; 
 		yaw = 0;	
 		this.keyboardHandler = (KeyboardHandler) display.getKeyboardHandler();
-		
 	}
 	
 	public void update(Display display) {

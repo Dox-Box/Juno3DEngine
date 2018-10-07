@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Juno3DEngine-master/src"/>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-zstd.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-yoga.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjglx-debug-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjglx-debug-1.0.0-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjglx-debug-1.0.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vma-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vma-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vma-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vma-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vma-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-vma.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tootle.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-stb-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-stb-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-stb-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-stb-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-stb-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-stb.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-stable-2018-09-15-custom.zip">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-sse-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-sse-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-sse-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-sse-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-sse-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-sse.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-remotery.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-par-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-par-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-par-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-par-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-par-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-par.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-ovr-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-ovr-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-ovr-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-ovr.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openvr.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengles.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opengl.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opencl-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opencl-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-opencl.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openal-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openal-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openal-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openal-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openal-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-openal.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-odbc-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-odbc-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-odbc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nfd.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lz4.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jawt-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jawt-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-jawt.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-glfw.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-egl-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-egl-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-egl.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-natives-windows.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-natives-macos.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-natives-linux.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl-assimp.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/lwjgl.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/joml-1.9.11-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/joml-1.9.11-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dox/eclipse-workspace/gitJuno/Juno3DEngine-master/lib/lwjgl/joml-1.9.11.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/joml-1.9.11-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/joml-1.9.11-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/joml-1.9.11.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-assimp-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-assimp.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-bgfx.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-egl-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-egl-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-egl.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-glfw-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-glfw.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jawt-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jawt-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jawt.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-jemalloc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lmdb.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lz4-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-lz4.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nanovg.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nfd-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nfd.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-nuklear.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-odbc-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-odbc-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-odbc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openal-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openal-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openal-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openal-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openal-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openal.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opencl-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opencl-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opencl.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengl-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengl.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengles-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-opengles.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openvr-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-openvr.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-ovr-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-ovr-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-ovr-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-ovr.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-par-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-par-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-par-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-par-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-par-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-par.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-remotery-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-remotery.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-rpmalloc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-sse-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-sse-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-sse-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-sse-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-sse-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-sse.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-stb-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-stb-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-stb-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-stb-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-stb-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-stb.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyexr.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tinyfd.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tootle-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-tootle.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vma-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vma-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vma-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vma-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vma-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vma.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-vulkan.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-xxhash.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-yoga-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-yoga.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-natives-linux.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-natives-macos.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-natives-windows.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-zstd-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl-zstd.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjgl.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjglx-debug-1.0.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjglx-debug-1.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/lwjgl/lwjglx-debug-1.0.0.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/PNGDecoder.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/slick-util-3/ibxm.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/slick-util-3/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/slick-util-3/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="Juno3DEngine-master/lib/slick-util-3/slick-util3.jar"/>
+	<classpathentry kind="output" path="Juno3DEngine-master/bin"/>
+</classpath>

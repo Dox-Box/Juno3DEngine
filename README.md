@@ -1,4 +1,4 @@
-Juno 3D  is an Engine designed to provide a cross-platform, simulation tool for a variety of physics environments and settings.
+Juno 3D  is an Engine designed to provide a cross-platform, simulation tool for a variety of physics environments and scenarios.
 
 Getting started:
 

@@ -16,7 +16,7 @@ Getting started using the Juno 3D Engine:
   
   Each of these lines below the comments begin with a type which specifies what kind of environmental object, or data type it might be.
   
-  
+  The current list of supported types in the interpreter are as follows: 
 
 
 

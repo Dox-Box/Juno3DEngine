@@ -21,6 +21,5 @@ Phy 1.4f -1 0 0 2 4 0
 # lighting / other
 #   	x    y   z  r g b
 Light 1000 400 240 1 1 1
-Light 7000 100 200 3.0f 3.0f 3.0f
 Skybox Starfield 0 0 0 0 0 0 19000
 Skybox Starfield 0 0 0 90 180 0 19000

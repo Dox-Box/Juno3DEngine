@@ -1,9 +1,5 @@
-# map: test
-#   	x    y   z  r g b
-light 1000 400 240 1 1 1
-light 7000 100 200 3.0f 3.0f 3.0f
-skybox Starfield 0 0 0 0 0 0 19000
-skybox Starfield 0 0 0 90 180 0 19000
+# DEMO Simulation #1 
+
 
 # planets:					
 planet jupiter jupiter_tex -2000 0 -100 -1 1 0 2 
@@ -22,3 +18,9 @@ object asteroid asteroid 31 2 -22 1 2 3 5
 phy 3.0f 1 0 0 2 -1 0
 phy 1.4f -1 0 0 2 4 0
 
+# lighting / other
+#   	x    y   z  r g b
+light 1000 400 240 1 1 1
+light 7000 100 200 3.0f 3.0f 3.0f
+skybox Starfield 0 0 0 0 0 0 19000
+skybox Starfield 0 0 0 90 180 0 19000

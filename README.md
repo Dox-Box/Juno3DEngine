@@ -7,7 +7,6 @@ Getting started using the Juno 3D Engine:
     To get started using the Juno 3D engine, make sure to inspect the test.juno file in /res/script/ for a demo on how to use the juno scripting system.
     ".juno" files are just text files containing the script which is fed into the engine at runtime, which then tells Juno3D how to construct your simulation.
 
-___________________________________________________________________________
 
 Getting started with using the engine utils for an external program:
 

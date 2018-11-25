@@ -173,9 +173,9 @@ public class Main implements Runnable {
 	
 	
 	public void loadSim(String file) {
-		RawObj focusObj = objLoader.loadObjModel("prime");
+		RawObj focusObj = objLoader.loadObjModel("jupiter");
 		ObjTexture focusTex = new ObjTexture(objLoader.loadTexture("red"));
-		focus = new Focus(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.001f,display);
+		focus = new Focus(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.0000001f,display);
 		mapLoader.loadMapData(file,objLoader);
 		mapLoader.link();
 		//lights = mapLoader.getLights();

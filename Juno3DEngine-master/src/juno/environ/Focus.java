@@ -89,7 +89,7 @@ public class Focus extends PhysicsObject {
 	public void move() {
 
 		deltaX = -(float) (Math.sin(Math.toRadians(dRotX)) * MOVE_SPEED);
-		deltaZ = -(float) (Math.cos(Math.toRadians(dRotY)) * MOVE_SPEED);
+		//deltaZ = -(float) (Math.cos(Math.toRadians(dRotY)) * MOVE_SPEED);
 		//deltaX += (float) (Math.cos(Math.toRadians(dRotX)) * MOVE_SPEED);
 		//deltaZ += -(float) (Math.sin(Math.toRadians(dRotZ)) * MOVE_SPEED);
 

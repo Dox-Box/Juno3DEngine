@@ -2,3 +2,5 @@
 /BoundingSphere.class
 /Collider.class
 /CollisionDetector.class
+/MeshCollider.class
+/PlaneCollider.class

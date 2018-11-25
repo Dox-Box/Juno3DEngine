@@ -2,8 +2,6 @@ package engine;
 
 import java.io.IOException;
 
-
-
 import java.util.ArrayList;
 
 import org.joml.Vector2f;
@@ -110,10 +108,7 @@ public class Main implements Runnable {
 	public synchronized void run(){
 
 		
-		
-		
 	while(running) {
-		
 		
 		planet1.changeRotation(0,.14f,0);
 		objRender.renderAllObjects(lights, camera, renderObjects);

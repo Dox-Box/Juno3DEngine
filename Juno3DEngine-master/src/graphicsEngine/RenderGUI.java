@@ -16,7 +16,7 @@ public class RenderGUI {
 	private RawObj GUIquad;
 	
 	public RenderGUI(OBJLoader loader) {
-		float[] positions = { -1,1, -1,-1, 1,1, 1, -1 };
+		float[] positions = { -1, 1, -1, -1, 1, 1, 1, -1 };
 		GUIquad = loader.loadToVao(positions);
 		shader = new GUIShader();
 		

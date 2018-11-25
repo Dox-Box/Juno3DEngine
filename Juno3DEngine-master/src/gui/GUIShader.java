@@ -7,8 +7,8 @@ import graphicsEngine.Shader;
 public class GUIShader extends Shader{
 	
 
-	private static final String VERTEX_FILE = "src/graphicsEngine/guivtxshdr.vertex";
-    private static final String FRAG_FILE = "src/graphicsEngine/guifragshdr.frag";
+	private static final String VERTEX_FILE = "res/shaders/guivtxshdr.vertex";
+    private static final String FRAG_FILE = "res/shaders/guifragshdr.frag";
     private int location_transformationMatrix;
 
     

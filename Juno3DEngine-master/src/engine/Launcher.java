@@ -54,7 +54,7 @@ public class Launcher extends JFrame {
   	}
 	private void initialize() {
 		
-		 frame = new JFrame();
+		  frame = new JFrame();
 	      frame.getContentPane().setBackground(new Color(.0f,.0f,.0f));
 	      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      frame.setLocationRelativeTo(null);
@@ -121,7 +121,7 @@ public class Launcher extends JFrame {
 		          options.addMouseListener(new MouseAdapter() {
 		           @Override
 		           public void mouseClicked(MouseEvent e) {
-		           
+		        	   OptionsMenu.start();
 
 		           }
 		          });

@@ -10,8 +10,8 @@ import utils.MathUtils;
 
 public class StaticShader extends Shader {
 
-	private static String vertexShaderFile = "src/graphicsEngine/vertexShader.vert";	
-	private static String FragShaderFile = "src/graphicsEngine/fragmentShader.frag";
+	private static String vertexShaderFile = "res/shaders/vertexShader.vert";	
+	private static String FragShaderFile = "res/shaders/fragmentShader.frag";
 	
 	private int location_transformationMatrix;
 	private int location_projectionMatrix;
@@ -21,7 +21,6 @@ public class StaticShader extends Shader {
 	private int location_shineDamper;
 	private int location_reflectivity;	
 	private int NUM_LIGHTS = 2;
-
 	
 	public StaticShader() {
 		super(vertexShaderFile, FragShaderFile);

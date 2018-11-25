@@ -14,7 +14,7 @@ public class Focus extends PhysicsObject {
 	
 	KeyboardHandler keyboardHandler;
 	
-	private static final float MOVE_SPEED = 0.02f;
+	private static final float MOVE_SPEED = 2.2f;
 	private static final float MAX_TURN_SPEED = 1.1f;
 																											
 	private float deltaX;
@@ -24,7 +24,6 @@ public class Focus extends PhysicsObject {
 	private float dRotY;
 	private float dRotZ;
 	private int id;
-	
 	
 
 	public Focus(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale, Display display) {
@@ -43,18 +42,18 @@ public class Focus extends PhysicsObject {
 	
 	public void input() {
 		if(keyboardHandler.isKeyDown(GLFW_KEY_W)) {
-			deltaZ += MOVE_SPEED;
+			deltaZ += MOVE_SPEED; // forward
 		}
 		if(keyboardHandler.isKeyDown(GLFW_KEY_S)) {
-			deltaZ -= MOVE_SPEED;
+			deltaZ -= MOVE_SPEED; // backward
 		}
 		if(keyboardHandler.isKeyDown(GLFW_KEY_A)) {
-			//dRotY = -MAX_TURN_SPEED; //yaw
+			//dRotY = -MAX_TURN_SPEED; //yaw left
 			dRotY = -MAX_TURN_SPEED;
 		}
 		
 		if(keyboardHandler.isKeyDown(GLFW_KEY_D)) {
-			//dRotY = MAX_TURN_SPEED;		//yaw
+			//dRotY = MAX_TURN_SPEED;		//yaw right
 			dRotY = MAX_TURN_SPEED;
 		}
 		if(keyboardHandler.isKeyDown(GLFW_KEY_R)) {
@@ -91,8 +90,8 @@ public class Focus extends PhysicsObject {
 
 		deltaX = -(float) (Math.sin(Math.toRadians(dRotX)) * MOVE_SPEED);
 		deltaZ = -(float) (Math.cos(Math.toRadians(dRotY)) * MOVE_SPEED);
-		deltaX += (float) (Math.cos(Math.toRadians(dRotX)) * MOVE_SPEED);
-		deltaZ += -(float) (Math.sin(Math.toRadians(dRotZ)) * MOVE_SPEED);
+		//deltaX += (float) (Math.cos(Math.toRadians(dRotX)) * MOVE_SPEED);
+		//deltaZ += -(float) (Math.sin(Math.toRadians(dRotZ)) * MOVE_SPEED);
 
 			
 		}

@@ -2,25 +2,25 @@
 
 
 # planets:					
-planet jupiter jupiter_tex -2000 0 -100 -1 1 0 2 
+Planet jupiter jupiter_tex -2000 0 -100 -1 1 0 2 
 
 # objects:
 # .obj    .png     
 # raw	 texture   x y z rx ry rz scale
-object asteroid ast-tex-1 -18 0 -3 2 1 0 5 
-object asteroid asteroid 31 2 -22 1 2 3 5
+Object asteroid ast-tex-1 -18 0 -3 2 1 0 5 
+Object asteroid asteroid 31 2 -22 1 2 3 5
 
 
 
 
 # physics data for each object (sequential order)
 # mass xV yV zV aX aY aZ 
-phy 3.0f 1 0 0 2 -1 0
-phy 1.4f -1 0 0 2 4 0
+Phy 3.0f 1 0 0 2 -1 0
+Phy 1.4f -1 0 0 2 4 0
 
 # lighting / other
 #   	x    y   z  r g b
-light 1000 400 240 1 1 1
-light 7000 100 200 3.0f 3.0f 3.0f
-skybox Starfield 0 0 0 0 0 0 19000
-skybox Starfield 0 0 0 90 180 0 19000
+Light 1000 400 240 1 1 1
+Light 7000 100 200 3.0f 3.0f 3.0f
+Skybox Starfield 0 0 0 0 0 0 19000
+Skybox Starfield 0 0 0 90 180 0 19000

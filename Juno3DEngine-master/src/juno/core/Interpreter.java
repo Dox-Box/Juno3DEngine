@@ -19,7 +19,7 @@ import juno.gl.ObjTexture;
 import juno.gl.RawObj;
 
 
-public class SimLoader {
+public class Interpreter {
 	Scanner scan;
 	ArrayList<String[]> physicsData = new ArrayList<String[]>();
 	ArrayList<PhysicsObject> physicsObjects = new ArrayList<PhysicsObject>();
@@ -56,7 +56,7 @@ public class SimLoader {
 			}
 			
 			String[] data = line.split(" ");
-			if(data[0].equals("light")) {
+			if(data[0].equals("Light")) {
 				float x = Float.parseFloat(data[1]);
 				float y = Float.parseFloat(data[2]);
 				float z = Float.parseFloat(data[3]);
@@ -65,7 +65,7 @@ public class SimLoader {
 				float b = Float.parseFloat(data[6]);
 				lights.add( new Light(new Vector3f(x,y,z),new Vector3f(r,g,b)));
 			}
-			if(data[0].equals("skybox")) {
+			if(data[0].equals("Skybox")) {
 				RawObj raw = objLoader.loadToVao(Skybox.getVertexData(), Skybox.getIndicesData(), Skybox.getNormalData(), Skybox.getTextureData());
 				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture(data[1]));
 				float x = Float.parseFloat(data[2]);
@@ -82,7 +82,7 @@ public class SimLoader {
 				}
 			}
 			
-			if(data[0].equals("object")) {
+			if(data[0].equals("Object")) {
 				RawObj raw = objLoader.loadObjModel(data[1]);
 				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture(data[2]));
 				float x = Float.parseFloat(data[3]);
@@ -96,7 +96,7 @@ public class SimLoader {
 
 			}
 			
-			if(data[0].equals("phy")) {
+			if(data[0].equals("Phy")) {
 					float mass = Float.parseFloat(data[1]);
 					float xVelo = Float.parseFloat(data[2]);
 					float yVelo = Float.parseFloat(data[3]);
@@ -108,7 +108,7 @@ public class SimLoader {
 					physicsData.add(data);
 					
 			}
-			if(data[0].equals("planet")) {
+			if(data[0].equals("Planet")) {
 				RawObj raw = objLoader.loadObjModel(data[1]);
 				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture(data[2]));
 				float x = Float.parseFloat(data[3]);

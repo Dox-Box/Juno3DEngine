@@ -62,7 +62,7 @@ public class Main implements Runnable {
 	Camera camera;
 	Focus focus;
 	Planet planet1;
-	SimLoader mapLoader;
+	Interpreter mapLoader;
 	CollisionDetector collisionDetector;
 
 	
@@ -88,7 +88,7 @@ public class Main implements Runnable {
 		display = new Display(WIDTH,HEIGHT);
 		shader = new StaticShader();
 		objRender = new OBJRender(display,shader);
-		mapLoader = new SimLoader();
+		mapLoader = new Interpreter();
 		renderGUI = new RenderGUI(objLoader);
 		loadSim("test");
 		loadHUD();

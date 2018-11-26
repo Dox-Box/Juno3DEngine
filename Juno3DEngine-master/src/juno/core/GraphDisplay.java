@@ -19,10 +19,6 @@ import java.awt.Color;
 
 public class GraphDisplay {
 
-
-
-
-
 	    private JFrame frame;
 	    private Canvas canvas;
 

@@ -18,10 +18,17 @@ Getting started using the Juno 3D Engine:
   
   The current list of supported types in the interpreter are as follows: 
 
+    
+    - Object: The general purpose object used when conducting a sim. Given the .obj 3D model file and texture files to represent its    scale, initial rotation, and position.
 
+    - Planet: Generally intened to be used for planets, or other large, massive objects, such as moons or the like.
 
-
-
+    - Phy: Short for Physics script, this assigns physical properties to objects in the world, however, the interpreter is strict, and the number of Phy types and Object MUST MATCH or the engine will not have been given sufficient information to begin a simulation.
+    ( who wants an asteroid with no mass?)
+    
+    - Light: This represents a light in the 3D world space. Currently, Juno 3D supports a single light source, but including more Lights will not affect the rendering.
+    
+    - Skybox: This is the backdrop of the simulation, use a .png filepath here to change the background in the simulation.
 
 
 

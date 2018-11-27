@@ -37,7 +37,9 @@ public class OBJLoader {
 	private int LOD = 1;
 	
 	
-	
+	/*
+	 * VAO: vertex array object, VBO: vertex buffer object
+	 */
 	public RawObj loadToVao(float[] positions, int[] indices,float[] normals, float[] textureCoords ) {
 		int vaoID = createVAO();
 		bindIndicesBuffer(indices);
@@ -79,7 +81,7 @@ public class OBJLoader {
 		return buffer;
 	}
 	
-        /* indices to draw from vertex postiions, counterclockwise */
+        /* indices to draw from vertex positions, counterclockwise */
 	private void bindIndicesBuffer(int[] indices) {
 		int vboID = GL15.glGenBuffers();
 		vboIDs.add(vboID);
@@ -97,7 +99,7 @@ public class OBJLoader {
 	
 	
 	private void unbindVAO() {
-		GL30.glBindVertexArray(0); /* 0 unbinds the current vao */
+		GL30.glBindVertexArray(0); /* 0 un-binds the current VAO */
 	}
 	
 	public int loadTexture(String filePath) {

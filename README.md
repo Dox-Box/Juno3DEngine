@@ -11,7 +11,7 @@ ___________________________________________________________________________
   
   
   
-Getting started developing your own application using the Juno 3D Engine :
+Getting started creating your own environment using the Juno 3D Engine :
     
     To get started using the Juno 3D engine, make sure to inspect the test.juno file in /res/script/ for a demo on how to use the juno scripting system.
 

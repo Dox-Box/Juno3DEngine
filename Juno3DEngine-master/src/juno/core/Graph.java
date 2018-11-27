@@ -56,7 +56,7 @@ public class Graph implements Runnable{
   private int speed;
   private float rate;
   private float deltaTime;
-  private int graphInterval; // The point where the display should start graphing data, not all of the total data inputed?
+  private int graphInterval;
   
 
   public Graph(String title, String xLabel, String yLabel,int width, int height ) {

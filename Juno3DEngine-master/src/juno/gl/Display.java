@@ -37,7 +37,7 @@ public class Display {
 	
 	
 	public Display() {
-		WIDTH = 900;
+		WIDTH = 1000;
 		HEIGHT = 900;
 		init();
 	}
@@ -63,7 +63,10 @@ public class Display {
 			glfwDefaultWindowHints(); 
 			glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE); 
 			glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE); 
-			
+			glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
+			//glfwSetWindowPos(window, 0, 0);
+
+
 
 			// Create window
 			window = glfwCreateWindow(WIDTH, HEIGHT, "0.0.0", NULL, NULL);
@@ -87,12 +90,12 @@ public class Display {
 			GL.createCapabilities();
 			// enable v-sync
 			glfwSwapInterval(1);	
-			glfwWindowHint(GLFW_SAMPLES, 2);
+			glfwWindowHint(GLFW_SAMPLES, 4);
 			GL11.glTexParameterf(GL11.GL_TEXTURE_2D, EXTTextureFilterAnisotropic.GL_TEXTURE_MAX_ANISOTROPY_EXT, 2.0f); 
 			glfwShowWindow(window);
 			glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
 			glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
-			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+			//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 
 		}

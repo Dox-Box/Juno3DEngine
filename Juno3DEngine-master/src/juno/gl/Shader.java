@@ -10,7 +10,11 @@ import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
-
+/*
+ * GLSL code is used to shade in each pixel on the screen.
+ * Fragment Shader: (.frag) is used to rasterize the display with texture colors
+ * Vertex Shader: (.vert / .vrtx ) is used to process each individual vertex of each model.
+ */
 public abstract class Shader {
 
 	private int programID;

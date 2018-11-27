@@ -2,6 +2,10 @@ package juno.gl;
 
 import org.joml.Vector2f;
 
+/*
+ * This is a simple 2D texture class, more basic than Texture.java
+ */
+
 public class HUDTexture {
 
 	private int textureID;

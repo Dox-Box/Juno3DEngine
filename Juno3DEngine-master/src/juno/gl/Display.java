@@ -18,6 +18,12 @@ import org.lwjgl.system.MemoryStack;
 import juno.core.KeyboardHandler;
 import juno.core.MouseHandler;
 
+/*
+ * This code is responsible for the windowing system, and updating of the screen at each frame.
+ * And is also where the OpenGL context is created and referenced from in the code.
+ */
+
+
 public class Display {
 	private long window;
 	private int WIDTH;

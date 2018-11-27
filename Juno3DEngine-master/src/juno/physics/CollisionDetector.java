@@ -16,6 +16,9 @@ public class CollisionDetector {
 		collider = new Collider();
 	}
 	
+	/*
+	 * check all objects (excluding themselves) to see if the sphere boundary around them is intersecting any other object.
+	 */
 	public void update() {
 		for(int i = 0; i < objects.size(); i++) {
 			for(int j = 0; j < objects.size()-1; j++) {

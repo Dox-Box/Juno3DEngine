@@ -1,5 +1,9 @@
 package juno.gl;
 
+/*
+ *  Obj: responsible for storing the mesh data for .obj filetype objects,
+ *  Since rendering can in theory support multiple file types, but each loaded in differently. 
+ */
 public class Obj {
 
 	private RawObj raw;

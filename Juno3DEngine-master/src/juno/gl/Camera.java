@@ -8,7 +8,9 @@ import juno.environ.PhysicsObject;
 
 import static org.lwjgl.glfw.GLFW.*;
 
-
+/* 
+ * This class controls the view-matrix, or the perspective of the user in the 3D environment. 
+ */
 public class Camera {
 
 	private KeyboardHandler keyboardHandler;

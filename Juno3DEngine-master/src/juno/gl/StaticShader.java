@@ -8,6 +8,9 @@ import org.joml.Vector3f;
 import juno.environ.Light;
 import juno.util.MathUtils;
 
+/*
+ * This StaticShader does not support animations, thus, StaticShader.
+ */
 public class StaticShader extends Shader {
 
 	private static String vertexShaderFile = "res/shaders/vertexShader.vert";	

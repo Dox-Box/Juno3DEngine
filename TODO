@@ -1,8 +1,6 @@
 
 Known bugs: 
 
-GLSL Shaders on planets leave weird shading artifacts in irregular polygons on the surface of the sphere, unknown reason, likely in the fragment shader.
-
 
 GLFW: window is moved to halfway down from the center of the screen on some devices.
 

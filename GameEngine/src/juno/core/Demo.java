@@ -99,7 +99,7 @@ public class Demo implements Runnable {
 	
 	public void setup() {
 		//thread = new Thread( ,"secondary");
-		//thread.start();						// TODO: thread cpu and gpu calls.
+		//thread.start();						// TODO: thread rendering
 		
 		
 	}

@@ -1,0 +1,23 @@
+# DEMO Simulation #1 
+
+
+# planets:					
+
+Planet jupiter jupiter_tex 200 3 100 -1 0 0 1
+# objects:
+# .obj    .png     
+# raw	 texture   x y z rx ry rz scale
+
+
+
+
+
+# physics data for each object (sequential order)
+# mass xV yV zV aX aY aZ 
+
+
+# lighting / other
+#   	x    y   z  r g b
+Light 1000 400 240 1 1 1
+Skybox Starfield 0 0 0 0 0 0 19000
+Skybox Starfield 0 0 0 90 180 0 19000

@@ -1,0 +1,16 @@
+# Blender MTL File: 'asteroid.blend'
+# Material Count: 1
+
+newmtl asteroid1
+Ns 200.000000
+Ka 0.250000 0.250000 0.250000
+Kd 0.800000 0.800000 0.800000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 6
+map_Kd /home/dox/Downloads/Asteroid/asteroid_s.png
+map_Bump -bm 0.350042 /home/dox/Downloads/Asteroid/asteroid_n.png
+map_Ks /home/dox/Downloads/Asteroid/asteroid_s.png
+map_d /home/dox/Downloads/Asteroid/asteroid_d.png

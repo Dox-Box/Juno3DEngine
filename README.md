@@ -1,6 +1,8 @@
 Juno 3D  is an Engine designed to provide a cross-platform, simulation tool for a variety of physics environments and properties.
 ___________________________________________________________________________
 
+![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/GameEngine/res/launcher.png)
+
   Running Juno :
   
     In order to run, just clone Juno3DEngine-master, and run Juno3D.jar 

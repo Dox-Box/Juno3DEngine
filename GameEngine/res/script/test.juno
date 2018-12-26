@@ -3,7 +3,7 @@
 
 # planets:					
 
-Planet jupiter jupiter_tex 200 3 100 -1 0 0 1
+Planet jupiter mars 120 3 100 -1 0 0 10
 # objects:
 # .obj    .png     
 # raw	 texture   x y z rx ry rz scale

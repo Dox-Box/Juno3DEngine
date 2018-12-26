@@ -173,7 +173,7 @@ public class Demo implements Runnable {
 	
 	public void loadSim(String file) {
 		RawObj focusObj = objLoader.loadObjModel("jupiter");
-		ObjTexture focusTex = new ObjTexture(objLoader.loadTexture("red"));
+		ObjTexture focusTex = new ObjTexture(objLoader.loadTexture("asteroid"));
 		focus = new Player(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.1f,display);
 		mapLoader.loadMapData(file,objLoader);
 		mapLoader.link();

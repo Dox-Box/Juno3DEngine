@@ -2,8 +2,8 @@
 
 
 # planets:					
-Planet jupiter jupiter_tex -2000 0 -100 -1 1 0 2 
-Planet jupiter jupiter_tex 200 3 100 -1 0 0 20
+
+Planet jupiter jupiter_tex 200 3 300 -1 0 0 20
 
 # objects:
 # .obj    .png     
@@ -17,9 +17,9 @@ Object asteroid asteroid -22 10 0 2 1 1 4
 
 # physics data for each object (sequential order)
 # mass xV yV zV aX aY aZ 
-Phy 3.0f 1 0 0 2 -1 0
-Phy 1.4f -1 0 0 2 4 0
-Phy 4.1f -2 7 0 0 3 0 
+Phy 3.0f 0 0 0 2 -1 0
+Phy 1.4f -0.1f 0 0 1 0 0
+Phy 4.1f 0 0 0 0 1 0 
 
 # lighting / other
 #   	x    y   z  r g b

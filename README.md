@@ -14,12 +14,11 @@ ___________________________________________________________________________
   
   
 
-[Firstly, Juno has two similar,but separate versions, a simulation creator tool, and "Game Engine" (although it does not provide the same utilities as those such as Unity, Juno's low level tools allow for higher customization, plus, its written in Java! So it is platform independent!]
 
 
 
     
-Getting started creating your own environment using the Juno 3D Engine :
+Getting started creating your own environment using the Juno 3D Engine [Simulation] :
 
 
     Make sure to inspect the test.juno file in /res/script/ for an example of how to use the juno basic scripting system.
@@ -60,4 +59,9 @@ Getting started with using the engine utils for an external program:
     To use Juno 3D in your own project in Eclipse, clone the repository, then copy file Juno3D.jar from include/ and the contents of /lib into your project, 
     go into Eclipse, right click on your project, go to Build Path > Configure Build Path
     > Click on the libraries tab, then "Add External JARs" and find Juno3D.jar in your project directory.
+    
+    
+    
+Using Juno for creating games :
+Instead of using the provided source and dependencies in the Juno3DEngine-master folder, goto the readme in "GameEngine" for further information on setting up a new project.
     

@@ -3,7 +3,7 @@ ___________________________________________________________________________
 
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/GameEngine/res/launcher.png)
 
-  Running Juno :
+  # Running Juno #
   
     In order to run, just clone Juno3DEngine-master, and run Juno3D.jar 
     
@@ -61,6 +61,6 @@ Getting started with using the engine utils for an external program:
     > Click on the libraries tab, then "Add External JARs" and find Juno3D.jar in your project directory.
     
     
-Markup : #Using Juno for creating games #
+ # Using Juno for creating games #
 Instead of using the provided source and dependencies in the Juno3DEngine-master folder, goto the readme in "GameEngine" for further information on setting up a new project.
     

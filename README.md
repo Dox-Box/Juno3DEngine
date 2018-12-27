@@ -14,6 +14,8 @@ ___________________________________________________________________________
   
   
 Getting started creating your own environment using the Juno 3D Engine :
+
+Firstly, Juno has two similar,but separate versions, a simulation creator tool, and "Game Engine" (although it does not provide the same utilities as those such as Unity, Juno's low level tools allow for higher customization, plus, its written in Java! So it is platform independent!
     
     To get started using the Juno 3D engine, make sure to inspect the test.juno file in /res/script/ for a demo on how to use the juno scripting system.
 

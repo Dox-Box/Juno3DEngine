@@ -62,6 +62,6 @@ Getting started with using the engine utils for an external program:
     
     
     
-Using Juno for creating games :
+*Using Juno for creating games :
 Instead of using the provided source and dependencies in the Juno3DEngine-master folder, goto the readme in "GameEngine" for further information on setting up a new project.
     

@@ -60,7 +60,7 @@ Getting started with using the engine utils for an external program:
     go into Eclipse, right click on your project, go to Build Path > Configure Build Path
     > Click on the libraries tab, then "Add External JARs" and find Juno3D.jar in your project directory.
     
-    =====================================================================================================
+=====================================================================================================
     
 *Using Juno for creating games :
 Instead of using the provided source and dependencies in the Juno3DEngine-master folder, goto the readme in "GameEngine" for further information on setting up a new project.

@@ -1,7 +1,10 @@
 Juno 3D  is an Engine designed to provide a cross-platform, simulation tool for a variety of physics environments and properties, or as a lightweight game creation tool.
 ___________________________________________________________________________
 
-![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/GameEngine/res/launcher-juno_g.png)
+![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/GameEngine/res/launcher-juno.png)
+![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Juno3DEngine-master/res/opengl-java.png)
+
+https://github.com/Dox-Box/Juno3DEngine/blob/master/Juno3DEngine-master/res/opengl-java.png
 
   # Running Juno #
   

@@ -56,6 +56,8 @@ Getting started creating your own environment using the Juno 3D Engine [Simulati
 
 Getting started with using the engine utils for an external program:
 
+
+
     To use Juno 3D in your own project in Eclipse, clone the repository, then copy file Juno3D.jar from include/ and the contents of /lib into your project, 
     go into Eclipse, right click on your project, go to Build Path > Configure Build Path
     > Click on the libraries tab, then "Add External JARs" and find Juno3D.jar in your project directory.
@@ -63,4 +65,21 @@ Getting started with using the engine utils for an external program:
     
  # Using Juno for creating games #
 Instead of using the provided source and dependencies in the Juno3DEngine-master folder, goto the readme in "GameEngine" for further information on setting up a new project.
+
+
+
+
+
+
+
+
+
+# How it all works #
+
+
+
+
+
+
+
     

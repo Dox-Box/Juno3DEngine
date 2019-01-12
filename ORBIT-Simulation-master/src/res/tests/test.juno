@@ -1,0 +1,30 @@
+#map: test
+#main	x    y   z  r g b
+light 1000 400 240 1 1 1
+light 7000 100 200 3.0f 3.0f 3.0f
+skybox Starfield 0 0 0 0 0 0 19000
+skybox Starfield 0 0 0 90 180 0 19000
+
+
+# .obj    .png     
+# raw	 texture   x y z rx ry rz scale
+object planet mars -348 2 -3 2 1 0 6.8f 
+#object planet venus -35 2 -3 -34 2 3 8.7f
+#object planet earth 555 2 -3 0 0 0 11
+#object planet mercury -580 2 -3 1 0 0 4.0f
+#object planet neptune 1400 2 -3 3 0 0 21
+#object planet uranus 2900 2 -3 -5 0 0 31
+#object planet saturn 4400 2 -3 1 0 0 40
+#object planet jupiter_tex 8900 2 -3 0 0 0 71
+
+
+#physics data
+# mass xV yV zV aX aY aZ 
+phy 3.0f 0.2f 0 0 0 6 0
+#phy 1.4f 0.1f 0 0 0 4 0
+#phy 4.0 0 0 0 0 2 0
+#phy 0.8f 0 0 0 0 8 0
+#phy 3.9f 0 0 0 0 7 0
+#phy 4.0f 0 0 0 0 7.1f 0
+#phy 7.0f 0 0 0 0 7 0 
+#phy 8.0f 0 0 0 0 3 0

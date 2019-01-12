@@ -1,0 +1,20 @@
+#test
+#main
+light 20000 400 240 1 1 1
+skybox Starfield 0 0 0 0 0 0 19000
+skybox Starfield 0 0 0 90 180 0 19000
+planet jupiter jupiter_tex -390 2 33 0 1 0 1 
+
+
+# raw	 texture   x y z rx ry rz scale
+basic asteroid ast-tex-1 -18 2 -3 2 1 0 2 
+basic asteroid ast-tex-1 31 2 -3 1 2 3 2
+
+
+
+
+#physics data
+# mass xV yV zV aX aY aZ 
+phy 1.0f 10.9f 10 0 15.5f 0 1
+phy 1.0f 0 0 0 0 0 0
+

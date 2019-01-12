@@ -3,23 +3,21 @@
 
 # planets:					
 
-Planet jupiter jupiter_tex 200 3 300 -1 0 0 20
+Planet jupiter mars 200 3 300 -1 0 0 20
 
 # objects:
 # .obj    .png     
 # raw	 texture   x y z rx ry rz scale
-Object asteroid ast-tex-1 -18 0 -3 2 1 0 5 
-Object asteroid asteroid 31 2 -22 1 2 3 5
-Object asteroid asteroid -22 10 0 2 1 1 4
+
+
 
 
 
 
 # physics data for each object (sequential order)
 # mass xV yV zV aX aY aZ 
-Phy 3.0f 0 0 0 2 -1 0
-Phy 1.4f -0.1f 0 0 1 0 0
-Phy 4.1f 0 0 0 0 1 0 
+
+
 
 # lighting / other
 #   	x    y   z  r g b

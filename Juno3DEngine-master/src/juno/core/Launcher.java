@@ -62,7 +62,7 @@ public class Launcher extends JFrame {
 	      frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 	      frame.setResizable(true);
 	      frame.getContentPane().setLayout(null);
-	      frame.setTitle("Juno Game Engine");
+	      frame.setTitle("Juno Sim Engine");
 	      frame.setFocusable(false);
 	      setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	      setBounds(100, 100, 920, 540);
@@ -154,8 +154,8 @@ public class Launcher extends JFrame {
 	       
 	       /* background for menu */
 	       JLabel lblNewLabel_1 = new JLabel("");
-	       lblNewLabel_1.setIcon(new ImageIcon("res/earth-background-icon.png"));			
-	       lblNewLabel_1.setBounds(10, 0, WIDTH+10, HEIGHT+10);
+	       lblNewLabel_1.setIcon(new ImageIcon("res/launcher-juno.png"));			
+	       lblNewLabel_1.setBounds(0, 0, WIDTH, HEIGHT);
 	       frame.getContentPane().add(lblNewLabel_1);
 	       
 	       

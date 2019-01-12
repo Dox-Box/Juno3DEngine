@@ -23,7 +23,7 @@ public class Focus extends PhysicsObject {
 	private float dRotX;
 	private float dRotY;
 	private float dRotZ;
-	private int id;
+	private final int ID;
 	
 
 	public Focus(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale, Display display) {
@@ -35,6 +35,7 @@ public class Focus extends PhysicsObject {
 		dRotX = 0;
 		dRotY = 0;
 		dRotZ = 0;
+		ID = 0;
 	}
 	
 	

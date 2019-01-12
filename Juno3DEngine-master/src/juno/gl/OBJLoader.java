@@ -2,6 +2,7 @@ package juno.gl;
 
 import java.io.BufferedReader;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,11 +17,11 @@ import java.util.ArrayList;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL14;
-import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.opengl.GL30;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL14.*;
+import static org.lwjgl.opengl.GL15.*;
+import static org.lwjgl.opengl.GL20.*;
+import static org.lwjgl.opengl.GL30.*;
 import static org.lwjgl.opengl.GL30.*;
 import de.matthiasmann.twl.utils.PNGDecoder;
 import de.matthiasmann.twl.utils.PNGDecoder.Format;
@@ -34,7 +35,7 @@ public class OBJLoader {
 	private ArrayList<Integer> textureIDs = new ArrayList<Integer>();
 	
         /* level of detail, negative is better */	
-	private int LOD = 1;
+	private int LOD = -1;
 	
 	
 	/*
@@ -58,20 +59,20 @@ public class OBJLoader {
 		
 	}
 	private int createVAO() {
-		int vaoID = GL30.glGenVertexArrays();
+		int vaoID = glGenVertexArrays();
 		vaoIDs.add(vaoID);
-		GL30.glBindVertexArray(vaoID);
+		glBindVertexArray(vaoID);
 		return vaoID;
 	}
 	
 	private void storeDataInAttribList(int attribNumber, float[] data, int dimensions) {
-		int vboID = GL15.glGenBuffers();
+		int vboID = glGenBuffers();
 		vboIDs.add(vboID);
-		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, vboID);
+		glBindBuffer(GL_ARRAY_BUFFER, vboID);
 		FloatBuffer  buffer = storeDataInFloatBuffer(data);
-		GL15.glBufferData(GL15.GL_ARRAY_BUFFER, buffer, GL15.GL_STATIC_DRAW); 
-		GL20.glVertexAttribPointer(attribNumber, dimensions, GL11.GL_FLOAT, false,0,0);
-		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER,  0);
+		glBufferData(GL_ARRAY_BUFFER, buffer, GL_STATIC_DRAW); 
+		glVertexAttribPointer(attribNumber, dimensions, GL_FLOAT, false,0,0);
+		glBindBuffer(GL_ARRAY_BUFFER,  0);
 	}
 	
 	private FloatBuffer storeDataInFloatBuffer(float[] data) {
@@ -83,11 +84,11 @@ public class OBJLoader {
 	
         /* indices to draw from vertex positions, counterclockwise */
 	private void bindIndicesBuffer(int[] indices) {
-		int vboID = GL15.glGenBuffers();
+		int vboID = glGenBuffers();
 		vboIDs.add(vboID);
-		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboID);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vboID);
 		IntBuffer buffer = storeDataInIntBuffer(indices);
-		GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, buffer,GL15.GL_STATIC_DRAW);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, buffer,GL_STATIC_DRAW);
 	}
 	
 	private IntBuffer storeDataInIntBuffer(int[] data) {
@@ -99,7 +100,7 @@ public class OBJLoader {
 	
 	
 	private void unbindVAO() {
-		GL30.glBindVertexArray(0); /* 0 un-binds the current VAO */
+		glBindVertexArray(0); /* 0 un-binds the current VAO */
 	}
 	
 	public int loadTexture(String filePath) {
@@ -118,7 +119,7 @@ public class OBJLoader {
 		  glGenerateMipmap(textureID);
 		  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 		  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-		  glTexParameterf(GL_TEXTURE_2D, GL14.GL_TEXTURE_LOD_BIAS,LOD);
+		  glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_LOD_BIAS,LOD);
 		 
 		  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
 		  
@@ -240,13 +241,13 @@ public class OBJLoader {
 	/* called when the program shuts down to free up memory */
 	public void clearData() {
 		for(int vao : vaoIDs) {
-			GL30.glDeleteVertexArrays(vao);
+			glDeleteVertexArrays(vao);
 		}
 		for(int vbo : vboIDs) {
-			GL15.glDeleteBuffers(vbo);
+			glDeleteBuffers(vbo);
 		}
 		for(int texture : textureIDs) {
-			GL11.glDeleteTextures(texture);
+			glDeleteTextures(texture);
 		}
 		
 	}

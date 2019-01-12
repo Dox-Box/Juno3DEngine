@@ -64,6 +64,7 @@ public class Interpreter {
 				float g = Float.parseFloat(data[5]);
 				float b = Float.parseFloat(data[6]);
 				lights.add( new Light(new Vector3f(x,y,z),new Vector3f(r,g,b)));
+				continue;
 			}
 			if(data[0].equals("Skybox")) {
 				RawObj raw = objLoader.loadToVao(Skybox.getVertexData(), Skybox.getIndicesData(), Skybox.getNormalData(), Skybox.getTextureData());
@@ -77,8 +78,10 @@ public class Interpreter {
 				float sc = Float.parseFloat(data[8]);
 				if(skybox == null) {
 					skybox = new Skybox(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
+					continue;
 				}else {	
 					skybox2 = new Skybox(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
+					continue;
 				}
 			}
 			
@@ -93,6 +96,7 @@ public class Interpreter {
 				float rz = Float.parseFloat(data[8]);
 				float sc = Float.parseFloat(data[9]);
 				physicsObjects.add(new PhysicsObject(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc));
+				continue;
 
 			}
 			
@@ -106,6 +110,7 @@ public class Interpreter {
 					float angRotY = Float.parseFloat(data[6]);
 					float angRotZ = Float.parseFloat(data[7]);
 					physicsData.add(data);
+					continue;
 					
 			}
 			if(data[0].equals("Planet")) {
@@ -119,8 +124,11 @@ public class Interpreter {
 				float rz = Float.parseFloat(data[8]);
 				float sc = Float.parseFloat(data[9]);
 				planet = new Planet(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
-
+				continue;
 			}
+			
+			System.err.println("Unidentified type :  " + data[0]);
+			
 					
 		}
 	}

@@ -90,7 +90,7 @@ public class Main implements Runnable {
 		objRender = new OBJRender(display,shader);
 		mapLoader = new Interpreter();
 		renderGUI = new RenderGUI(objLoader);
-		loadSim("test");
+		loadInstance("test");
 		loadHUD();
 		collisionDetector = new CollisionDetector(physicsObjects);
 		lastTime = System.nanoTime();
@@ -172,7 +172,7 @@ public class Main implements Runnable {
 
 	
 	
-	public void loadSim(String file) {
+	public void loadInstance(String file) {
 		RawObj focusObj = objLoader.loadObjModel("jupiter");
 		ObjTexture focusTex = new ObjTexture(objLoader.loadTexture("mercury"));
 		focus = new Focus(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.0000001f,display);

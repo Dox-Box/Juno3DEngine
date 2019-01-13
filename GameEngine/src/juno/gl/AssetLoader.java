@@ -26,7 +26,7 @@ import de.matthiasmann.twl.utils.PNGDecoder;
 import de.matthiasmann.twl.utils.PNGDecoder.Format;
 
 
-public class OBJLoader {
+public class AssetLoader {
 	
 	
 	private ArrayList<Integer> vaoIDs = new ArrayList<Integer>(); 
@@ -118,7 +118,7 @@ public class OBJLoader {
 		  glGenerateMipmap(textureID);
 		  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 		  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-		  glTexParameterf(GL_TEXTURE_2D, GL14.GL_TEXTURE_LOD_BIAS,LOD);
+		  glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_LOD_BIAS, LOD);
 		 
 		  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, decoder.getWidth(), decoder.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
 		  

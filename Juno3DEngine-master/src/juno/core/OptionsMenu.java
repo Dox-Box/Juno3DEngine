@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,6 +15,10 @@ import javax.swing.border.EmptyBorder;
 
 public class OptionsMenu extends JFrame{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	private JPanel contentPane;
 	private static int WIDTH;
@@ -64,6 +70,12 @@ public class OptionsMenu extends JFrame{
 	    exit.setForeground(Color.WHITE);
 	    exit.setBackground(new Color(0.16f,0.46f,0.16f));
 	    frame.getContentPane().add(exit);
+	    exit.addMouseListener(new MouseAdapter() {
+	        @Override
+	         public void mouseClicked(MouseEvent e) {
+	          frame.setVisible(false);
+	          }	
+	        });
 
 	    
 		

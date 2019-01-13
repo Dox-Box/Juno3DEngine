@@ -1,12 +1,12 @@
 package juno.gl;
 
-public class ObjTexture {
+public class Texture {
 
 	private int textureID;
 	private float shineDamper = 1f;
 	private float reflectivity = 0;
 	
-	public ObjTexture(int id) {
+	public Texture(int id) {
 		textureID = id;
 	}
 	

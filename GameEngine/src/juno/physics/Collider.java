@@ -2,13 +2,13 @@ package juno.physics;
 
 import org.joml.Vector3f;
 
-import juno.environ.PhysicsObject;
+import juno.environ.GameObject;
 
 /* handles a collision detection */
 public class Collider {
 	
 	/* Collision Response  */
-	public void sphereCollision(PhysicsObject a, PhysicsObject b){
+	public void sphereCollision(GameObject a, GameObject b){
 		float dMomentum = a.getMass() * a.getVelocity().length() - b.getMass()*b.getVelocity().length();
 		Vector3f vec1= a.getVelocity().mul(a.getMass());
 		Vector3f vec2 = b.getVelocity().mul(b.getMass());

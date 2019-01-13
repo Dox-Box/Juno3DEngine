@@ -9,35 +9,36 @@ import org.joml.Vector3f;
 
 import juno.environ.Player;
 import juno.environ.Light;
-import juno.environ.PhysicsObject;
+import juno.environ.GameObject;
 import juno.environ.Planet;
 import juno.environ.Skybox;
 import juno.gl.Camera;
-import juno.gl.OBJLoader;
+import juno.gl.AssetLoader;
 import juno.gl.Obj;
-import juno.gl.ObjTexture;
+import juno.gl.Texture;
 import juno.gl.RawObj;
 
 
 public class Interpreter {
 	Scanner scan;
 	ArrayList<String[]> physicsData = new ArrayList<String[]>();
-	ArrayList<PhysicsObject> physicsObjects = new ArrayList<PhysicsObject>();
+	ArrayList<GameObject> physicsObjects = new ArrayList<GameObject>();
 	ArrayList<Light> lights = new ArrayList<Light>();
 	RawObj rawPlayerModel;
-	ObjTexture playerTex;
+	Texture playerTex;
 	Player player;
-	ObjTexture skyboxTex;
+	Texture skyboxTex;
 	Skybox skybox;
 	Skybox skybox2;
 	Camera camera;
-	Planet planet;
 	
 	private static int index = 0;
+	private static int lineNum;
 	
 	
-	public void loadMapData(String filePath, OBJLoader objLoader) {
+	public void loadMapData(String filePath, AssetLoader objLoader) {
 		String line;
+		lineNum = 0;
 		try {
 			scan = new Scanner(new File("res/script/"+filePath+".juno"));
 		} catch (FileNotFoundException e) {
@@ -47,6 +48,7 @@ public class Interpreter {
 		}
 
 		while(scan.hasNextLine()) {
+			lineNum++;
 			line = scan.nextLine();
 			if(line.length() == 0) {
 				continue;
@@ -64,10 +66,11 @@ public class Interpreter {
 				float g = Float.parseFloat(data[5]);
 				float b = Float.parseFloat(data[6]);
 				lights.add( new Light(new Vector3f(x,y,z),new Vector3f(r,g,b)));
+				continue;
 			}
 			if(data[0].equals("Skybox")) {
 				RawObj raw = objLoader.loadToVao(Skybox.getVertexData(), Skybox.getIndicesData(), Skybox.getNormalData(), Skybox.getTextureData());
-				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture(data[1]));
+				Texture skyTex = new Texture(objLoader.loadTexture(data[1]));
 				float x = Float.parseFloat(data[2]);
 				float y = Float.parseFloat(data[3]);
 				float z = Float.parseFloat(data[4]);
@@ -77,14 +80,16 @@ public class Interpreter {
 				float sc = Float.parseFloat(data[8]);
 				if(skybox == null) {
 					skybox = new Skybox(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
+					continue;
 				}else {	
 					skybox2 = new Skybox(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
+					continue;
 				}
 			}
 			
 			if(data[0].equals("Object")) {
 				RawObj raw = objLoader.loadObjModel(data[1]);
-				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture(data[2]));
+				Texture skyTex = new Texture(objLoader.loadTexture(data[2]));
 				float x = Float.parseFloat(data[3]);
 				float y = Float.parseFloat(data[4]);
 				float z = Float.parseFloat(data[5]);
@@ -92,8 +97,8 @@ public class Interpreter {
 				float ry = Float.parseFloat(data[7]);
 				float rz = Float.parseFloat(data[8]);
 				float sc = Float.parseFloat(data[9]);
-				physicsObjects.add(new PhysicsObject(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc));
-
+				physicsObjects.add(new GameObject(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc));
+				continue;
 			}
 			
 			if(data[0].equals("Phy")) {
@@ -106,8 +111,9 @@ public class Interpreter {
 					float angRotY = Float.parseFloat(data[6]);
 					float angRotZ = Float.parseFloat(data[7]);
 					physicsData.add(data);
-					
+					continue;
 			}
+			/*
 			if(data[0].equals("Planet")) {
 				RawObj raw = objLoader.loadObjModel(data[1]);
 				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture(data[2]));
@@ -121,23 +127,21 @@ public class Interpreter {
 				planet = new Planet(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
 
 			}
+			*/
+			
+			System.err.println("Unidentified type : '" + data[0] + "' while loading file : " + filePath + ".juno (line " + lineNum + ")");
 					
 		}
 	}
 	
-	
-	public Scanner getScan() {
-		return scan;
-	}
 
-
-	public ArrayList<String[]> getPhysicsData() {
+	public ArrayList<String[]> getGameObjectsData() {
 		return physicsData;
 	}
 
 
 
-	public ArrayList<PhysicsObject> getPhysicsObjects() {
+	public ArrayList<GameObject> getGameObjects() {
 		return physicsObjects;
 	}
 
@@ -148,7 +152,7 @@ public class Interpreter {
 	
 
 
-	public ObjTexture getSkyboxTex() {
+	public Texture getSkyboxTex() {
 		return skyboxTex;
 	}
 
@@ -172,12 +176,6 @@ public class Interpreter {
 
 
 
-	public Planet getPlanet() {
-		return planet;
-	}
-
-
-
 	public static int getIndex() {
 		return index;
 	}
@@ -188,7 +186,7 @@ public class Interpreter {
 		for(int i = 0; i< physicsObjects.size(); i++) {
 			String[] data = physicsData.get(i);
 			if(data.length < 8 || physicsObjects.get(i) == null) {
-				System.err.println("mismatch of physics data types in .juno file!");
+				System.err.println("missing entry for physics data types in script file!");
 			}
 			float mass = Float.parseFloat(data[1]);
 			float xVelo = Float.parseFloat(data[2]);

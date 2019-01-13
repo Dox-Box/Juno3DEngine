@@ -86,7 +86,7 @@ public class Launcher extends JFrame {
 	       JButton start = new JButton("RUN");
 	       start.setFont(new Font("Noto Sans", Font.PLAIN, 24));
 	       start.setForeground(new Color(1f,1f,1f));
-	       start.setBackground(new Color(0.4f,0.15f,0.15f));
+	       start.setBackground(new Color(0.4f,0.0f,0.45f));
 	       start.addMouseListener(new MouseAdapter() {
 	        @Override
 	         public void mouseClicked(MouseEvent e) {
@@ -95,13 +95,13 @@ public class Launcher extends JFrame {
 				Demo test = new Demo(WIDTH, HEIGHT, "0.0.0");			
 	        }	
 	        });
-	       start.setBounds(WIDTH-840, HEIGHT - 800, 190, 48);
+	       start.setBounds(460, HEIGHT - 800, 190, 48);
 
 	       frame.getContentPane().add(start);  
 	       
-	       JButton load = new JButton("LOAD SAVED");
+	       JButton load = new JButton("LOAD SAVE");
 	          load.setFont(new Font("Noto Sans", Font.PLAIN, 24));
-	          load.setBackground(new Color(0.4f,0.15f,0.15f));
+	          load.setBackground(new Color(0.4f,0.0f,0.45f));
 	          load.setForeground(new Color(.9f,.9f,.9f));
 	          load.addMouseListener(new MouseAdapter() {
 	           @Override
@@ -111,13 +111,25 @@ public class Launcher extends JFrame {
 	           }
 	          });
 
-	          load.setBounds(WIDTH-840, HEIGHT-650, 190, 48);
+	          load.setBounds(460, HEIGHT-650, 190, 48);
 	          frame.getContentPane().add(load);
 
+	          JButton worldBuilder = new JButton("World Designer");
+	          worldBuilder.setFont(new Font("Noto Sans", Font.PLAIN, 24));
+	          worldBuilder.setBackground(new Color(0.41f,0.0f,0.45f));
+	          worldBuilder.setForeground(new Color(.9f,.9f,.9f));
+	          worldBuilder.addMouseListener(new MouseAdapter() {
+	           @Override
+	           public void mouseClicked(MouseEvent e) {
+
+	           }
+	          });
+	          worldBuilder.setBounds(460, HEIGHT - 500, 240, 48);
+	          frame.getContentPane().add(worldBuilder);
 		       
 		       JButton options = new JButton("OPTIONS");
 		          options.setFont(new Font("Noto Sans", Font.PLAIN, 24));
-		          options.setBackground(new Color(0.41f,0.15f,0.15f));
+		          options.setBackground(new Color(0.41f,0.0f,0.45f));
 		          options.setForeground(new Color(.9f,.9f,.9f));
 		          options.addMouseListener(new MouseAdapter() {
 		           @Override
@@ -127,20 +139,20 @@ public class Launcher extends JFrame {
 		           }
 		          });
 
-		          options.setBounds(WIDTH-840, HEIGHT-500, 190, 48);
+		          options.setBounds(460, HEIGHT-350, 190, 48);
 		          frame.getContentPane().add(options);
 		          
 		      
 		          JButton exit = new JButton("EXIT");
 		          exit.setFont(new Font("Courier",Font.PLAIN,24));
-		          exit.setBackground(new Color(0.16f,0.36f,0.16f));
+		          exit.setBackground(new Color(0.36f,0.36f,0.36f));
 		          exit.setForeground(new Color(0.9f,0.9f,0.9f));
 		          exit.addMouseListener(new MouseAdapter() {
 			           public void mouseClicked(MouseEvent e) {
 			        	   System.exit(0);
 			           }
 			          });
-		          exit.setBounds(100,HEIGHT-200,100,48);
+		          exit.setBounds(460,HEIGHT-200,100,48);
 		          frame.getContentPane().add(exit);
 	       
 	       /* version of engine */
@@ -154,7 +166,7 @@ public class Launcher extends JFrame {
 	       
 	       /* background for menu */
 	       JLabel lblNewLabel_1 = new JLabel("");
-	       lblNewLabel_1.setIcon(new ImageIcon("res/launcher.png"));			
+	       lblNewLabel_1.setIcon(new ImageIcon("res/launcher-juno_g.png"));			
 	       lblNewLabel_1.setBounds(0, 0, WIDTH, HEIGHT);
 	       frame.getContentPane().add(lblNewLabel_1);
 	       

@@ -4,7 +4,7 @@ import org.joml.Vector3f;
 import org.lwjgl.opengl.GL11;
 
 import juno.core.KeyboardHandler;
-import juno.environ.PhysicsObject;
+import juno.environ.GameObject;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -18,7 +18,7 @@ public class Camera {
 	private float roll;
 	private float pitch;
 	private float yaw;
-	PhysicsObject object;	
+	GameObject object;	
 	float deltaX;
 	float deltaY;
 	float deltaZ;
@@ -32,7 +32,7 @@ public class Camera {
 	
 	
 	
-	public Camera(PhysicsObject object, Display display) {
+	public Camera(GameObject object, Display display) {
 		this.object = object;
 		position = new Vector3f(0,0,0);
 		roll = 0;
@@ -88,7 +88,7 @@ public class Camera {
 		return yaw;
 	}
 
-	public PhysicsObject getObject() {
+	public GameObject getObject() {
 		return object;
 	}
 

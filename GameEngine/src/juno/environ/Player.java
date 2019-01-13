@@ -10,7 +10,7 @@ import juno.gl.Camera;
 import juno.gl.Display;
 import juno.gl.Obj;
 
-public class Player extends PhysicsObject {
+public class Player extends GameObject {
 	
 	KeyboardHandler keyboardHandler;
 	

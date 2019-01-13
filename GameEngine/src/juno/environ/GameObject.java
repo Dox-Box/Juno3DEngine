@@ -5,7 +5,7 @@ import org.joml.Vector3f;
 import juno.gl.Obj;
 import juno.physics.BoundingSphere;
 
-public class PhysicsObject {
+public class GameObject implements Renderable {
 
 	private Obj texturedObj;
 	private Vector3f position;
@@ -19,7 +19,7 @@ public class PhysicsObject {
 	private float mass;
 
 	
-	public PhysicsObject(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale) {
+	public GameObject(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale) {
 		this.texturedObj = texturedObj;
 		this.position = position;
 		this.rotX = rotX;
@@ -36,6 +36,7 @@ public class PhysicsObject {
 		
 	}
 	
+	public void update() {}
 	
 	public void update(float dt) {
 		deltaX = velocity.x * dt;

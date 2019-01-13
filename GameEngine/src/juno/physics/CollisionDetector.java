@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 import org.joml.Vector3f;
 
-import juno.environ.PhysicsObject;
+import juno.environ.GameObject;
 
 public class CollisionDetector {
 
-	ArrayList<PhysicsObject> objects;
+	ArrayList<GameObject> objects;
 	Collider collider;
 	
-	public CollisionDetector(ArrayList<PhysicsObject> basicObjects) {
+	public CollisionDetector(ArrayList<GameObject> basicObjects) {
 		objects = basicObjects;
 		collider = new Collider();
 	}
@@ -33,7 +33,7 @@ public class CollisionDetector {
 	}
 	
 	
-	public void updateObjectList(ArrayList<PhysicsObject> objects) {
+	public void updateObjectList(ArrayList<GameObject> objects) {
 		this.objects = objects;
 	}
 	

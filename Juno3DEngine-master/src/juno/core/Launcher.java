@@ -62,7 +62,7 @@ public class Launcher extends JFrame {
 	      frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 	      frame.setResizable(true);
 	      frame.getContentPane().setLayout(null);
-	      frame.setTitle("Juno Sim Engine");
+	      frame.setTitle("JSE");
 	      frame.setFocusable(false);
 	      setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	      setBounds(100, 100, 920, 540);
@@ -92,7 +92,7 @@ public class Launcher extends JFrame {
 	         public void mouseClicked(MouseEvent e) {
 	          frame.setVisible(false);
 	          
-				Main test = new Main(WIDTH, HEIGHT, "0.0.0");			
+				Main test = new Main(WIDTH, HEIGHT, "0.1.4");			
 	        }	
 	        });
 	       start.setBounds(40, HEIGHT - 800, 190, 48);

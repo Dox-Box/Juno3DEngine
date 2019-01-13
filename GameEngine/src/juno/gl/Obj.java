@@ -7,9 +7,9 @@ package juno.gl;
 public class Obj {
 
 	private RawObj raw;
-	private  ObjTexture texture;
+	private  Texture texture;
 	
-	public Obj(RawObj raw, ObjTexture texture) {
+	public Obj(RawObj raw, Texture texture) {
 		this.raw = raw;
 		this.texture = texture;
 	}
@@ -18,7 +18,7 @@ public class Obj {
 		return raw;
 	}
 
-	public ObjTexture getTexture() {
+	public Texture getTexture() {
 		return texture;
 	}
 	

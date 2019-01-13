@@ -1,19 +1,20 @@
 # DEMO Simulation #1 
 
 
-# planets:					
 
-Planet jupiter mars 120 3 100 -1 0 0 10
+
+
 # objects:
 # .obj    .png     
 # raw	 texture   x y z rx ry rz scale
-
+Object planet ocean 0 0 -20 0 0 0 300
 
 
 
 
 # physics data for each object (sequential order)
 # mass xV yV zV aX aY aZ 
+Phy 0 0 0 0 0 0 0 
 
 
 # lighting / other

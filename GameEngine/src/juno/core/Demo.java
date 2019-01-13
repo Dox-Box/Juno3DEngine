@@ -14,16 +14,16 @@ import static org.lwjgl.glfw.GLFWKeyCallback.*;
 
 import juno.environ.Player;
 import juno.environ.Light;
-import juno.environ.PhysicsObject;
+import juno.environ.GameObject;
 import juno.environ.Planet;
 import juno.environ.Skybox;
 import juno.gl.Camera;
 import juno.gl.Display;
 import juno.gl.HUDTexture;
-import juno.gl.OBJLoader;
+import juno.gl.AssetLoader;
 import juno.gl.MasterRender;
 import juno.gl.Obj;
-import juno.gl.ObjTexture;
+import juno.gl.Texture;
 import juno.gl.RawObj;
 import juno.gl.RenderGUI;
 import juno.gl.StaticShader;
@@ -46,23 +46,22 @@ public class Demo implements Runnable {
 	private GLFWKeyCallback keyCallback;
 	
 
-	OBJLoader objLoader;
-	MasterRender objRender;
+	AssetLoader loader;
+	MasterRender masterRender;
 	StaticShader shader;
 	RenderGUI renderGUI;
 	
-	ObjTexture texture;
-	ObjTexture texture2;
-	ArrayList<PhysicsObject> renderableObjects = new ArrayList<PhysicsObject>();
-	ArrayList<PhysicsObject> physicsObjects = new ArrayList<PhysicsObject>();
+	Texture texture;
+	Texture texture2;
+	ArrayList<GameObject> renderableObjects = new ArrayList<GameObject>();
+	ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
 	ArrayList<HUDTexture> hud = new ArrayList<HUDTexture>();
 	ArrayList<Light> lights = new ArrayList<Light>();
 	Skybox stars;
 	Skybox stars2;
 	Camera camera;
-	Player focus;
-	Planet planet1;
-	Interpreter mapLoader;
+	Player player;
+	Interpreter interpreter;
 	CollisionDetector collisionDetector;
 
 	
@@ -74,7 +73,7 @@ public class Demo implements Runnable {
 			init();
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.err.println("Error loading simulation!");
+			System.err.println("Error loading game!");
 			System.exit(-1);
 		}
 		
@@ -84,15 +83,15 @@ public class Demo implements Runnable {
 		setup();
 		running = true;
 		GLFW.glfwInit();
-		objLoader = new OBJLoader();		
+		loader = new AssetLoader();		
 		display = new Display(WIDTH,HEIGHT);
 		shader = new StaticShader();
-		objRender = new MasterRender(display,shader);
-		mapLoader = new Interpreter();
-		renderGUI = new RenderGUI(objLoader);
+		masterRender = new MasterRender(display,shader);
+		interpreter = new Interpreter();
+		renderGUI = new RenderGUI(loader);
 		loadSim("test");
 		loadHUD();
-		collisionDetector = new CollisionDetector(physicsObjects);
+		collisionDetector = new CollisionDetector(gameObjects);
 		lastTime = System.nanoTime();
 		run();
 	    }
@@ -110,8 +109,7 @@ public class Demo implements Runnable {
 		
 	while(running) {
 		
-		planet1.changeRotation(0,.14f,0);
-		objRender.renderAllObjects(lights, camera, renderableObjects);
+		masterRender.renderAllObjects(lights, camera, renderableObjects);
 		update();
 
 	}
@@ -121,7 +119,7 @@ public class Demo implements Runnable {
 	 	
 	
 	public void update() {
-		focus.update();
+		player.update();
 		camera.update(display);
 		
 		stars.setPosition(camera.getPosition());
@@ -129,7 +127,7 @@ public class Demo implements Runnable {
 		float current = System.nanoTime(); 
 		float dt = current - lastTime;
 		dt /= 1000000000;
-		for(PhysicsObject obj : physicsObjects ) {
+		for(GameObject obj : gameObjects ) {
 			obj.update(dt);
 		}
 		collisionDetector.update();
@@ -172,32 +170,30 @@ public class Demo implements Runnable {
 	
 	
 	public void loadSim(String file) {
-		RawObj focusObj = objLoader.loadObjModel("jupiter");
-		ObjTexture focusTex = new ObjTexture(objLoader.loadTexture("asteroid"));
-		focus = new Player(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.1f,display);
-		mapLoader.loadMapData(file,objLoader);
-		mapLoader.link();
+		RawObj focusObj = loader.loadObjModel("jupiter");
+		Texture focusTex = new Texture(loader.loadTexture("asteroid"));
+		player = new Player(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.1f,display);
+		interpreter.loadMapData(file,loader);
+		interpreter.link();
 		//lights = mapLoader.getLights();
 		lights = new ArrayList<Light>();
 		lights.add(new Light(new Vector3f(1000,1,-1000),new Vector3f(1,1,1)));
 		lights.add(new Light(new Vector3f(0,0,0),new Vector3f(1,1,1)));
 
-		physicsObjects = mapLoader.getPhysicsObjects();		
-		stars = mapLoader.getSkybox();
-		stars2 = mapLoader.getSkybox2();
-		planet1 = mapLoader.getPlanet();
-		camera = new Camera(focus,display);
-		renderableObjects.add(focus);
+		gameObjects = interpreter.getGameObjects();		
+		stars = interpreter.getSkybox();
+		stars2 = interpreter.getSkybox2();
+		camera = new Camera(player,display);
+		renderableObjects.add(player);
 		renderableObjects.add(stars);
 		renderableObjects.add(stars2);
-		renderableObjects.add(planet1);
-		for(PhysicsObject obj : physicsObjects) {
+		for(GameObject obj : gameObjects) {
 			renderableObjects.add(obj);
 		}
 	}
 	
 	public void loadHUD() {
-		hud.add(new HUDTexture(objLoader.loadTexture("test-0-1-4"), new Vector2f(0.8f,-.95f), new Vector2f(0.09f,0.09f)));
+		//hud.add(new HUDTexture(objLoader.loadTexture("test-0-1-4"), new Vector2f(0.8f,-.95f), new Vector2f(0.09f,0.09f)));
 	}
 	
 	
@@ -207,7 +203,7 @@ public class Demo implements Runnable {
 	
 	public void exit() {
 		shader.close();
-		objLoader.clearData();
+		loader.clearData();
 		System.exit(0);
 	}
 }

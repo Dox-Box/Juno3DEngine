@@ -4,7 +4,7 @@ import org.joml.Vector3f;
 
 import juno.gl.Obj;
 
-public class Planet extends PhysicsObject {
+public class Planet extends GameObject {
 	static final float bigG =  (float) (6.674 * Math.exp(10));
 
 	public Planet(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale) {

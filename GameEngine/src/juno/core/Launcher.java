@@ -22,7 +22,7 @@ import juno.gl.Display;
 
 public class Launcher extends JFrame {
 	
-	/* authors : J. Dox
+	/* authors : J. Dox.
 	 * 
 	 */
 
@@ -86,7 +86,7 @@ public class Launcher extends JFrame {
 	       JButton start = new JButton("RUN");
 	       start.setFont(new Font("Noto Sans", Font.PLAIN, 24));
 	       start.setForeground(new Color(1f,1f,1f));
-	       start.setBackground(new Color(0.4f,0.0f,0.45f));
+	       start.setBackground(new Color(0.3f,0.0f,0.45f));
 	       start.addMouseListener(new MouseAdapter() {
 	        @Override
 	         public void mouseClicked(MouseEvent e) {
@@ -101,7 +101,7 @@ public class Launcher extends JFrame {
 	       
 	       JButton load = new JButton("LOAD SAVE");
 	          load.setFont(new Font("Noto Sans", Font.PLAIN, 24));
-	          load.setBackground(new Color(0.4f,0.0f,0.45f));
+	          load.setBackground(new Color(0.3f,0.0f,0.45f));
 	          load.setForeground(new Color(.9f,.9f,.9f));
 	          load.addMouseListener(new MouseAdapter() {
 	           @Override
@@ -116,7 +116,7 @@ public class Launcher extends JFrame {
 
 	          JButton worldBuilder = new JButton("World Designer");
 	          worldBuilder.setFont(new Font("Noto Sans", Font.PLAIN, 24));
-	          worldBuilder.setBackground(new Color(0.41f,0.0f,0.45f));
+	          worldBuilder.setBackground(new Color(0.3f,0.0f,0.45f));
 	          worldBuilder.setForeground(new Color(.9f,.9f,.9f));
 	          worldBuilder.addMouseListener(new MouseAdapter() {
 	           @Override
@@ -129,7 +129,7 @@ public class Launcher extends JFrame {
 		       
 		       JButton options = new JButton("OPTIONS");
 		          options.setFont(new Font("Noto Sans", Font.PLAIN, 24));
-		          options.setBackground(new Color(0.41f,0.0f,0.45f));
+		          options.setBackground(new Color(0.3f,0.0f,0.45f));
 		          options.setForeground(new Color(.9f,.9f,.9f));
 		          options.addMouseListener(new MouseAdapter() {
 		           @Override
@@ -166,7 +166,7 @@ public class Launcher extends JFrame {
 	       
 	       /* background for menu */
 	       JLabel lblNewLabel_1 = new JLabel("");
-	       lblNewLabel_1.setIcon(new ImageIcon("res/launcher-juno_g.png"));			
+	       lblNewLabel_1.setIcon(new ImageIcon("res/launcher-gameEngine.png"));
 	       lblNewLabel_1.setBounds(0, 0, WIDTH, HEIGHT);
 	       frame.getContentPane().add(lblNewLabel_1);
 	       

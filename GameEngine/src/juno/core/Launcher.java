@@ -85,13 +85,6 @@ public class Launcher extends JFrame {
 	    setResizable(false);
 	    setUndecorated(false);
 	  
-	    JLabel title = new JLabel("Juno Game Engine");
-	    title.setFont(new Font("Courier", Font.ITALIC, 36));					
-	    title.setBounds(WIDTH/6, 115, 602, 44);
-	    title.setForeground(new Color(.8f,.8f,.8f));
-	    title.setHorizontalAlignment(SwingConstants.CENTER);
-	    title.setVerticalAlignment(SwingConstants.TOP);
-	    frame.getContentPane().add(title);
 	    
 	    JButton run = new JButton("Run");
 	    run.setFont(new Font("Monospaced", Font.PLAIN, 26));
@@ -222,6 +215,10 @@ public class Launcher extends JFrame {
 	    version.setBounds(WIDTH - 200, HEIGHT-75,130,35);
 	    frame.getContentPane().add(version);
 	     
+	    JLabel title = new JLabel("");
+	    title.setIcon(new ImageIcon("res/logoGE.png"));
+	    title.setBounds(WIDTH/3 + 100, 80, 1000, 100);
+	    frame.getContentPane().add(title);
 	       
 	    /* background for menu */
 	    JLabel lblNewLabel_1 = new JLabel("");

@@ -196,7 +196,7 @@ public class Launcher extends JFrame {
 		    
 	    	public void mouseEntered(MouseEvent e) {
 	    		exit.setBounds(410 + hoverXOffset, HEIGHT - 200 + hoverYOffset, 100, 48);
-	    		exit.setBackground(new Color(0.73f, 0.1f, 0.1f));
+	    		exit.setBackground(new Color(0.33f, 0.1f, 0.1f));
 	    	}
 		    	   
 	    	public void mouseExited(MouseEvent e) {

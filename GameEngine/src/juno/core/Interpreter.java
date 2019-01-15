@@ -69,7 +69,7 @@ public class Interpreter {
 			}
 			if(data[0].equals("Skybox")) {
 				RawObj raw = objLoader.loadToVao(Skybox.getVertexData(), Skybox.getIndicesData(), Skybox.getNormalData(), Skybox.getTextureData());
-				Texture skyTex = new Texture(objLoader.loadTexture(data[1]));
+				Texture skyTex = new Texture(objLoader.loadTexture("textures/" + data[1]));
 				float x = Float.parseFloat(data[2]);
 				float y = Float.parseFloat(data[3]);
 				float z = Float.parseFloat(data[4]);
@@ -87,8 +87,8 @@ public class Interpreter {
 			}
 			
 			if(data[0].equals("Object")) {
-				RawObj raw = objLoader.loadObjModel(data[1]);
-				Texture skyTex = new Texture(objLoader.loadTexture(data[2]));
+				RawObj raw = objLoader.loadObjModel("objs/" + data[1]);
+				Texture tex = new Texture(objLoader.loadTexture("textures/" + data[2]));
 				float x = Float.parseFloat(data[3]);
 				float y = Float.parseFloat(data[4]);
 				float z = Float.parseFloat(data[5]);
@@ -96,7 +96,7 @@ public class Interpreter {
 				float ry = Float.parseFloat(data[7]);
 				float rz = Float.parseFloat(data[8]);
 				float sc = Float.parseFloat(data[9]);
-				physicsObjects.add(new GameObject(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc));
+				physicsObjects.add(new GameObject(new Obj(raw, tex),new Vector3f(x,y,z),rx,ry,rz,sc));
 				continue;
 			}
 			

@@ -169,8 +169,8 @@ public class App implements Runnable {
 	
 	
 	public void loadSim(String file) {
-		RawObj focusObj = loader.loadObjModel("jupiter");
-		Texture focusTex = new Texture(loader.loadTexture("asteroid"));
+		RawObj focusObj = loader.loadObjModel("objs/planet");
+		Texture focusTex = new Texture(loader.loadTexture("textures/asteroid"));
 		player = new Player(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.1f,display);
 		interpreter.loadMapData(file,loader);
 		interpreter.link();

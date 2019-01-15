@@ -103,18 +103,18 @@ public class Launcher extends JFrame {
 	    	App test = new App(WIDTH, HEIGHT, "0.1.5");
 	    }
 	    public void mouseEntered(MouseEvent e) {
-	    	 run.setBounds(460 + hoverXOffset, HEIGHT - 800 + hoverYOffset, 190, 48);
+	    	 run.setBounds(410 + hoverXOffset, HEIGHT - 800 + hoverYOffset, 190, 48);
 	    	 run.setBackground(hoverColor);
 	    	      
 	    }
 	    public void mouseExited(MouseEvent e) {
-	    	 run.setBounds(460, HEIGHT - 800, 190, 48);
+	    	 run.setBounds(410, HEIGHT - 800, 190, 48);
 	    	 run.setBackground(defaultColor);
 	    	 isHoveringButton = false;
 	    }
 	     
 	    });
-	    run.setBounds(460, HEIGHT - 800, 190, 48);
+	    run.setBounds(410, HEIGHT - 800, 190, 48);
 	    run.setBorderPainted(false);
 	    run.setFocusPainted(false);
 	    frame.getContentPane().add(run);  
@@ -126,16 +126,16 @@ public class Launcher extends JFrame {
 	    load.addMouseListener(new MouseAdapter() {
 
 	    	public void mouseEntered(MouseEvent e) {
-	    	load.setBounds(460 + hoverXOffset, HEIGHT - 650 + hoverYOffset, 190, 48);
+	    	load.setBounds(410 + hoverXOffset, HEIGHT - 650 + hoverYOffset, 190, 48);
 	    	load.setBackground(hoverColor);
 	    	}
 	    	public void mouseExited(MouseEvent e) {
-	    		load.setBounds(460, HEIGHT - 650, 190, 48);
+	    		load.setBounds(410, HEIGHT - 650, 190, 48);
 	    		load.setBackground(defaultColor);
 	    	}
     	});
 	
-	    load.setBounds(460, HEIGHT-650, 190, 48);
+	    load.setBounds(410, HEIGHT-650, 190, 48);
 	    load.setBorderPainted(false);
 	    load.setFocusPainted(false);
 	    frame.getContentPane().add(load);
@@ -150,15 +150,15 @@ public class Launcher extends JFrame {
 	
 	    	}
 	    	public void mouseEntered(MouseEvent e) {
-	    		worldBuilder.setBounds(460 + hoverXOffset, HEIGHT - 500 + hoverYOffset, 240, 48);
+	    		worldBuilder.setBounds(410 + hoverXOffset, HEIGHT - 500 + hoverYOffset, 240, 48);
 	    		worldBuilder.setBackground(hoverColor);
 	    	}
 	    	public void mouseExited(MouseEvent e) {
-	    		worldBuilder.setBounds(460, HEIGHT - 500, 240, 48);
+	    		worldBuilder.setBounds(410, HEIGHT - 500, 240, 48);
 	    		worldBuilder.setBackground(defaultColor);
 	    	}
 	    });
-	    worldBuilder.setBounds(460, HEIGHT - 500, 240, 48);
+	    worldBuilder.setBounds(410, HEIGHT - 500, 240, 48);
 	    worldBuilder.setBorderPainted(false);
 	    worldBuilder.setFocusPainted(false);
 	    frame.getContentPane().add(worldBuilder);
@@ -174,16 +174,16 @@ public class Launcher extends JFrame {
 	    	}
 	    	
 	        public void mouseEntered(MouseEvent e) {
-	        	options.setBounds(460 + hoverXOffset, HEIGHT - 350 + hoverYOffset, 190, 48);
+	        	options.setBounds(410 + hoverXOffset, HEIGHT - 350 + hoverYOffset, 190, 48);
 	        	options.setBackground(hoverColor);
 	        }
 		    public void mouseExited(MouseEvent e) {
-		    	options.setBounds(460, HEIGHT - 350, 190, 48);
+		    	options.setBounds(410, HEIGHT - 350, 190, 48);
 		    	options.setBackground(defaultColor);
 		    }
 	    });
 	
-	    options.setBounds(460, HEIGHT-350, 190, 48);
+	    options.setBounds(410, HEIGHT-350, 190, 48);
 	    options.setBorderPainted(false);
 	    options.setFocusPainted(false);
 	    frame.getContentPane().add(options);
@@ -200,16 +200,16 @@ public class Launcher extends JFrame {
 		    }
 		    
 	    	public void mouseEntered(MouseEvent e) {
-	    		exit.setBounds(460 + hoverXOffset, HEIGHT - 200 + hoverYOffset, 100, 48);
+	    		exit.setBounds(410 + hoverXOffset, HEIGHT - 200 + hoverYOffset, 100, 48);
 	    		exit.setBackground(new Color(0.33f, 0.1f, 0.1f));
 	    	}
 		    	   
 	    	public void mouseExited(MouseEvent e) {
-	    		exit.setBounds(460, HEIGHT - 200, 100, 48);
+	    		exit.setBounds(410, HEIGHT - 200, 100, 48);
 		        exit.setBackground(new Color(0.16f, 0.16f, 0.16f));
 		    }
         });
-        exit.setBounds(460,HEIGHT-200,100,48);
+        exit.setBounds(410,HEIGHT-200,100,48);
         exit.setBorderPainted(false);
         exit.setFocusPainted(false);
         frame.getContentPane().add(exit);

@@ -6,10 +6,11 @@ ___________________________________________________________________________
 
 https://github.com/Dox-Box/Juno3DEngine/blob/master/Juno3DEngine-master/res/opengl-java.png
 
-  # Running Juno #
+  # Running A Simulation #
   
-    In order to run, just clone Juno3DEngine-master, and run Juno3D.jar 
+    In order to run the default script, just clone Juno3DEngine-master, and run Juno3D.jar 
     
+    Note: When using linux, it is necessary to use terminal to navigate to the directory of the repo, then type: 'java -jar  juno3D.jar
   
   
   

@@ -22,27 +22,25 @@ https://github.com/Dox-Box/Juno3DEngine/blob/master/Juno3DEngine-master/res/open
 
 
     
-Getting started creating your own environment using the Juno 3D Engine [Simulation] :
+Getting started creating your own environment using the Juno 3D Engine scripting tool [Simulation] :
 
 
     Make sure to inspect the test.juno file in /res/script/ for an example of how to use the juno basic scripting system.
 
 - ".juno" files are just text files containing the script which is fed into the engine at runtime, which then tells Juno3D how to construct your simulation.
+  
+  In res/script/test.juno you will find: 
+  
+  Lines marked with a '#', these act as comments in the scripting system, so if a line starts with the '#' char, then the interpreter will skip that line.
+  
 
-- Firstly, its important to know the general layout of the scripting system in Juno:
-  
-  In /script/test.juno you will find: 
-  
-  Lines marked with a '#', these act as comments in the scripting system, so if a line has a '#', everything after that is skipped by the interpreter system.
-  
-  Each of these lines below the comments begin with a type which specifies what kind of environmental object, or data type it might be.
   
   The current list of supported types in the interpreter are as follows: 
 
     
-    - Object: The general purpose object used when conducting a sim. Given the .obj 3D model file and texture files to represent its    scale, initial rotation, and position.
+    - Object: The general purpose object used when conducting a sim. Given a (non-animated) .obj 3D model file and texture files to represent its position, initial rotation, and scale.
 
-    - Planet: Generally intened to be used for planets, or other large, massive objects, such as moons or the like.
+    - Planet: Generally intened to be used for planets, or other large, massive objects, such as moons; this object will have an assigned gravitational influence determined by the gravity physics subsystem.
 
     - Phy: Short for Physics script, this assigns physical properties to objects in the world, however, the interpreter is strict, and the number of Phy types and Object MUST MATCH or the engine will not have been given sufficient information to begin a simulation.
     ( who wants an asteroid with no mass?)

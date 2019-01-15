@@ -42,12 +42,14 @@ Getting started creating your own environment using the Juno 3D Engine scripting
 
     - Planet: Generally intened to be used for planets, or other large, massive objects, such as moons; this object will have an assigned gravitational influence determined by the gravity physics subsystem.
 
-    - Phy: Short for Physics script, this assigns physical properties to objects in the world, however, the interpreter is strict, and the number of Phy types and Object MUST MATCH or the engine will not have been given sufficient information to begin a simulation.
-    ( who wants an asteroid with no mass?)
+    - Phy: Short for Physics scripting object, this assigns physical properties to objects in the world, however, the interpreter is strict, and the number of Phy types and Object MUST MATCH the number of objects or the engine will not have been given sufficient information to begin a simulation.
+    ( who wants an asteroid with no mass, or linear/angular velocity?)
     
-    - Light: This represents a light in the 3D world space. Currently, Juno 3D supports a single light source, but including more Lights will not affect the rendering.
+    - Light: This represents a light in the 3D world space. Currently, Juno 3D supports a limited number of light sources, as each light increases the rendering load per frame.
     
     - Skybox: This is the backdrop of the simulation, use a .png filepath here to change the background in the simulation.
+    
+    - SkySphere: [experimental] will create a background in the shape of a sphere, useful for instances in space.
 
 
 
@@ -55,8 +57,7 @@ Getting started creating your own environment using the Juno 3D Engine scripting
 
 
 
-
-Getting started with using the engine utils for an external program:
+Getting started with linking the engine with an external program:
 
 
 

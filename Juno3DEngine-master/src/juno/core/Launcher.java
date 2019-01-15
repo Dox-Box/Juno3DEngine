@@ -86,13 +86,7 @@ public class Launcher extends JFrame {
 	    setResizable(false);
 	    setUndecorated(false);
 	  
-	    JLabel title = new JLabel("Juno 3D Engine");
-	    title.setFont(new Font("Courier", Font.ITALIC, 36));					
-	    title.setBounds(WIDTH/3, 125, 602, 44);
-	    title.setForeground(new Color(.8f,.8f,.8f));
-	    title.setHorizontalAlignment(SwingConstants.CENTER);
-	    title.setVerticalAlignment(SwingConstants.TOP);
-	    frame.getContentPane().add(title);
+	   
 	    
 	    JButton run = new JButton("Run");
 	    run.setFont(new Font("Monospaced", Font.PLAIN, 26));
@@ -224,12 +218,17 @@ public class Launcher extends JFrame {
 	    frame.getContentPane().add(version);
 	     
 	       
+	    JLabel title = new JLabel("");
+	    title.setIcon(new ImageIcon("res/logo3D.png"));
+	    title.setBounds(WIDTH/3 + 100, 80, 1000, 100);
+	    frame.getContentPane().add(title);
+	    
 	    /* background for menu */
-	    JLabel lblNewLabel_1 = new JLabel("");
-	    lblNewLabel_1.setIcon(new ImageIcon("res/launcher-juno.png"));
-	    lblNewLabel_1.setBounds(0, 0, WIDTH, HEIGHT);
-	    frame.getContentPane().add(lblNewLabel_1);
-						   
+	    JLabel backdrop = new JLabel("");
+	    backdrop.setIcon(new ImageIcon("res/launcher-juno.png"));
+	    backdrop.setBounds(0, 0, WIDTH, HEIGHT);
+	    frame.getContentPane().add(backdrop);
+	    
 	   
    
    

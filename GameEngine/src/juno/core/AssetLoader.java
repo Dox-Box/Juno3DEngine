@@ -1,4 +1,4 @@
-package juno.gl;
+package juno.core;
 
 import java.io.BufferedReader;
 
@@ -24,6 +24,7 @@ import org.lwjgl.opengl.GL30;
 import static org.lwjgl.opengl.GL30.*;
 import de.matthiasmann.twl.utils.PNGDecoder;
 import de.matthiasmann.twl.utils.PNGDecoder.Format;
+import juno.gl.RawObj;
 
 
 public class AssetLoader {

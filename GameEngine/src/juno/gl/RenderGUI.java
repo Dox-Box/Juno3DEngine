@@ -7,6 +7,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL30;
 
+import juno.core.AssetLoader;
 import juno.gui.GUIShader;
 import juno.gui.HUD;
 

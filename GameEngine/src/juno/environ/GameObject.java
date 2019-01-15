@@ -42,7 +42,6 @@ public class GameObject implements Renderable {
 		deltaX = velocity.x * dt;
 		deltaY = velocity.y * dt;
 		deltaZ = velocity.z * dt;
-		//System.out.println(dt);
 		float dRotX = angularVel.x * dt;
 		float dRotY = angularVel.y * dt;
 		float dRotZ = angularVel.z * dt;
@@ -97,9 +96,7 @@ public class GameObject implements Renderable {
 	}
 	
 		
-	public BoundingSphere getBoundingSphere() {
-		return boundingSphere;
-	}
+
 	
 	public Obj getTexturedObj() {
 		return texturedObj;
@@ -145,7 +142,9 @@ public class GameObject implements Renderable {
 	
 	
 	
-	
+	public BoundingSphere getBoundingSphere() {
+		return boundingSphere;
+	}
 	
 	
 	

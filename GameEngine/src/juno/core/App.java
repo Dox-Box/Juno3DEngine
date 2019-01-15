@@ -20,7 +20,6 @@ import juno.environ.Skybox;
 import juno.gl.Camera;
 import juno.gl.Display;
 import juno.gl.HUDTexture;
-import juno.gl.AssetLoader;
 import juno.gl.MasterRender;
 import juno.gl.Obj;
 import juno.gl.Texture;
@@ -32,7 +31,7 @@ import juno.physics.CollisionDetector;
 /*
 * @author Jim Dox.
 */
-public class Demo implements Runnable {
+public class App implements Runnable {
 
 	private int WIDTH;
 	private int HEIGHT;
@@ -65,7 +64,7 @@ public class Demo implements Runnable {
 	CollisionDetector collisionDetector;
 
 	
-	public Demo(int width, int height, String name) {
+	public App(int width, int height, String name) {
 		this.WIDTH = width;
 		this.HEIGHT = height;
 		this.title = name;

@@ -13,7 +13,6 @@ import juno.environ.GameObject;
 import juno.environ.Planet;
 import juno.environ.Skybox;
 import juno.gl.Camera;
-import juno.gl.AssetLoader;
 import juno.gl.Obj;
 import juno.gl.Texture;
 import juno.gl.RawObj;
@@ -113,21 +112,7 @@ public class Interpreter {
 					physicsData.add(data);
 					continue;
 			}
-			/*
-			if(data[0].equals("Planet")) {
-				RawObj raw = objLoader.loadObjModel(data[1]);
-				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture(data[2]));
-				float x = Float.parseFloat(data[3]);
-				float y = Float.parseFloat(data[4]);
-				float z = Float.parseFloat(data[5]);
-				float rx = Float.parseFloat(data[6]);
-				float ry = Float.parseFloat(data[7]);
-				float rz = Float.parseFloat(data[8]);
-				float sc = Float.parseFloat(data[9]);
-				planet = new Planet(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
-
-			}
-			*/
+		
 			
 			System.err.println("Unidentified type : '" + data[0] + "' while loading file : " + filePath + ".juno (line " + lineNum + ")");
 					

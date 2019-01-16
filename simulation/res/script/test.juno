@@ -2,7 +2,7 @@
 
 # planet
 
-Planet planet jupiter_tex 0 0 0 0 0 0 
+Planet planet jupiter_tex 0 0 0 0 0 0 10
 
 # objects     
 # raw	 texture   x y z rx ry rz scale

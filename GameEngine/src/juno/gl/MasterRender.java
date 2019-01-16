@@ -30,11 +30,14 @@ public class MasterRender {
 	private Map<Obj, List<GameObject>> allObjects = new HashMap<Obj, List<GameObject>>();
 	private ArrayList<Light> lights;
 	
+	
 	public MasterRender(Display display, StaticShader shader) {
 		this.display = display;
 		this.shader = shader;
 		glEnable(GL_CULL_FACE);
 		glEnable(GL_BACK);
+		glEnable(GL_DEPTH_TEST | GL_DEPTH_BUFFER_BIT);
+
 		createProjectionMatrix(); 
 		shader.start();
 		shader.loadProjectionMatrix(projectionMatrix);
@@ -46,7 +49,6 @@ public class MasterRender {
 		display.update();
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(0, 0, 0, 1);
-		glEnable(GL_DEPTH_TEST | GL_DEPTH_BUFFER_BIT);
 	}
 	
 	public void renderAllObjects(ArrayList<Light> lights, Camera camera, ArrayList<GameObject> allObjects) {
@@ -92,7 +94,7 @@ public class MasterRender {
 		List<GameObject> batch = allObjects.get(model);
 		if(batch != null) {
 			batch.add(object);
-		}else {
+		}else{
 			List<GameObject> newBatch = new ArrayList<GameObject>();
 			newBatch.add(object);
 			allObjects.put(model, newBatch);
@@ -143,26 +145,29 @@ public class MasterRender {
 	
 	
 	/* special case rendering for skybox */ 
-	public void render(Skybox object,StaticShader shader) {
-		//shader.start();
+	public void renderSky(Skybox object) {
 		glDisable(GL_DEPTH_TEST | GL_DEPTH_BUFFER_BIT);
+		System.out.println("Depth disabled");
 		Obj texturedObj = object.getTexturedObj();
-		RawObj obj = texturedObj.getRawObj();
-		glBindVertexArray(obj.getVaoID());
+		RawObj rawObj = texturedObj.getRawObj();
+		glBindVertexArray(rawObj.getVaoID());
 		glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
 		glEnableVertexAttribArray(2);
 		Matrix4f transformationMatrix = MathUtils.createTransformationMatrix(object.getPosition(), object.getRotX(),
 				object.getRotY(),object.getRotZ(),object.getScale());
+		glDrawElements(GL_TRIANGLES, rawObj.getNumVertices(), GL_UNSIGNED_INT, 0); 
+
 		
-		shader.loadTransformationMatrix(transformationMatrix);
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, texturedObj.getTexture().getID());
-		glDrawElements(GL_TRIANGLES, obj.getNumVertices(), GL_UNSIGNED_INT, 0); 
+		glDrawElements(GL_TRIANGLES, rawObj.getNumVertices(), GL_UNSIGNED_INT, 0); 
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
 		glDisableVertexAttribArray(2);
 		glBindVertexArray(0);
+		glEnable(GL_DEPTH_TEST | GL_DEPTH_BUFFER_BIT);
+
 	}
 	
 	//---------------------------------------------------------------------//

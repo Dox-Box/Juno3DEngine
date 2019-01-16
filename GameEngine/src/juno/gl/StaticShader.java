@@ -13,8 +13,8 @@ import juno.util.MathUtils;
  */
 public class StaticShader extends Shader {
 
-	private static String vertexShaderFile = "res/shaders/vertexShader.vert";	
-	private static String FragShaderFile = "res/shaders/fragmentShader.frag";
+	private static String vertexShaderFile = "res/shaders/staticShader.vert";	
+	private static String FragShaderFile = "res/shaders/staticShader.frag";
 	
 	private int location_transformationMatrix;
 	private int location_projectionMatrix;

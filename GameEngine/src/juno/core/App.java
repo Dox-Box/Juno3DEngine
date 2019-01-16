@@ -48,15 +48,14 @@ public class App implements Runnable {
 	AssetLoader loader;
 	MasterRender masterRender;
 	StaticShader shader;
-	RenderGUI renderGUI;
+	RenderGUI renderGui;
 	
 
 	ArrayList<GameObject> renderableObjects = new ArrayList<GameObject>();
 	ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
 	ArrayList<HUDTexture> hud = new ArrayList<HUDTexture>();
 	ArrayList<Light> lights = new ArrayList<Light>();
-	Skybox sky1;
-	Skybox sky2;
+	Skybox sky;
 	Camera camera;
 	Player player;
 	Interpreter interpreter;
@@ -85,9 +84,9 @@ public class App implements Runnable {
 		shader = new StaticShader();
 		masterRender = new MasterRender(display,shader);
 		interpreter = new Interpreter();
-		renderGUI = new RenderGUI(loader);
+		renderGui = new RenderGUI(loader);
 		loadInstance("test");
-		loadHUD();
+		loadGui();
 		collisionDetector = new CollisionDetector(gameObjects);
 		lastTime = System.nanoTime();
 		run();
@@ -135,7 +134,7 @@ public class App implements Runnable {
 		
 	}
 	
-	private void fpsRegulator() {
+	protected void fpsRegulator() {
 		
 		if(display.shouldExit) {
 			running = false;
@@ -175,18 +174,16 @@ public class App implements Runnable {
 		lights.add(new Light(new Vector3f(0,0,0),new Vector3f(1,1,1)));
 
 		gameObjects = interpreter.getGameObjects();		
-		sky1 = interpreter.getSkybox();
-		sky2 = interpreter.getSkybox2();
+		sky = interpreter.getSkybox();
 		camera = new Camera(player,display);
 		renderableObjects.add(player);
-		renderableObjects.add(sky1);
-		renderableObjects.add(sky2);
+
 		for(GameObject obj : gameObjects) {
 			renderableObjects.add(obj);
 		}
 	}
 	
-	protected void loadHUD() {
+	protected void loadGui() {
 		//hud.add(new HUDTexture(objLoader.loadTexture("test-0-1-4"), new Vector2f(0.8f,-.95f), new Vector2f(0.09f,0.09f)));
 	}
 	

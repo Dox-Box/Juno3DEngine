@@ -1,5 +1,5 @@
 
-Rogue3D  is an Engine designed to provide a portable, cross-platform (Linux, and Windows) simulation tool for rigid body collisions and dynamics, or as a lightweight game creation tool.
+Juno 3D  is an Engine designed to provide a portable, cross-platform (Linux, and Windows) simulation tool for rigid body collisions and dynamics, or as a lightweight game creation tool.
 ___________________________________________________________________________
 
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Simulation/res/juno-preview.png)

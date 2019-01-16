@@ -1,11 +1,12 @@
-Rogue 3D  is an Engine designed to provide a portable, cross-platform (Linux, and Windows) simulation tool for rigid body collisions and dynamics, or as a lightweight game creation tool.
+
+3D  is an Engine designed to provide a portable, cross-platform (Linux, and Windows) simulation tool for rigid body collisions and dynamics, or as a lightweight game creation tool.
 ___________________________________________________________________________
 
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Simulation/res/juno-preview.png)
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Simulation/res/opengl-java.png)
 
 
-  # Running A Simulation in Rogue #
+  # Running A Simulation #
   
     In order to run the default script, just clone Juno3DEngine-master, and run Juno3D.jar 
     

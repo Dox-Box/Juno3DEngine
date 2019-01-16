@@ -33,16 +33,16 @@ import juno.physics.CollisionDetector;
 */
 public class App implements Runnable {
 
-	private int WIDTH;
-	private int HEIGHT;
-	private String title;
-	private Display display;
+	protected int WIDTH;
+	protected int HEIGHT;
+	protected String title;
+	protected Display display;
 	static final int FPS = 60;
 	static final double time_per_update = 1000000000/FPS;
 	static float lastTime;
-	private Thread thread;
-	private Boolean running; 
-	private GLFWKeyCallback keyCallback;
+	protected Thread thread;
+	protected Boolean running; 
+	protected GLFWKeyCallback keyCallback;
 	
 
 	AssetLoader loader;
@@ -50,24 +50,23 @@ public class App implements Runnable {
 	StaticShader shader;
 	RenderGUI renderGUI;
 	
-	Texture texture;
-	Texture texture2;
+
 	ArrayList<GameObject> renderableObjects = new ArrayList<GameObject>();
 	ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
 	ArrayList<HUDTexture> hud = new ArrayList<HUDTexture>();
 	ArrayList<Light> lights = new ArrayList<Light>();
-	Skybox stars;
-	Skybox stars2;
+	Skybox sky1;
+	Skybox sky2;
 	Camera camera;
 	Player player;
 	Interpreter interpreter;
 	CollisionDetector collisionDetector;
 
 	
-	public App(int width, int height, String name) {
+	public App(int width, int height, String title) {
 		this.WIDTH = width;
 		this.HEIGHT = height;
-		this.title = name;
+		this.title = title;
 		try {
 			init();
 		} catch (Exception e) {
@@ -79,7 +78,6 @@ public class App implements Runnable {
 	}
 	
 	public void init(){
-		setup();
 		running = true;
 		GLFW.glfwInit();
 		loader = new AssetLoader();		
@@ -88,7 +86,7 @@ public class App implements Runnable {
 		masterRender = new MasterRender(display,shader);
 		interpreter = new Interpreter();
 		renderGUI = new RenderGUI(loader);
-		loadSim("test");
+		loadInstance("test");
 		loadHUD();
 		collisionDetector = new CollisionDetector(gameObjects);
 		lastTime = System.nanoTime();
@@ -117,12 +115,9 @@ public class App implements Runnable {
 	}
 	 	
 	
-	public void update() {
-		player.update();
-		camera.update(display);
+	private void update() {
 		
-		stars.setPosition(camera.getPosition());
-		stars2.setPosition(camera.getPosition());
+
 		float current = System.nanoTime(); 
 		float dt = current - lastTime;
 		dt /= 1000000000;
@@ -135,12 +130,12 @@ public class App implements Runnable {
 
 	}
 		
-	public void initHUD() {
+	private void initHUD() {
 
 		
 	}
 	
-	public void fpsRegulator() {
+	private void fpsRegulator() {
 		
 		if(display.shouldExit) {
 			running = false;
@@ -168,7 +163,7 @@ public class App implements Runnable {
 
 	
 	
-	public void loadSim(String file) {
+	protected void loadInstance(String file) {
 		RawObj focusObj = loader.loadObjModel("objs/planet");
 		Texture focusTex = new Texture(loader.loadTexture("textures/asteroid"));
 		player = new Player(new Obj(focusObj,focusTex),new Vector3f(3,2,-850), 0f,180.0f,0f,0.1f,display);
@@ -180,18 +175,18 @@ public class App implements Runnable {
 		lights.add(new Light(new Vector3f(0,0,0),new Vector3f(1,1,1)));
 
 		gameObjects = interpreter.getGameObjects();		
-		stars = interpreter.getSkybox();
-		stars2 = interpreter.getSkybox2();
+		sky1 = interpreter.getSkybox();
+		sky2 = interpreter.getSkybox2();
 		camera = new Camera(player,display);
 		renderableObjects.add(player);
-		renderableObjects.add(stars);
-		renderableObjects.add(stars2);
+		renderableObjects.add(sky1);
+		renderableObjects.add(sky2);
 		for(GameObject obj : gameObjects) {
 			renderableObjects.add(obj);
 		}
 	}
 	
-	public void loadHUD() {
+	protected void loadHUD() {
 		//hud.add(new HUDTexture(objLoader.loadTexture("test-0-1-4"), new Vector2f(0.8f,-.95f), new Vector2f(0.09f,0.09f)));
 	}
 	
@@ -200,7 +195,7 @@ public class App implements Runnable {
 		
 	
 	
-	public void exit() {
+	protected void exit() {
 		shader.close();
 		loader.clearData();
 		System.exit(0);

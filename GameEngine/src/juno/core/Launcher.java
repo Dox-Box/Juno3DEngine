@@ -22,8 +22,8 @@ import juno.gl.Display;
 
 public class Launcher extends JFrame {
 	
-	/* authors : J. Dox.
-	 * 
+	/* 
+	 * authors : J. Dox.
 	 */
 
 	private static final long serialVersionUID = 1L;
@@ -93,7 +93,7 @@ public class Launcher extends JFrame {
 	    run.addMouseListener(new MouseAdapter() {
 	    public void mouseClicked(MouseEvent e) {
 	    	frame.setVisible(false);
-	    	App test = new App(WIDTH, HEIGHT, "0.1.5");
+	    	Game game = new Game(WIDTH, HEIGHT, "0.1.5");
 	    }
 	    public void mouseEntered(MouseEvent e) {
 	    	 run.setBounds(410 + hoverXOffset, HEIGHT - 800 + hoverYOffset, 190, 48);

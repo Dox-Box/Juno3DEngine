@@ -20,7 +20,7 @@ import juno.environ.PhysicsObject;
 import juno.environ.Skybox;
 import juno.util.MathUtils;
 
-public class OBJRender {
+public class ObjRender {
 	Display display;
 	private static final float FOV = 40;
 	private static final float NEAR_PLANE = 0.1f;
@@ -31,7 +31,7 @@ public class OBJRender {
 	private Map<Obj, List<PhysicsObject>> allObjects = new HashMap<Obj, List<PhysicsObject>>();
 	private ArrayList<Light> lights;
 	
-	public OBJRender(Display display, StaticShader shader) {
+	public ObjRender(Display display, StaticShader shader) {
 		this.display = display;
 		this.shader = shader;
 		GL11.glEnable(GL11.GL_CULL_FACE);

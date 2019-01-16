@@ -21,7 +21,7 @@ import juno.gl.Camera;
 import juno.gl.Display;
 import juno.gl.HUDTexture;
 import juno.gl.OBJLoader;
-import juno.gl.OBJRender;
+import juno.gl.ObjRender;
 import juno.gl.Obj;
 import juno.gl.ObjTexture;
 import juno.gl.RawObj;
@@ -47,7 +47,7 @@ public class Main implements Runnable {
 	
 
 	OBJLoader objLoader;
-	OBJRender objRender;
+	ObjRender objRender;
 	StaticShader shader;
 	RenderGUI renderGUI;
 	
@@ -87,7 +87,7 @@ public class Main implements Runnable {
 		objLoader = new OBJLoader();		
 		display = new Display(WIDTH,HEIGHT);
 		shader = new StaticShader();
-		objRender = new OBJRender(display,shader);
+		objRender = new ObjRender(display,shader);
 		mapLoader = new Interpreter();
 		renderGUI = new RenderGUI(objLoader);
 		loadInstance("test");

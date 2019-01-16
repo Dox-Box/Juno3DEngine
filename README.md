@@ -4,7 +4,6 @@ ___________________________________________________________________________
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Simulation/res/juno-preview.png)
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Simulation/res/opengl-java.png)
 
-https://github.com/Dox-Box/Juno3DEngine/blob/master/Juno3DEngine-master/res/opengl-java.png
 
   # Running A Simulation #
   

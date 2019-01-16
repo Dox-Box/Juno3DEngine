@@ -5,7 +5,7 @@ ___________________________________________________________________________
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Simulation/res/opengl-java.png)
 
 
-  # Running A Simulation #
+  # Running A Simulation in Rogue #
   
     In order to run the default script, just clone Juno3DEngine-master, and run Juno3D.jar 
     

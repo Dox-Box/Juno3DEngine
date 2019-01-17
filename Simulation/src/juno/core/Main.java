@@ -198,7 +198,7 @@ public class Main implements Runnable {
 	}
 	
 	public void loadHUD() {
-		hud.add(new HUDTexture(objLoader.loadTexture("test-0-1-4"), new Vector2f(0.8f,-.95f), new Vector2f(0.09f,0.09f)));
+		//hud.add(new HUDTexture(objLoader.loadTexture("test-0-1-4"), new Vector2f(0.8f,-.95f), new Vector2f(0.09f,0.09f)));
 	}
 	
 	

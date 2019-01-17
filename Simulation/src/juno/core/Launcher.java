@@ -73,7 +73,7 @@ public class Launcher extends JFrame {
 	    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 	    frame.setResizable(true);
 	    frame.getContentPane().setLayout(null);
-	    frame.setTitle("J3D");
+	    frame.setTitle(" ");
 	    frame.setFocusable(false);
 	    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	    setBounds(100, 100, 920, 540);
@@ -219,7 +219,7 @@ public class Launcher extends JFrame {
 	     
 	       
 	    JLabel title = new JLabel("");
-	    title.setIcon(new ImageIcon("res/logo3D.png"));
+	    title.setIcon(new ImageIcon("res/Luna-3D-Engine.png"));
 	    title.setBounds(WIDTH/3 + 100, 80, 1000, 100);
 	    frame.getContentPane().add(title);
 	    

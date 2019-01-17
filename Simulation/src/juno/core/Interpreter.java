@@ -39,7 +39,7 @@ public class Interpreter {
 	public void loadMapData(String filePath, OBJLoader objLoader) {
 		String line;
 		try {
-			scan = new Scanner(new File("res/script/"+filePath+".juno"));
+			scan = new Scanner(new File("res/script/"+filePath+".luna"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.err.println("Missing configuration file, failed to load : " + filePath);

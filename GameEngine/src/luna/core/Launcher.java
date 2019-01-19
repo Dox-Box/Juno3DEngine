@@ -3,6 +3,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,11 +36,10 @@ public class Launcher extends JFrame {
     private boolean isHoveringButton;
     private static final String VERSION_STR = "Build 0.1.5";
 
-	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-  	private int WIDTH = (int) screenSize.getWidth();
-
-  	private int HEIGHT = (int) screenSize.getHeight();
-  	
+  
+  	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+  	private int WIDTH = gd.getDisplayMode().getWidth();
+  	private int HEIGHT = gd.getDisplayMode().getHeight();
 
 
   	public static void main(String[] args) {
@@ -60,7 +61,7 @@ public class Launcher extends JFrame {
   	}
 	private void initialize() {
 		defaultColor = new Color(0.22f, 0.0f, 0.5f);
-		hoverColor = new Color(0.22f, 0.125f, 0.5f);
+		hoverColor = new Color(0.22f, 0.16f, 0.5f);
 		isHoveringButton = false;
 		int hoverXOffset = 4;
 		int hoverYOffset = -2;
@@ -76,6 +77,7 @@ public class Launcher extends JFrame {
 	    frame.setFocusable(false);
 	    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	    setBounds(100, 100, 920, 540);
+	    setSize(400,400);
 	    frame.setVisible(true);
 	 
 	    contentPane = new JPanel();
@@ -226,6 +228,7 @@ public class Launcher extends JFrame {
 	    lblNewLabel_1.setBounds(0, 0, WIDTH, HEIGHT);
 	    frame.getContentPane().add(lblNewLabel_1);
 						   
+	    frame.setResizable(false);
 	   
    
    

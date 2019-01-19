@@ -136,27 +136,6 @@ public class App implements Runnable {
 	
 	protected void fpsRegulator() {
 		
-		if(display.shouldExit) {
-			running = false;
-		}
-		
-	    double delta = 0;
-	    long now;
-	    long last_time = System.nanoTime();
-	    long timer = 0;
-	    int upts = 0;
-	    double d2 = 1;
-	    while(true){
-	      now = System.nanoTime();
-	      delta += (now - last_time)/time_per_update;
-	      timer+= now-last_time;
-	      last_time = now;
-	      if(delta>=1){
-	    	delta--;
-	    	upts++;
-	    	break;
-	      }
-	    }
 	}
 	
 

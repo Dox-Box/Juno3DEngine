@@ -13,12 +13,15 @@ import luna.physics.CollisionDetector;
 
 public class Game extends App{
 	
+	private float currentTime;
+	
 	public Game(int w, int h, String title) {
 		super(w, h, title);
 
 	}
 	
 	public void init() {
+		
 		this.running = true;
 		GLFW.glfwInit();
 		super.loader = new AssetLoader();		
@@ -31,6 +34,7 @@ public class Game extends App{
 		loadGui();
 		collisionDetector = new CollisionDetector(gameObjects);
 		lastTime = System.nanoTime();
+		currentTime = System.nanoTime();
 		run();
 	}
 	
@@ -55,16 +59,30 @@ public class Game extends App{
 		
 		
 		sky.setPosition(camera.getPosition());
-		float current = System.nanoTime(); 
-		float dt = current - lastTime;
+		currentTime = System.nanoTime(); 
+		float dt = currentTime - lastTime;
+		lastTime = currentTime;
 		dt /= 1000000000;
+		
 		for(GameObject obj : gameObjects ) {
 			obj.update(dt);
 		}
 		collisionDetector.update();
+		
 		fpsRegulator();
-		lastTime = current;
-
+		if(display.shouldExit) {
+			running = false;
+		}
+	}
+	
+	public void fpsRegulator() {
+		 
+		
+		    
+	}
+	
+	public void SecondaryUpdate() { // updates once every x number of frames.
+		
 	}
 	
 	protected void loadGui() {

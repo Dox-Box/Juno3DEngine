@@ -1,5 +1,5 @@
 
-Luna 3D Engine is designed to provide a portable, cross-platform (Linux, and Windows) simulation tool for rigid body collisions and dynamics, or as a lightweight game creation tool.
+Luna 3D Engine is designed to provide a portable, cross-platform (Linux, Windows, and macOS) simulation tool for rigid body collisions and dynamics, or as a lightweight game creation tool.
 ___________________________________________________________________________
 
 ![alt text](https://github.com/Dox-Box/Juno3DEngine/blob/master/Simulation/res/luna-preview.png)

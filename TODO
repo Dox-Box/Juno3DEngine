@@ -1,9 +1,0 @@
-
-Known bugs: 
-
-
-GLFW: window is moved to halfway down from the center of the screen on some devices.
-
-Skybox: normals need to be fixed
-
-Need to make scripting system better.

@@ -227,7 +227,7 @@ public class Launcher extends JFrame {
 	    /* background for menu */
 	    JLabel lblNewLabel_1 = new JLabel("");
 	    lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher3.png"));
-	    lblNewLabel_1.setBounds(5, 0, WIDTH+100, HEIGHT);
+	    lblNewLabel_1.setBounds(0, 0, WIDTH+100, HEIGHT);
 	    frame.getContentPane().add(lblNewLabel_1);
 						   
 	    frame.setResizable(false);

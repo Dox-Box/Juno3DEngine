@@ -17,8 +17,7 @@ To get the engine up and running on your machine, make sure you have Java 8 or l
 
 
 <br />
-__Initial troubleshooting:__
-
+Initial troubleshooting:
 
 If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then the first thing you should do is check to make sure you have the correct drivers installed. This is a more common issue on Linux based systems, so check if your graphics card manufacturer has a download available for your specific Linux distro.
 

@@ -60,7 +60,7 @@ public class Launcher extends JFrame {
   		
   	}
 	private void initialize() {
-		defaultColor = new Color(0.089f, 0.089f, 0.089f);
+		defaultColor = new Color(0.06f, 0.06f, 0.06f);
 		hoverColor = new Color(0.09f, 0.06f, 0.2f);
 		isHoveringButton = false;
 		int hoverXOffset = 4;
@@ -188,7 +188,7 @@ public class Launcher extends JFrame {
 	  
 	    JButton exit = new JButton("Exit");
 	    exit.setFont(new Font("Monospaced",Font.PLAIN,24));
-	    exit.setBackground(new Color(0.12f,0.12f,0.12f));
+	    exit.setBackground(new Color(0.07f,0.07f,0.07f));
 	    exit.setForeground(new Color(0.9f,0.9f,0.9f));
 	    exit.addMouseListener(new MouseAdapter() {
 		          
@@ -196,7 +196,7 @@ public class Launcher extends JFrame {
 	    		System.exit(0);
 		    }
 		    
-	    	public void mouseEntered(MouseEvent e) {
+	    	public void mouseEntered(MouseEvent e) {	
 	    		exit.setBounds(410 + hoverXOffset, HEIGHT - 200 + hoverYOffset, 100, 48);
 	    		exit.setBackground(new Color(0.33f, 0.1f, 0.1f));
 	    	}
@@ -226,8 +226,8 @@ public class Launcher extends JFrame {
 	       
 	    /* background for menu */
 	    JLabel lblNewLabel_1 = new JLabel("");
-	    lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher.png"));
-	    lblNewLabel_1.setBounds(5, 0, WIDTH+20, HEIGHT);
+	    lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher3.png"));
+	    lblNewLabel_1.setBounds(5, 0, WIDTH+100, HEIGHT);
 	    frame.getContentPane().add(lblNewLabel_1);
 						   
 	    frame.setResizable(false);

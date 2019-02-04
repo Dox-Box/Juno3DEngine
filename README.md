@@ -27,9 +27,9 @@ The structure of the engine:
 
 
 <br />
-# Troubleshooting: 
+**Troubleshooting:** 
 
-If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then the first thing you should do is check to make sure you have the correct drivers installed. This is a more common issue on Linux based systems, so check if your graphics card manufacturer has a download available for your specific Linux distro.
+  If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then the first thing you should do      is check to make sure you have the correct drivers installed. This is a more common issue on Linux based systems, so check if your graphics card manufacturer has a download available for your specific Linux distro.
 
 Link to drivers for Linux systems:
 * https://www.nvidia.com/Download/index.aspx?lang=en-us

@@ -1,5 +1,7 @@
 # 3D Rendering on Linux, Windows, and macOS
-A tool for creating 3D simulations with rigid body dynamics using the built in physics, or as a lightweight game development tool. <br />Compatibile with Linux, Windows, and macOS
+An Engine that can be used for physics simulations, or for 3D game development.
+
+<br />Compatibile with Linux, Windows, and macOS
 ![alt text](https://github.com/jimdox/Midnight/blob/master/engine/res/launcher-prev2.png)
 
 

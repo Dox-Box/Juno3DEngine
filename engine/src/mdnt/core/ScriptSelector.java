@@ -32,6 +32,7 @@ public class ScriptSelector extends JFrame{
 	private static int startPosX;
 	private static int startPosY;
 	private Color itemColor;
+	private Color itemHoverColor;
 	
 	public ScriptSelector(File[] files) {
 		scripts = files;
@@ -54,13 +55,13 @@ public class ScriptSelector extends JFrame{
 		frame.getContentPane().setBackground(new Color(.5f,.5f,.5f));
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setLocationRelativeTo(null);
-	    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 	    frame.setResizable(true);
 	    frame.getContentPane().setLayout(null);
 	    frame.setTitle(" ");
 	    frame.setFocusable(false);
 	    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	    setBounds(100, 100, 920, 540);
+	    frame.setBounds(690,320, 200, 600);
 
 	    contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	    setContentPane(contentPane);
@@ -84,9 +85,10 @@ public class ScriptSelector extends JFrame{
 		        	  	
 		           }
 		           });
-	    itemColor = new Color(0.2f, 0.5f, 0.2f);
-	    startPosX = 250;
-	    startPosY = 200;
+	    itemColor = new Color(0.3f, 0.2f, 0.38f);
+	    itemHoverColor = new Color(0.3f, 0.3f, 0.4f);
+	    startPosX = 10;
+	    startPosY = 10;
 	    
 	    itemHeight = 40;
 	    itemWidth = 180;
@@ -96,7 +98,7 @@ public class ScriptSelector extends JFrame{
 	    for(int i = 0; i < scripts.length; i++) {
 	    	if(scripts[i] != null) {
 	    		frame.getContentPane().add(generateButton(scripts[i], deltaX, deltaY));
-	    		deltaX += 80;
+	    		deltaY += 65;
 			
 			
 	    	}
@@ -114,24 +116,34 @@ public class ScriptSelector extends JFrame{
 	}
 	
 	public JButton generateButton(File file, int deltaX, int deltaY) {
-		JButton script = new JButton(file.getName());
-		script.setBounds(startPosX + deltaX, startPosY + deltaY, itemWidth, itemHeight);
-		script.setFont(new Font("Monospaced", Font.PLAIN, 16));
-		script.setBackground(itemColor);
-		script.setForeground(Color.WHITE);
-        script.setBorderPainted(false);
-        script.setFocusPainted(false);
+		JButton fileButton = new JButton(file.getName());
+		fileButton.setBounds(startPosX + deltaX, startPosY + deltaY, itemWidth, itemHeight);
+		fileButton.setFont(new Font("Monospaced", Font.PLAIN, 16));
+		fileButton.setBackground(itemColor);
+		fileButton.setForeground(Color.WHITE);
+        fileButton.setBorderPainted(false);
+        fileButton.setFocusPainted(false);
         
-        script.addMouseListener(new MouseAdapter() {
+        fileButton.addMouseListener(new MouseAdapter() {
+        	
+        	public void mouseEntered(MouseEvent e) {
+        		fileButton.setBackground(itemHoverColor);
+        		
+        	}
+        	
+        	public void mouseExited(MouseEvent e) {
+        		fileButton.setBackground(itemColor);
+        	}
+        	
         	public void mouseClicked(MouseEvent e) {
-        		Launcher.setProg(script.getName());
+        		Launcher.setProg(fileButton.getName());
         }
         });
         
         
         
         
-		return script;
+		return fileButton;
 	}
 	
 }

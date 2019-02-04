@@ -39,12 +39,26 @@ public class Launcher extends JFrame {
     private static final String VERSION_STR = "Build 0.1.6";
     private static String selectedProg;
     private static boolean readyToStart;
+    
+    private static int itemHeight;
+	private static int itemWidth;
+	private static int startPosX;
+	private static int startPosY;
+	private Color fileColor;
+	private File[] listFiles;
   
   	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
   	private int WIDTH = gd.getDisplayMode().getWidth();
   	private int HEIGHT = gd.getDisplayMode().getHeight();
   	private static int applicationWidth;
   	private static int applicationHeight;
+  	private boolean promptFlag; 
+  	private JButton run;
+  	private JButton worldBuilder;
+  	private JButton options;
+  	private JButton exit;
+  	
+  	
 
   	public static void main(String[] args) {
     EventQueue.invokeLater(new Runnable() {
@@ -98,28 +112,27 @@ public class Launcher extends JFrame {
 	    setUndecorated(false);
 	    readyToStart = false;
 	    
-	    JButton run = new JButton("Run");
+	    run = new JButton("Run");
 	    run.setFont(new Font("Monospaced", Font.PLAIN, 26));
 	    run.setForeground(new Color(1f,1f,1f));
 	    run.setBackground(defaultColor);
 	    run.addMouseListener(new MouseAdapter() {
 	    public void mouseClicked(MouseEvent e) {
-	    	//frame.setVisible(false);
-    		promptSelectFile();
+    		ScriptSelector scriptSelector = new ScriptSelector(getRunnableFiles()); 
 	    }
 	    public void mouseEntered(MouseEvent e) {
-	    	 run.setBounds(410 + hoverXOffset, HEIGHT - 800 + hoverYOffset, 190, 48);
+	    	 run.setBounds(410 + hoverXOffset, HEIGHT - 730 + hoverYOffset, 190, 48);
 	    	 run.setBackground(hoverColor);
 	    	      
 	    }
 	    public void mouseExited(MouseEvent e) {
-	    	 run.setBounds(410, HEIGHT - 800, 190, 48);
+	    	 run.setBounds(410, HEIGHT - 730, 190, 48);
 	    	 run.setBackground(defaultColor);
 	    	 isHoveringButton = false;
 	    }
 	     
 	    });
-	    run.setBounds(410, HEIGHT - 800, 190, 48);
+	    run.setBounds(410, HEIGHT - 730, 190, 48);
 	    run.setBorderPainted(false);
 	    run.setFocusPainted(false);
 	    frame.getContentPane().add(run);  
@@ -151,7 +164,7 @@ public class Launcher extends JFrame {
 	    load.setFocusPainted(false);
 	    frame.getContentPane().add(load);
 	*/
-	    JButton worldBuilder = new JButton("World Designer");
+	    worldBuilder = new JButton("World Designer");
 	    worldBuilder.setFont(new Font("Monospaced", Font.PLAIN, 24));
 	    worldBuilder.setBackground(defaultColor);
 	    worldBuilder.setForeground(new Color(.9f,.9f,.9f));
@@ -161,20 +174,20 @@ public class Launcher extends JFrame {
 	
 	    	}
 	    	public void mouseEntered(MouseEvent e) {
-	    		worldBuilder.setBounds(410 + hoverXOffset, HEIGHT - 500 + hoverYOffset, 240, 48);
+	    		worldBuilder.setBounds(410 + hoverXOffset, HEIGHT - 610 + hoverYOffset, 240, 48);
 	    		worldBuilder.setBackground(hoverColor);
 	    	}
 	    	public void mouseExited(MouseEvent e) {
-	    		worldBuilder.setBounds(410, HEIGHT - 500, 240, 48);
+	    		worldBuilder.setBounds(410, HEIGHT - 610, 240, 48);
 	    		worldBuilder.setBackground(defaultColor);
 	    	}
 	    });
-	    worldBuilder.setBounds(410, HEIGHT - 500, 240, 48);
+	    worldBuilder.setBounds(410, HEIGHT - 610, 240, 48);
 	    worldBuilder.setBorderPainted(false);
 	    worldBuilder.setFocusPainted(false);
 	    frame.getContentPane().add(worldBuilder);
 	   
-	    JButton options = new JButton("Options");
+	    options = new JButton("Options");
 	    options.setFont(new Font("Courier", Font.PLAIN, 24));
 	    options.setBackground(defaultColor);
 	    options.setForeground(new Color(.9f,.9f,.9f));
@@ -185,22 +198,22 @@ public class Launcher extends JFrame {
 	    	}
 	    	
 	        public void mouseEntered(MouseEvent e) {
-	        	options.setBounds(410 + hoverXOffset, HEIGHT - 350 + hoverYOffset, 190, 48);
+	        	options.setBounds(410 + hoverXOffset, HEIGHT - 490 + hoverYOffset, 190, 48);
 	        	options.setBackground(hoverColor);
 	        }
 		    public void mouseExited(MouseEvent e) {
-		    	options.setBounds(410, HEIGHT - 350, 190, 48);
+		    	options.setBounds(410, HEIGHT - 490, 190, 48);
 		    	options.setBackground(defaultColor);
 		    }
 	    });
 	
-	    options.setBounds(410, HEIGHT-350, 190, 48);
+	    options.setBounds(410, HEIGHT-490, 190, 48);
 	    options.setBorderPainted(false);
 	    options.setFocusPainted(false);
 	    frame.getContentPane().add(options);
 	      
 	  
-	    JButton exit = new JButton("Exit");
+	    exit = new JButton("Exit");
 	    exit.setFont(new Font("Monospaced",Font.PLAIN,24));
 	    exit.setBackground(new Color(0.07f,0.07f,0.07f));
 	    exit.setForeground(new Color(0.9f,0.9f,0.9f));
@@ -217,7 +230,7 @@ public class Launcher extends JFrame {
 		    	   
 	    	public void mouseExited(MouseEvent e) {
 	    		exit.setBounds(410, HEIGHT - 200, 100, 48);
-		        exit.setBackground(new Color(0.12f, 0.12f, 0.12f));
+		        exit.setBackground(new Color(0.07f, 0.07f, 0.07f));
 		    }
         });
         exit.setBounds(410,HEIGHT-200,100,48);
@@ -247,11 +260,11 @@ public class Launcher extends JFrame {
 	    frame.setResizable(false);
 	   
    
-	    listScriptFiles();
+	    getRunnableFiles();
 	}
 	
 	
-	public File[] listScriptFiles() {
+	public File[] getRunnableFiles() {
 		File folder = new File("res/script/");
 		File[] files = folder.listFiles();
 		for(File file : files) {
@@ -264,10 +277,6 @@ public class Launcher extends JFrame {
 		return files;
 	}
 	
-	public void promptSelectFile() {
-		ScriptSelector.start(listScriptFiles());
-	}
-	
 
 	public void setVisible(boolean flag) {
 		this.frame.setVisible(flag);
@@ -277,7 +286,7 @@ public class Launcher extends JFrame {
 	public static void setProg(String filepath) {
 		selectedProg = filepath;
 		readyToStart = true;
-		
+		Game.createInstance(applicationWidth, applicationHeight, " ", filepath);
 		
 	}
 	

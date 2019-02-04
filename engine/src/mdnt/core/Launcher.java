@@ -84,7 +84,7 @@ public class Launcher extends JFrame {
   	}
 	private void initialize() {
 		defaultColor = new Color(0.06f, 0.06f, 0.06f);
-		hoverColor = new Color(0.09f, 0.06f, 0.2f);
+		hoverColor = new Color(0.1f, 0.08f, 0.15f);
 		isHoveringButton = false;
 		int hoverXOffset = 4;
 		int hoverYOffset = -2;
@@ -286,8 +286,13 @@ public class Launcher extends JFrame {
 	public static void setProg(String filepath) {
 		selectedProg = filepath;
 		readyToStart = true;
-		Game.createInstance(applicationWidth, applicationHeight, " ", filepath);
-		
+		if(filepath != null) {
+		Game.createInstance(applicationWidth, applicationHeight, " ", selectedProg);
+		}
+	}
+	
+	public static String getProg() {
+		return selectedProg;
 	}
 	
 	

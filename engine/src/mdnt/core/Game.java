@@ -14,13 +14,14 @@ import mdnt.physics.CollisionDetector;
 public class Game extends App{
 	
 	private float currentTime;
-	
+	private String scriptPath;
 	public static void createInstance(int w, int h, String windowName, String filepath) {
 		Game game = new Game(w, h, windowName, filepath);
 	}
 	
 	public Game(int w, int h, String windowName, String filepath) {
 		super(w, h, windowName, filepath);
+		this.scriptPath = filepath;
 
 	}
 	
@@ -34,7 +35,7 @@ public class Game extends App{
 		super.masterRender = new MasterRender(display,shader);
 		super.interpreter = new Interpreter();
 		super.renderGui = new RenderGUI(loader);
-		loadInstance("game1");
+		loadInstance(Launcher.getProg());
 		loadGui();
 		collisionDetector = new CollisionDetector(gameObjects);
 		lastTime = System.nanoTime();

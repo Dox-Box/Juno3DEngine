@@ -39,7 +39,7 @@ public class Interpreter {
 		String line;
 		lineNum = 0;
 		try {
-			scan = new Scanner(new File("res/script/"+filePath+".mdnt"));
+			scan = new Scanner(new File("res/script/"+filePath));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.err.println("Missing configuration file, failed to load : " + filePath);

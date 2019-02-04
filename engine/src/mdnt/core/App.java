@@ -66,6 +66,7 @@ public class App implements Runnable {
 		this.WIDTH = width;
 		this.HEIGHT = height;
 		this.title = title;
+	
 		try {
 			init();
 		} catch (Exception e) {
@@ -85,7 +86,7 @@ public class App implements Runnable {
 		masterRender = new MasterRender(display,shader);
 		interpreter = new Interpreter();
 		renderGui = new RenderGUI(loader);
-		loadInstance("test");
+		loadInstance(Launcher.getProg());
 		loadGui();
 		collisionDetector = new CollisionDetector(gameObjects);
 		lastTime = System.nanoTime();

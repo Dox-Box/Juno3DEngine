@@ -53,9 +53,9 @@ public class ScriptSelector extends JFrame{
 		contentPane = new JPanel();
 		
 		frame.getContentPane().setBackground(new Color(.5f,.5f,.5f));
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	    frame.setLocationRelativeTo(null);
-	    frame.setResizable(true);
+	    frame.setResizable(false);									/* TODO: add scaling if files exceed frame limit. */
 	    frame.getContentPane().setLayout(null);
 	    frame.setTitle(" ");
 	    frame.setFocusable(false);
@@ -69,24 +69,8 @@ public class ScriptSelector extends JFrame{
 	    setResizable(true);
 	    frame.setVisible(true);
 
-	   
-	    JButton exit = new JButton("BACK");
-	    exit.setBounds(140, HEIGHT - 140, 100, 45);
-	    exit.setFont(new Font("Courier", Font.ITALIC, 25));
-	    exit.setForeground(Color.WHITE);
-	    exit.setBackground(new Color(0.16f,0.16f,0.16f));
-	    
-	    frame.getContentPane().add(exit);
-
-	    exit.addMouseListener(new MouseAdapter() {
-		           @Override
-		           public void mouseClicked(MouseEvent e) {
-		        	  	frame.setVisible(false);
-		        	  	
-		           }
-		           });
-	    itemColor = new Color(0.3f, 0.2f, 0.38f);
-	    itemHoverColor = new Color(0.3f, 0.3f, 0.4f);
+	   	itemColor = new Color(0.1f, 0.1f, 0.1f);
+	    itemHoverColor = new Color(0.18f, 0.14f, 0.22f);
 	    startPosX = 10;
 	    startPosY = 10;
 	    
@@ -104,14 +88,7 @@ public class ScriptSelector extends JFrame{
 	    	}
 	    }
 	    
-	    /* background */
-	    JLabel lblNewLabel_1 = new JLabel("");
-	    lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher2.png"));
-	    lblNewLabel_1.setBounds(0, 0, WIDTH+100, HEIGHT);
-	    frame.getContentPane().add(lblNewLabel_1);
-						   
-	    frame.setResizable(false);
-	
+	    
 	
 	}
 	
@@ -123,7 +100,7 @@ public class ScriptSelector extends JFrame{
 		fileButton.setForeground(Color.WHITE);
         fileButton.setBorderPainted(false);
         fileButton.setFocusPainted(false);
-        
+        fileButton.setName(file.getName());
         fileButton.addMouseListener(new MouseAdapter() {
         	
         	public void mouseEntered(MouseEvent e) {
@@ -137,6 +114,7 @@ public class ScriptSelector extends JFrame{
         	
         	public void mouseClicked(MouseEvent e) {
         		Launcher.setProg(fileButton.getName());
+        		System.out.println(fileButton.getName());
         }
         });
         

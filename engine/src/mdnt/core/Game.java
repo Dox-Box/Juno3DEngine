@@ -15,8 +15,12 @@ public class Game extends App{
 	
 	private float currentTime;
 	
-	public Game(int w, int h, String title) {
-		super(w, h, title);
+	public static void createInstance(int w, int h, String windowName, String filepath) {
+		Game game = new Game(w, h, windowName, filepath);
+	}
+	
+	public Game(int w, int h, String windowName, String filepath) {
+		super(w, h, windowName, filepath);
 
 	}
 	

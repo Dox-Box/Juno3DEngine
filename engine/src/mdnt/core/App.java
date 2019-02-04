@@ -62,7 +62,7 @@ public class App implements Runnable {
 	CollisionDetector collisionDetector;
 
 	
-	public App(int width, int height, String title) {
+	public App(int width, int height, String title, String filepath) {
 		this.WIDTH = width;
 		this.HEIGHT = height;
 		this.title = title;

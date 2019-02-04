@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -25,7 +27,7 @@ import mdnt.gl.Display;
 public class Launcher extends JFrame {
 	
 	/* 
-	 * authors : J. Dox.
+	 * authors : Jim. Dox.
 	 */
 
 	private static final long serialVersionUID = 1L;
@@ -34,13 +36,15 @@ public class Launcher extends JFrame {
     private Color defaultColor;
     private Color hoverColor;
     private boolean isHoveringButton;
-    private static final String VERSION_STR = "Build 0.1.5";
-
+    private static final String VERSION_STR = "Build 0.1.6";
+    private static String selectedProg;
+    private static boolean readyToStart;
   
   	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
   	private int WIDTH = gd.getDisplayMode().getWidth();
   	private int HEIGHT = gd.getDisplayMode().getHeight();
-
+  	private static int applicationWidth;
+  	private static int applicationHeight;
 
   	public static void main(String[] args) {
     EventQueue.invokeLater(new Runnable() {
@@ -53,6 +57,11 @@ public class Launcher extends JFrame {
         }
       }
     });
+    
+    while(!readyToStart) {
+    	
+    }
+	Game.createInstance(applicationWidth, applicationHeight, " ", selectedProg);
   }
   
   	public Launcher() {
@@ -65,7 +74,8 @@ public class Launcher extends JFrame {
 		isHoveringButton = false;
 		int hoverXOffset = 4;
 		int hoverYOffset = -2;
-		
+		applicationWidth = WIDTH;
+		applicationHeight = HEIGHT;
 		frame = new JFrame();
 	    frame.getContentPane().setBackground(new Color(.0f,.0f,.0f));
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,7 +96,7 @@ public class Launcher extends JFrame {
 	    contentPane.setLayout(null);
 	    setResizable(false);
 	    setUndecorated(false);
-	  
+	    readyToStart = false;
 	    
 	    JButton run = new JButton("Run");
 	    run.setFont(new Font("Monospaced", Font.PLAIN, 26));
@@ -94,8 +104,8 @@ public class Launcher extends JFrame {
 	    run.setBackground(defaultColor);
 	    run.addMouseListener(new MouseAdapter() {
 	    public void mouseClicked(MouseEvent e) {
-	    	frame.setVisible(false);
-	    	Game game = new Game(WIDTH, HEIGHT, " ");
+	    	//frame.setVisible(false);
+    		promptSelectFile();
 	    }
 	    public void mouseEntered(MouseEvent e) {
 	    	 run.setBounds(410 + hoverXOffset, HEIGHT - 800 + hoverYOffset, 190, 48);
@@ -113,7 +123,7 @@ public class Launcher extends JFrame {
 	    run.setBorderPainted(false);
 	    run.setFocusPainted(false);
 	    frame.getContentPane().add(run);  
-	   
+	 /*  
 	    JButton load = new JButton("Load Save");
 	    load.setFont(new Font("Monospaced", Font.PLAIN, 24));
 	    load.setBackground(defaultColor);
@@ -130,13 +140,17 @@ public class Launcher extends JFrame {
 	    		load.setBounds(410, HEIGHT - 650, 190, 48);
 	    		load.setBackground(defaultColor);
 	    	}
+	    	
+	    	public void mouseClicked(MouseEvent e) {
+	    		promptSelectFile();
+	    	}
     	});
 	
 	    load.setBounds(410, HEIGHT-650, 190, 48);
 	    load.setBorderPainted(false);
 	    load.setFocusPainted(false);
 	    frame.getContentPane().add(load);
-	
+	*/
 	    JButton worldBuilder = new JButton("World Designer");
 	    worldBuilder.setFont(new Font("Monospaced", Font.PLAIN, 24));
 	    worldBuilder.setBackground(defaultColor);
@@ -233,12 +247,39 @@ public class Launcher extends JFrame {
 	    frame.setResizable(false);
 	   
    
-   
+	    listScriptFiles();
 	}
 	
 	
+	public File[] listScriptFiles() {
+		File folder = new File("res/script/");
+		File[] files = folder.listFiles();
+		for(File file : files) {
+			if(!file.getName().contains(".mdnt")) {
+				file = null;
+			}
+		}
+		
+		
+		return files;
+	}
 	
+	public void promptSelectFile() {
+		ScriptSelector.start(listScriptFiles());
+	}
 	
+
+	public void setVisible(boolean flag) {
+		this.frame.setVisible(flag);
+	}
+	
+	/* starts app once selected by user */
+	public static void setProg(String filepath) {
+		selectedProg = filepath;
+		readyToStart = true;
+		
+		
+	}
 	
 	
 }

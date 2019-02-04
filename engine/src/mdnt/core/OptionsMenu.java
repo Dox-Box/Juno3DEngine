@@ -1,6 +1,7 @@
 package mdnt.core;
 
 import java.awt.Color;
+
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -43,7 +44,7 @@ public class OptionsMenu extends JFrame{
 	    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 	    frame.setResizable(true);
 	    frame.getContentPane().setLayout(null);
-	    frame.setTitle("Options Menu");
+	    frame.setTitle(" ");
 	    frame.setFocusable(false);
 	    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	    setBounds(100, 100, 920, 540);

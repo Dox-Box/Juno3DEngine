@@ -1,5 +1,6 @@
 # 3D Rendering on Linux, Windows, and macOS
-A tool for creating 3D simulations with rigid body dynamics using the built in physics, or as a lightweight game creation tool. <br />Compatibile with Linux, Windows, and macOS
+An engine that can be used for physics simulations, or as a tool for 3D game development.
+<br />Compatibile with Linux, Windows, and macOS
 ![alt text](https://github.com/jimdox/Midnight/blob/master/engine/res/launcher-prev2.png)
 
 
@@ -25,10 +26,10 @@ The structure of the engine:
 
 
 
-<br />
-# Troubleshooting:
 
-If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then the first thing you should do is check to make sure you have the correct drivers installed. This is a more common issue on Linux based systems, so check if your graphics card manufacturer has a download available for your specific Linux distro.
+**Troubleshooting** 
+
+  If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then the first thing you should do      is check to make sure you have the correct drivers installed. This is a more common issue on Linux based systems, so check if your graphics card manufacturer has a download available for your specific Linux distro.
 
 Link to drivers for Linux systems:
 * https://www.nvidia.com/Download/index.aspx?lang=en-us

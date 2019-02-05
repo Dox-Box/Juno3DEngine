@@ -1,11 +1,11 @@
 package mdnt.gl;
 import static org.lwjgl.glfw.GLFW.*;
+
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.system.MemoryUtil.*;
 import org.lwjgl.opengl.EXTTextureFilterAnisotropic;
 import  org.lwjgl.opengl.GL;
-import org.lwjgl.opengl.GL11;
 import java.nio.IntBuffer;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWCursorPosCallback;
@@ -67,7 +67,6 @@ public class Display {
 			//glfwSetWindowPos(window, 0, 0);
 
 
-
 			// Create window
 			window = glfwCreateWindow(WIDTH, HEIGHT, "", NULL, NULL);
 			if ( window == NULL )
@@ -91,7 +90,7 @@ public class Display {
 			// enable v-sync
 			glfwSwapInterval(1);	
 			glfwWindowHint(GLFW_SAMPLES, 4);
-			GL11.glTexParameterf(GL11.GL_TEXTURE_2D, EXTTextureFilterAnisotropic.GL_TEXTURE_MAX_ANISOTROPY_EXT, 2.0f); 
+			glTexParameterf(GL_TEXTURE_2D, EXTTextureFilterAnisotropic.GL_TEXTURE_MAX_ANISOTROPY_EXT, 2.0f); 
 			glfwShowWindow(window);
 			glfwSetKeyCallback(window, keyCallback = new IOHandler());
 			glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());

@@ -8,10 +8,12 @@ import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
 import javax.swing.border.EmptyBorder;
 
 public class OptionsMenu extends JFrame{
@@ -38,7 +40,7 @@ public class OptionsMenu extends JFrame{
 		frame = new JFrame();
 		contentPane = new JPanel();
 		
-		frame.getContentPane().setBackground(new Color(.7f,.7f,.7f));
+		frame.getContentPane().setBackground(new Color(.2f,.2f,.2f));
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setLocationRelativeTo(null);
 	    frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -57,12 +59,12 @@ public class OptionsMenu extends JFrame{
 
 	    JLabel title = new JLabel("Options");
 	    title.setBounds(20,10,190,70);
-	    title.setFont(new Font("Courier", Font.PLAIN, 40));
+	    title.setFont(new Font("Courier", Font.PLAIN, 34));
 	    title.setForeground(Color.BLACK);
 	    frame.getContentPane().add(title);
 		
 	    JButton exit = new JButton("BACK");
-	    exit.setBounds(WIDTH-140, HEIGHT-140, 100, 70);
+	    exit.setBounds(WIDTH-140, HEIGHT-140, 100, 47);
 	    exit.setFont(new Font("Courier", Font.ITALIC, 25));
 	    exit.setForeground(Color.WHITE);
 	    exit.setBackground(new Color(0.16f,0.46f,0.16f));
@@ -70,13 +72,35 @@ public class OptionsMenu extends JFrame{
 	    frame.getContentPane().add(exit);
 
 	    exit.addMouseListener(new MouseAdapter() {
-		           @Override
-		           public void mouseClicked(MouseEvent e) {
-		        	  	frame.setVisible(false);
+		          
+	    	public void mouseClicked(MouseEvent e) {
+	    		// TODO: setConfig
+	    		
+	    		frame.setVisible(false);
+	    		frame.dispose();
 		        	  	
-		           }
-		           });
+		    }
+		});
 		
+	    //JSlider resolution = new JSlider(JSlider.HORIZONTAL,1280,1920,1920);
+	    JLabel masterVolLabel = new JLabel("Master Volume");
+	    masterVolLabel.setBackground(null);
+	    masterVolLabel.setForeground(new Color(0.45f, 0.65f, 0.45f));
+	    masterVolLabel.setFont(new Font("Arial", Font.BOLD, 13));
+	    masterVolLabel.setBounds(WIDTH-415, 250, 160, 40);
+	    masterVolLabel.setVisible(true);
+	    frame.getContentPane().add(masterVolLabel);
+	    
+	    JSlider masterVolume = new JSlider(JSlider.VERTICAL, 0, 100, 100);
+	    masterVolume.setVisible(true);
+	    masterVolume.setBounds(WIDTH-400,300, 60, 100);
+	    masterVolume.setForeground(new Color(0.8f, 0.8f, 0.8f));
+	    masterVolume.setBackground(new Color (0.3f, 0.3f, 0.3f));
+	    frame.getContentPane().add(masterVolume);
+	    
+	    
+	   
+						   	    
 	}
 	
 	

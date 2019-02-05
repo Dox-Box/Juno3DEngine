@@ -2,6 +2,7 @@ package mdnt.gl;
 
 
 import static org.lwjgl.opengl.GL11.*;
+
 import static org.lwjgl.opengl.GL30.*;
 import static org.lwjgl.opengl.GL13.*;
 import static org.lwjgl.opengl.GL20.*;

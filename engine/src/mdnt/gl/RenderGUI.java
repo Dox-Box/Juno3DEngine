@@ -2,10 +2,11 @@ package mdnt.gl;
 
 import java.util.ArrayList;
 
+
 import org.joml.Matrix4f;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
-import org.lwjgl.opengl.GL30;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL13.*;
+import static org.lwjgl.opengl.GL30.*;
 
 import mdnt.core.AssetLoader;
 import mdnt.gui.GUIShader;
@@ -26,22 +27,22 @@ public class RenderGUI {
 	
 	public void render(ArrayList<HUDTexture> hud) {
 		shader.start();
-		GL30.glBindVertexArray(GUIquad.getVaoID());
+		glBindVertexArray(GUIquad.getVaoID());
 		glEnableVertexAttribArray(0);
-		glEnable(GL11.GL_BLEND);
+		glEnable(GL_BLEND);
 		glDisable(GL_DEPTH_TEST);
-		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		for(HUDTexture item : hud) {
-			GL13.glActiveTexture(GL13.GL_TEXTURE0);
-			GL11.glBindTexture(GL11.GL_TEXTURE_2D,item.getTextureID());
+			glActiveTexture(GL_TEXTURE0);
+			glBindTexture(GL_TEXTURE_2D,item.getTextureID());
 			Matrix4f matrix = mdnt.util.MathUtils.createTransformationMatrix(item.getPosition(),item.getScale());
 			shader.loadTransformation(matrix);
-			GL11.glDrawArrays(GL11.GL_TRIANGLE_STRIP,0,GUIquad.getNumVertices());
+			glDrawArrays(GL_TRIANGLE_STRIP,0,GUIquad.getNumVertices());
 		}
-		GL11.glDisable(GL_BLEND);
+		glDisable(GL_BLEND);
 		glEnable(GL_DEPTH_TEST);
 		glDisableVertexAttribArray(0);
-		GL30.glBindVertexArray(0);
+		glBindVertexArray(0);
 		shader.stop();
 		
 		

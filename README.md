@@ -1,6 +1,6 @@
 # 3D Rendering on Linux, Windows, and macOS
 An engine that can be used for physics simulations, or as a tool for 3D game development.
-<br />Compatibile with Linux, Windows, and macOS
+<br />Compatibile with Linux, Windows, and macOS <br />
 ![alt text](https://github.com/jimdox/Midnight/blob/master/engine/res/launcher-prev2.png)
 
 

@@ -1,4 +1,4 @@
-package mdnt.core;
+package mdnt.launch;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -104,7 +104,7 @@ public class OptionsMenu extends JFrame {
 		
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher2.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher5.png"));
 		lblNewLabel_1.setBounds(0, 0, WIDTH + 100, HEIGHT);
 		frame.getContentPane().add(lblNewLabel_1);
 

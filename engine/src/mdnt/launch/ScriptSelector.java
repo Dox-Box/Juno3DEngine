@@ -1,4 +1,4 @@
-package mdnt.core;
+package mdnt.launch;
 
 import java.awt.Color;
 import java.awt.Dimension;

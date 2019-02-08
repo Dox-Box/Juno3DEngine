@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Graph implements Runnable {
 
-	static final int FPS = 18;
+	static final int FPS = 60;
 	static final double time_per_upt = 1000000000 / FPS;
 
 	static double timeChange;

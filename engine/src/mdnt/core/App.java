@@ -19,6 +19,7 @@ import mdnt.gl.RawObj;
 import mdnt.gl.RenderGUI;
 import mdnt.gl.StaticShader;
 import mdnt.gl.Texture;
+import mdnt.launch.Launcher;
 import mdnt.physics.CollisionDetector;
 
 /*
@@ -51,19 +52,17 @@ public class App implements Runnable {
 	Player player;
 	Interpreter interpreter;
 	CollisionDetector collisionDetector;
+	
+	
 
 	
 	public static void createInstance(int w, int h, String windowName) {
-		BootFrame boot = new BootFrame("res/splash.png");
-		boot.setVisible(true);
-		long startTime = System.nanoTime();
-		long dt = 0;
-		double elapsedTime = 0;
-		while(elapsedTime < 1) {
-			dt = System.nanoTime();	// placeholder for loading assets before launching opengl
-			elapsedTime = (dt - startTime) * Math.pow(10, -9);
-		}
-		App app = new App(Launcher.getScreenWidth(), Launcher.getScreenHeight(), " ", Launcher.getProg());
+		
+		LogProcess log = new LogProcess(LogEvent.BOOT);
+		
+		
+
+		//App app = new App(Launcher.getScreenWidth(), Launcher.getScreenHeight(), " ", Launcher.getProg());
 	}
 	
 		

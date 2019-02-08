@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,7 +38,7 @@ public class Launcher extends JFrame {
 	private Color defaultColor;
 	private Color hoverColor;
 	private boolean isHoveringButton;
-	private static final String VERSION_STR = "Build 0.1.6";
+	public static final String VERSION_STR = "Build 0.1.6";
 	private static String selectedProg;
 	private static boolean readyToStart;
 
@@ -47,10 +48,12 @@ public class Launcher extends JFrame {
 	private static int startPosY;
 	private Color fileColor;
 	private File[] listFiles;
+	private ScriptSelector selector;
+
 
 	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-	private int WIDTH = gd.getDisplayMode().getWidth();
-	private int HEIGHT = gd.getDisplayMode().getHeight();
+	private static int WIDTH;
+	private static int HEIGHT; 
 	private static int applicationWidth;
 	private static int applicationHeight;
 	private boolean promptFlag;
@@ -74,7 +77,6 @@ public class Launcher extends JFrame {
 		while (!readyToStart) {
 
 		}
-		Game.createInstance(applicationWidth, applicationHeight, " ", selectedProg);
 	}
 
 	public Launcher() {
@@ -83,11 +85,15 @@ public class Launcher extends JFrame {
 	}
 
 	private void initialize() {
-		defaultColor = new Color(0.06f, 0.06f, 0.06f);
+		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+		WIDTH = gd.getDisplayMode().getWidth();
+		HEIGHT = gd.getDisplayMode().getHeight();
+		
+		defaultColor = new Color(0.04f, 0.04f, 0.04f);
 		hoverColor = new Color(0.1f, 0.08f, 0.15f);
 		isHoveringButton = false;
-		int hoverXOffset = 4;
-		int hoverYOffset = -2;
+		int hoverXOffset = 2;
+		int hoverYOffset = -4;
 		applicationWidth = WIDTH;
 		applicationHeight = HEIGHT;
 		frame = new JFrame();
@@ -120,25 +126,25 @@ public class Launcher extends JFrame {
 		run.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if (!promptFlag) {
-					ScriptSelector scriptSelector = new ScriptSelector(getRunnableFiles());
+					selector = new ScriptSelector(getRunnableFiles());
 					promptFlag = true;
 				}
 			}
 
 			public void mouseEntered(MouseEvent e) {
-				run.setBounds(410 + hoverXOffset, HEIGHT - 730 + hoverYOffset, 190, 48);
+				run.setBounds(257 + hoverXOffset, HEIGHT - 730 + hoverYOffset, 230, 48);
 				run.setBackground(hoverColor);
 
 			}
 
 			public void mouseExited(MouseEvent e) {
-				run.setBounds(410, HEIGHT - 730, 190, 48);
+				run.setBounds(257, HEIGHT - 730, 230, 48);
 				run.setBackground(defaultColor);
 				isHoveringButton = false;
 			}
 
 		});
-		run.setBounds(410, HEIGHT - 730, 190, 48);
+		run.setBounds(257, HEIGHT - 730, 230, 48);
 		run.setBorderPainted(false);
 		run.setFocusPainted(false);
 		frame.getContentPane().add(run);
@@ -166,20 +172,26 @@ public class Launcher extends JFrame {
 		worldBuilder.addMouseListener(new MouseAdapter() {
 
 			public void mouseClicked(MouseEvent e) {
+				if(selector != null) {
+					selector.getJFrame().setVisible(false);
+					selector.dispose();
+					selector = null;
+					promptFlag = false;
+				}
 
 			}
 
 			public void mouseEntered(MouseEvent e) {
-				worldBuilder.setBounds(410 + hoverXOffset, HEIGHT - 610 + hoverYOffset, 240, 48);
+				worldBuilder.setBounds(257 + hoverXOffset, HEIGHT - 610 + hoverYOffset, 230, 48);
 				worldBuilder.setBackground(hoverColor);
 			}
 
 			public void mouseExited(MouseEvent e) {
-				worldBuilder.setBounds(410, HEIGHT - 610, 240, 48);
+				worldBuilder.setBounds(257, HEIGHT - 610, 230, 48);
 				worldBuilder.setBackground(defaultColor);
 			}
 		});
-		worldBuilder.setBounds(410, HEIGHT - 610, 240, 48);
+		worldBuilder.setBounds(257, HEIGHT - 610, 230, 48);
 		worldBuilder.setBorderPainted(false);
 		worldBuilder.setFocusPainted(false);
 		frame.getContentPane().add(worldBuilder);
@@ -191,29 +203,35 @@ public class Launcher extends JFrame {
 		options.addMouseListener(new MouseAdapter() {
 
 			public void mouseClicked(MouseEvent e) {
+				if(selector != null) {
+					selector.getJFrame().setVisible(false);
+					selector.dispose();
+					selector = null;
+					promptFlag = false;
+				}
 				OptionsMenu.start();
 			}
 
 			public void mouseEntered(MouseEvent e) {
-				options.setBounds(410 + hoverXOffset, HEIGHT - 490 + hoverYOffset, 190, 48);
+				options.setBounds(257 + hoverXOffset, HEIGHT - 490 + hoverYOffset, 230, 48);
 				options.setBackground(hoverColor);
 			}
 
 			public void mouseExited(MouseEvent e) {
-				options.setBounds(410, HEIGHT - 490, 190, 48);
+				options.setBounds(257, HEIGHT - 490, 230, 48);
 				options.setBackground(defaultColor);
 			}
 		});
 
-		options.setBounds(410, HEIGHT - 490, 190, 48);
+		options.setBounds(257, HEIGHT - 490, 230, 48);
 		options.setBorderPainted(false);
 		options.setFocusPainted(false);
 		frame.getContentPane().add(options);
 
 		exit = new JButton("Exit");
-		exit.setFont(new Font("Monospaced", Font.PLAIN, 24));
+		exit.setFont(new Font("Monospaced", Font.PLAIN, 22));
 		exit.setBackground(new Color(0.07f, 0.07f, 0.07f));
-		exit.setForeground(new Color(0.9f, 0.9f, 0.9f));
+		exit.setForeground(new Color(0.55f, 0.55f, 0.55f));
 		exit.addMouseListener(new MouseAdapter() {
 
 			public void mouseClicked(MouseEvent e) {
@@ -221,16 +239,16 @@ public class Launcher extends JFrame {
 			}
 
 			public void mouseEntered(MouseEvent e) {
-				exit.setBounds(410 + hoverXOffset, HEIGHT - 200 + hoverYOffset, 100, 48);
+				exit.setBounds(257 + hoverXOffset, HEIGHT - 340 + hoverYOffset, 230, 42);
 				exit.setBackground(new Color(0.33f, 0.1f, 0.1f));
 			}
 
 			public void mouseExited(MouseEvent e) {
-				exit.setBounds(410, HEIGHT - 200, 100, 48);
-				exit.setBackground(new Color(0.07f, 0.07f, 0.07f));
+				exit.setBounds(257, HEIGHT - 340, 230, 42);
+				exit.setBackground(new Color(0.055f, 0.055f, 0.055f));
 			}
 		});
-		exit.setBounds(410, HEIGHT - 200, 100, 48);
+		exit.setBounds(257, HEIGHT - 340, 230, 42);
 		exit.setBorderPainted(false);
 		exit.setFocusPainted(false);
 		frame.getContentPane().add(exit);
@@ -243,14 +261,19 @@ public class Launcher extends JFrame {
 		version.setBounds(WIDTH - 200, HEIGHT - 75, 130, 35);
 		frame.getContentPane().add(version);
 
+		JLabel backdrop = new JLabel("");
+		backdrop.setIcon(new ImageIcon("res/menu_comp.png"));
+		backdrop.setBounds(WIDTH / 4 - WIDTH/8 , 130, 1000, 900);
+		frame.getContentPane().add(backdrop);
+		
 		JLabel title = new JLabel("");
-		title.setIcon(new ImageIcon("res/engine.png"));
-		title.setBounds(WIDTH / 3 + 100, 80, 800, 100);
+		title.setIcon(new ImageIcon("res/engine_logo.png"));
+		title.setBounds(-5, 130, 1000, 180);
 		frame.getContentPane().add(title);
 
 		/* background for menu */
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher3.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher4.png"));
 		lblNewLabel_1.setBounds(0, 0, WIDTH + 100, HEIGHT);
 		frame.getContentPane().add(lblNewLabel_1);
 
@@ -280,12 +303,22 @@ public class Launcher extends JFrame {
 		selectedProg = filepath;
 		readyToStart = true;
 		if (filepath != null) {
-			Game.createInstance(applicationWidth, applicationHeight, " ", selectedProg);
+			App.createInstance(applicationWidth, applicationHeight, " ");
 		}
 	}
 
 	public static String getProg() {
 		return selectedProg;
 	}
+	
+	public static int getScreenWidth() {
+		return WIDTH;
+	}
+	
+	public static int getScreenHeight() {
+		return HEIGHT;
+	}
+	
+
 
 }

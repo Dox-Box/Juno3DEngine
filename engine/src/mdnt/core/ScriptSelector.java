@@ -106,7 +106,6 @@ public class ScriptSelector extends JFrame {
 				frame.setAlwaysOnTop(false);
 				frame.dispose();
 				Launcher.setProg(fileButton.getName());
-				System.out.println(fileButton.getName());
 			}
 
 			@Override
@@ -122,6 +121,10 @@ public class ScriptSelector extends JFrame {
 		});
 
 		return fileButton;
+	}
+	
+	public JFrame getJFrame() {
+		return this.frame;
 	}
 
 }

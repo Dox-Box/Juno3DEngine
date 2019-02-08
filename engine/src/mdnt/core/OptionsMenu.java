@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -62,7 +63,7 @@ public class OptionsMenu extends JFrame {
 		JLabel title = new JLabel("Options");
 		title.setBounds(20, 10, 190, 70);
 		title.setFont(new Font("Courier", Font.PLAIN, 34));
-		title.setForeground(Color.BLACK);
+		title.setForeground(new Color(0.8f, 0.8f, 0.8f));
 		frame.getContentPane().add(title);
 
 		JButton exit = new JButton("BACK");
@@ -76,7 +77,7 @@ public class OptionsMenu extends JFrame {
 		exit.addMouseListener(new MouseAdapter() {
 
 			@Override
-			public void mouseClicked(MouseEvent e) {
+			public void mouseClicked(MouseEvent m) {
 				// TODO: setConfig
 
 				frame.setVisible(false);
@@ -96,10 +97,17 @@ public class OptionsMenu extends JFrame {
 
 		JSlider masterVolume = new JSlider(SwingConstants.VERTICAL, 0, 100, 100);
 		masterVolume.setVisible(true);
-		masterVolume.setBounds(WIDTH - 400, 300, 60, 100);
+		masterVolume.setBounds(WIDTH - 400, 300, 40, 100);
 		masterVolume.setForeground(new Color(0.8f, 0.8f, 0.8f));
 		masterVolume.setBackground(new Color(0.3f, 0.3f, 0.3f));
 		frame.getContentPane().add(masterVolume);
+		
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("res/mdnt-launcher2.png"));
+		lblNewLabel_1.setBounds(0, 0, WIDTH + 100, HEIGHT);
+		frame.getContentPane().add(lblNewLabel_1);
+
 
 	}
 

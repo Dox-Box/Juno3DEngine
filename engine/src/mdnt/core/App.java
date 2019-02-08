@@ -37,10 +37,10 @@ public class App implements Runnable {
 	protected Boolean running;
 	protected GLFWKeyCallback keyCallback;
 
-	AssetLoader loader;
-	MasterRender masterRender;
-	StaticShader shader;
-	RenderGUI renderGui;
+	private AssetLoader loader;
+	private MasterRender masterRender;
+	private StaticShader shader;
+	private RenderGUI renderGui;
 
 	ArrayList<GameObject> renderableObjects = new ArrayList<GameObject>();
 	ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
@@ -52,6 +52,21 @@ public class App implements Runnable {
 	Interpreter interpreter;
 	CollisionDetector collisionDetector;
 
+	
+	public static void createInstance(int w, int h, String windowName) {
+		BootFrame boot = new BootFrame("res/splash.png");
+		boot.setVisible(true);
+		long startTime = System.nanoTime();
+		long dt = 0;
+		double elapsedTime = 0;
+		while(elapsedTime < 1) {
+			dt = System.nanoTime();	// placeholder for loading assets before launching opengl
+			elapsedTime = (dt - startTime) * Math.pow(10, -9);
+		}
+		App app = new App(Launcher.getScreenWidth(), Launcher.getScreenHeight(), " ", Launcher.getProg());
+	}
+	
+		
 	public App(int width, int height, String title, String filepath) {
 		WIDTH = width;
 		HEIGHT = height;

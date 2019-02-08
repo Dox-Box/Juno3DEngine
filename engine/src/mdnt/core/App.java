@@ -61,7 +61,7 @@ public class App implements Runnable {
 		LogProcess log = new LogProcess(LogEvent.BOOT);
 		
 		
-
+	
 		//App app = new App(Launcher.getScreenWidth(), Launcher.getScreenHeight(), " ", Launcher.getProg());
 	}
 	

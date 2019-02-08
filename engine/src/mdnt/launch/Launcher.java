@@ -48,7 +48,7 @@ public class Launcher extends JFrame {
 	private static int startPosY;
 	private Color fileColor;
 	private File[] listFiles;
-	private ScriptSelector selector;
+	private FileSelector selector;
 
 
 	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
@@ -66,8 +66,12 @@ public class Launcher extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Launcher launcher = new Launcher();
-					launcher.frame.setVisible(true);
+					//Launcher launcher = new Launcher();
+					//launcher.frame.setVisible(true);
+					GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+					WIDTH = gd.getDisplayMode().getWidth();
+					HEIGHT = gd.getDisplayMode().getHeight();
+					App.createInstance(WIDTH, HEIGHT, " ");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -126,7 +130,7 @@ public class Launcher extends JFrame {
 		run.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if (!promptFlag) {
-					selector = new ScriptSelector(getRunnableFiles());
+					selector = new FileSelector(getRunnableFiles());
 					promptFlag = true;
 				}
 			}

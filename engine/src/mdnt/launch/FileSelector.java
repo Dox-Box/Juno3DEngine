@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
-public class ScriptSelector extends JFrame {
+public class FileSelector extends JFrame {
 
 	/**
 	 *
@@ -32,7 +32,7 @@ public class ScriptSelector extends JFrame {
 		WIDTH = (int) screenSize.getWidth();
 		HEIGHT = (int) screenSize.getHeight();
 
-		ScriptSelector select = new ScriptSelector(files);
+		FileSelector select = new FileSelector(files);
 	}
 
 	private JFrame frame;
@@ -42,7 +42,7 @@ public class ScriptSelector extends JFrame {
 
 	private Color itemHoverColor;
 
-	public ScriptSelector(File[] files) {
+	public FileSelector(File[] files) {
 		scripts = files;
 		display();
 	}

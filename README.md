@@ -22,10 +22,9 @@ The built-in editor uses this format (.mdnt) to position objects in the world-sp
 
 
 
-
+<br />
 
 **Troubleshooting** 
 
-  If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then check that you have up to date graphics drivers installed. This is a more common issue on Linux based systems.
 
   If a white box appears on screen, or if you get a black screen on start, this is likely an GLSL (OpenGL shader) crash, and could also be due to bad drivers.

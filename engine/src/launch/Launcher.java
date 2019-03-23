@@ -52,7 +52,7 @@ public class Launcher extends JFrame {
 					launcher = new Launcher();
 					Launcher.setVisibility(true);
 
-					//App.createInstance(sWIDTH, sHEIGHT, " ");
+					App.createInstance(sWIDTH, sHEIGHT, " ");
 					readyToStart = true;
 
 	}

@@ -44,7 +44,7 @@ import de.matthiasmann.twl.utils.PNGDecoder.Format;
 import opengl.RawObj;
 
 
-public class AssetImporter {
+public class AssetLoader {
 
 
 	private ArrayList<Integer> vaoIDs = new ArrayList<Integer>();
@@ -55,7 +55,7 @@ public class AssetImporter {
 	private int LOD = 1;
 
 
-
+	/* load data to Vertex Array Object structure */
 	public RawObj loadToVao(float[] positions, int[] indices,float[] normals, float[] textureCoords ) {
 		int vaoID = createVAO();
 		bindIndicesBuffer(indices);
@@ -79,7 +79,7 @@ public class AssetImporter {
 		GL30.glBindVertexArray(vaoID);
 		return vaoID;
 	}
-
+	/* OpenGL attribute list */
 	private void storeDataInAttribList(int attribNumber, float[] data, int dimensions) {
 		int vboID = GL15.glGenBuffers();
 		vboIDs.add(vboID);
@@ -113,11 +113,12 @@ public class AssetImporter {
 		return buffer;
 	}
 
-
+	/* */
 	private void unbindVAO() {
 		GL30.glBindVertexArray(0); /* 0 unbinds the current vao */
 	}
 
+	/* loads .png format images */
 	public int loadTexture(String filePath) {
 		try {
 			File file = new File("res/"+filePath+".png");
@@ -151,7 +152,7 @@ public class AssetImporter {
 	}
 
 
-
+	/* Loads .obj format */
 	public RawObj loadObjModel(String filePath) {
 		FileReader fr = null;
 		try {
@@ -215,7 +216,7 @@ public class AssetImporter {
 			reader.close();
 
 		}catch(Exception e) {
-			System.err.println("Invalid file format for .obj texture : "+filePath);
+			System.err.println("Invalid file format for .obj texture : " + filePath);
 			e.printStackTrace();
 		}
 
@@ -236,6 +237,7 @@ public class AssetImporter {
 
 	}
 
+	/*  */
 	private static void processVertex(String[] vertexData, ArrayList<Integer> indices, ArrayList<Vector2f> textures, ArrayList<Vector3f> normals, float[] textureArray, float[] normalsArray) {
 		int currentVertexPointer = Integer.parseInt(vertexData[0]) - 1;
 		indices.add(currentVertexPointer);

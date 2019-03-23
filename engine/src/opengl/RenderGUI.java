@@ -16,13 +16,13 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL30;
 
 import gui.GUIShader;
-import core.AssetImporter;
+import core.AssetLoader;
 
 public class RenderGUI {
 	GUIShader shader;
 	private RawObj GUIquad;
 
-	public RenderGUI(AssetImporter loader) {
+	public RenderGUI(AssetLoader loader) {
 		float[] positions = { -1,1, -1,-1, 1,1, 1, -1 };
 		GUIquad = loader.loadToVao(positions);
 		shader = new GUIShader();

@@ -1,5 +1,5 @@
 # 3D Rendering on Linux, Windows, and macOS
-This engine can be used for physics simulations, or as a tool for 3D game development.
+This engine can be used for physics simulations, or for other 3D applications.
 <br />Compatibile with Linux, Windows, and macOS <br />
 
 
@@ -10,16 +10,13 @@ This engine can be used for physics simulations, or as a tool for 3D game develo
 <br />
 
 # Getting Started:
-To get the engine up and running on your machine, make sure you have Java 8 or later installed to ensure the best compatibility on your system. 
-<br />
+
 <br />
 To run the engine, run the Midnight.jar executable file inside the main directory.
 <br />
 <br />
-In order to edit the world environment, navigate to /res/script, this where the engine will read in any file with the extension '.mdnt' using the interpreter. Examples are provided on how to use this scripting system, but the engine will only look for files that are inside of this folder, so when creating new scripts, make sure to include them in this folder. 
-
-The structure of the engine: 
-
+User-generated runnable scripts for the program are stored inside engine/res/scripts. 
+The built-in editor uses this format (.mdnt) to position objects in the world-space, and can also be used to adjust other settings, such as light characteristics.
 
 
 
@@ -29,4 +26,6 @@ The structure of the engine:
 
 **Troubleshooting** 
 
-  If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then the first thing you should do      is check to make sure you have the correct drivers installed. This is a more common issue on Linux based systems, so check if your graphics card manufacturer has a download available for your specific Linux distro.
+  If you encounter an error when attempting to run, saying that 'error: GLSL 4.0 is not supported.' then check that you have up to date graphics drivers installed. This is a more common issue on Linux based systems.
+
+  If a white box appears on screen, or if you get a black screen on start, this is likely an GLSL (OpenGL shader) crash, and could also be due to bad drivers.

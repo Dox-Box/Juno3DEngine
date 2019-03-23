@@ -4,7 +4,7 @@ import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
 
 import org.lwjgl.glfw.GLFWKeyCallback;
 
-public class KeyboardHandler extends GLFWKeyCallback{
+public class IOHandler extends GLFWKeyCallback{
 
 	public static boolean[] keys = new boolean[65536];
 

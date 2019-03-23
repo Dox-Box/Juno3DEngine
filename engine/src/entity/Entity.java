@@ -15,7 +15,7 @@ public class Entity {
 	private BoundingSphere boundingSphere;
 	private Vector3f velocity;
 	private Vector3f angularVel;
-	private float kineticEnergy;
+	//private float kineticEnergy;
 	private float mass;
 
 

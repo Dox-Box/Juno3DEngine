@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+/launch/
+/core/
+=======
+/.classpath
+/.project
+/core/
+/entity/
+/gui/
+/launch/
+/opengl/
+/physics/
+/utils/
+>>>>>>> 4e79ba9cbca93b4cf6fb26b62d4cf8a3d49e2841

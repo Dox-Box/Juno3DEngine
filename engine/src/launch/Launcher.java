@@ -40,8 +40,7 @@ public class Launcher extends JFrame {
 	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
 	private static int sWIDTH;
 	private static int sHEIGHT; 
-	//private static int applicationWidth;
-	//private static int applicationHeight;
+
 	
 
 	public static void main(String[] args) {
@@ -52,7 +51,7 @@ public class Launcher extends JFrame {
 					launcher = new Launcher();
 					Launcher.setVisibility(true);
 
-					//App.createInstance(sWIDTH, sHEIGHT, " ");
+					App.createInstance(sWIDTH, sHEIGHT, " ");
 					readyToStart = true;
 
 	}
@@ -66,8 +65,8 @@ public class Launcher extends JFrame {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		sWIDTH = (int) screenSize.getWidth();
 		sHEIGHT = (int) screenSize.getHeight();
-		int width = 200;
-		int height = 400;
+		int width = 452;
+		int height = 476;
 		
 		frame = new JFrame();
 		contentPane = new JPanel();
@@ -82,7 +81,7 @@ public class Launcher extends JFrame {
 		frame.setFocusable(true);
 		frame.setAlwaysOnTop(true);
 		setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-		frame.setBounds(sWIDTH/2 - 100, sHEIGHT/4, width, height);
+		frame.setBounds(sWIDTH/2 - width/2, sHEIGHT/4, width, height);
 
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -92,12 +91,12 @@ public class Launcher extends JFrame {
 		
 		JLabel ver = new JLabel(Launcher.VERSION_STR.substring(5));
 		ver.setForeground(new Color(0.75f, 0.75f, 0.75f));
-		ver.setFont(new Font("Courier", Font.PLAIN,10));
-		ver.setBounds(0,  height - 85, 40, 150);
+		ver.setFont(new Font("Courier", Font.PLAIN,13));
+		ver.setBounds(0,  height - 85, 60, 150);
 		frame.getContentPane().add(ver);
 
 		JLabel title = new JLabel("");
-		title.setIcon(new ImageIcon("res/splash.png"));
+		title.setIcon(new ImageIcon("res/engine.png"));
 		title.setBounds(0, 0, width, height);
 		frame.getContentPane().add(title);
 		//frame.setVisible(true);
@@ -125,18 +124,6 @@ public class Launcher extends JFrame {
 		launcher.getJFrame().setVisible(flag);
 	}
 
-	/* starts app once selected by user */
-	public static void setProg(String filepath) {
-		selectedProg = filepath;
-		readyToStart = true;
-		if (filepath != null) {
-			//App.createInstance(applicationWidth, applicationHeight, " ");
-		}
-	}
-
-	public static String getProg() {
-		return selectedProg;
-	}
 	
 	public static int getScreenWidth() {
 		return WIDTH;

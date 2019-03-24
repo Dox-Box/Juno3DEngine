@@ -108,7 +108,7 @@ public class App implements Runnable {
 	public synchronized void run(){
 
 
-
+		Launcher.setVisibility(false);
 
 		while(running) {
 

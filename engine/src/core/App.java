@@ -41,7 +41,7 @@ public class App implements Runnable {
 	private GLFWKeyCallback keyCallback;
 
 
-	AssetLoader objLoader;
+	AssetImporter objLoader;
 	RenderMaster objRender;
 	BasicShader shader;
 	RenderGUI renderGUI;
@@ -61,7 +61,6 @@ public class App implements Runnable {
 	
 	public static void createInstance(int WIDTH, int HEIGHT, String title) {
 		App app = new App(WIDTH, HEIGHT, title);
-	
 	}
 
 
@@ -70,7 +69,7 @@ public class App implements Runnable {
 		this.HEIGHT = height;
 		this.title = title;
 		try {
-			init();																						
+			init();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.err.println("Error loading simulation!");
@@ -84,7 +83,7 @@ public class App implements Runnable {
 		running = true;
 		GLFW.glfwInit();
 		display = new Display(WIDTH, HEIGHT, title);
-		objLoader = new AssetLoader();
+		objLoader = new AssetImporter();
 
 		shader = new BasicShader();
 		objRender = new RenderMaster(display,shader);
@@ -199,8 +198,12 @@ public class App implements Runnable {
 	}
 
 	public void loadGUI() {
-		
 	}
+
+
+
+
+
 
 
 
@@ -212,5 +215,4 @@ public class App implements Runnable {
 		objLoader.clearData();
 		System.exit(0);
 	}
-
 }

@@ -35,7 +35,7 @@ import org.lwjgl.opengl.EXTTextureFilterAnisotropic;
 import  org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 
-import core.IOHandler;
+import core.KeyboardHandler;
 import core.MouseHandler;
 
 public class Display {
@@ -109,7 +109,7 @@ public class Display {
 		glfwWindowHint(GLFW_SAMPLES, 2);
 		GL11.glTexParameterf(GL11.GL_TEXTURE_2D, EXTTextureFilterAnisotropic.GL_TEXTURE_MAX_ANISOTROPY_EXT, 2.0f);
 		glfwShowWindow(window);
-		glfwSetKeyCallback(window, keyCallback = new IOHandler());
+		glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
 		glfwSetCursorPosCallback(window, mouseCallback = new MouseHandler());
 		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -128,7 +128,7 @@ public class Display {
 			System.exit(0);
 		}
 
-		if( ((IOHandler) keyCallback).isKeyDown(GLFW_KEY_ESCAPE)){
+		if( ((KeyboardHandler) keyCallback).isKeyDown(GLFW_KEY_ESCAPE)){
 			shouldExit = true;
 		}
 
@@ -144,8 +144,8 @@ public class Display {
 		return WIDTH;
 	}
 
-	public IOHandler getKeyboardHandler() {
-		return ((IOHandler)keyCallback);
+	public KeyboardHandler getKeyboardHandler() {
+		return ((KeyboardHandler)keyCallback);
 	}
 	public MouseHandler getMouseHandler() {
 		return ((MouseHandler)mouseCallback);

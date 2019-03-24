@@ -15,13 +15,13 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_W;
 
 import org.joml.Vector3f;
 
-import core.IOHandler;
+import core.KeyboardHandler;
 import opengl.Display;
 import opengl.Obj;
 
 public class Focus extends Entity {
 
-	IOHandler keyboardHandler;
+	KeyboardHandler keyboardHandler;
 
 	private static final float MOVE_SPEED = 0.02f;
 	private static final float MAX_TURN_SPEED = 1.1f;

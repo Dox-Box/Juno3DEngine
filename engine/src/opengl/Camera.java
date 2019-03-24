@@ -4,13 +4,13 @@ import org.joml.Vector3f;
 
 import org.lwjgl.opengl.GL11;
 
-import core.IOHandler;
+import core.KeyboardHandler;
 import entity.Entity;
 
 
 public class Camera {
 
-	private IOHandler keyboardHandler;
+	private KeyboardHandler keyboardHandler;
 	private Vector3f position;
 	private float roll;
 	private float pitch;
@@ -61,7 +61,7 @@ public class Camera {
 
 
 
-	public IOHandler getKeyboardHandler() {
+	public KeyboardHandler getKeyboardHandler() {
 		return keyboardHandler;
 	}
 

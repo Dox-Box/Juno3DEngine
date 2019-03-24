@@ -30,7 +30,7 @@ public class Launcher extends JFrame {
 	private JFrame frame;
 	
 	public static Launcher launcher;
-	public static final String VERSION_STR = "Build 0.1.6";
+	public static final String VERSION_STR = "Build 0.1.7";
 	private static String selectedProg;
 	private static boolean readyToStart;	
 	
@@ -51,7 +51,7 @@ public class Launcher extends JFrame {
 					launcher = new Launcher();
 					Launcher.setVisibility(true);
 
-					App.createInstance(sWIDTH, sHEIGHT, " ");
+					//App.createInstance(sWIDTH, sHEIGHT, " ");
 					readyToStart = true;
 
 	}

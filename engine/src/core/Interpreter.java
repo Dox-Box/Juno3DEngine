@@ -14,7 +14,7 @@ import entity.Light;
 import entity.Entity;
 import entity.Planet;
 import entity.Skybox;
-import core.AssetLoader;
+import core.AssetImporter;
 import opengl.Camera;
 import opengl.Obj;
 import opengl.ObjTexture;
@@ -38,7 +38,7 @@ public class Interpreter {
 	private static int index = 0;
 
 
-	public void loadMapData(String filePath, AssetLoader objLoader) {
+	public void loadMapData(String filePath, AssetImporter objLoader) {
 		String line;
 		try {
 			scan = new Scanner(new File("res/scripts/"+filePath+".orbt"));

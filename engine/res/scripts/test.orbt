@@ -14,8 +14,8 @@ Object asteroid grey 1500 -600 1400 0 0 0 40
 
 # physics data for each object (sequential order)
 # mass xV yV zV aX aY aZ 
-Phy 1 210 280 0 0 1 0
-Phy 2 0 0 0 12 11 1
+Phy 0.5f 210 280 0 -1 4 0
+Phy 2 0 0 0 12 -6 1
 Phy 3 0 0 0 2 1 1
 
 

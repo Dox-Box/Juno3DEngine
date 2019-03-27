@@ -16,7 +16,7 @@ To run the engine, run the Midnight.jar executable file inside the main director
 <br />
 <br />
 User-generated runnable scripts for the program are stored inside engine/res/scripts. 
-The built-in editor uses this format (.mdnt) to position objects in the world-space, and can also be used to adjust other settings, such as light characteristics.
+The built-in editor uses this format (.orbt) to position objects in the world-space, and can also be used to adjust other settings, such as light characteristics.
 
 
 

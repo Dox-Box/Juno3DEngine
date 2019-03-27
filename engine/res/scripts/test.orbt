@@ -6,17 +6,17 @@
 
 # objects     
 # raw	 texture   x y z rx ry rz scale
-Object dragon red 0 1000 0 0 0 0 40
-Object dragon red 0 0 2000 0 0 0 40
-Object dragon red 3000 100 0 0 0 0 40
+Object asteroid grey 300 -700 2000 0 0 0 40
+Object asteroid grey 1300 900 2000 0 0 0 40
+Object asteroid grey 1500 -600 1400 0 0 0 40
 
 
 
 # physics data for each object (sequential order)
 # mass xV yV zV aX aY aZ 
-Phy 1 0 0 0 0 1 0
-Phy 1 0 0 0 0 1 0
-Phy 1 0 0 0 0 1 0
+Phy 1 210 280 0 0 1 0
+Phy 2 0 0 0 12 11 1
+Phy 3 0 0 0 2 1 1
 
 
 # lighting / other

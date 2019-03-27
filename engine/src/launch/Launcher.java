@@ -51,7 +51,7 @@ public class Launcher extends JFrame {
 					launcher = new Launcher();
 					Launcher.setVisibility(true);
 
-					//App.createInstance(sWIDTH, sHEIGHT, " ");
+					App.createInstance(sWIDTH, sHEIGHT, " ");
 					readyToStart = true;
 
 	}
@@ -65,8 +65,8 @@ public class Launcher extends JFrame {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		sWIDTH = (int) screenSize.getWidth();
 		sHEIGHT = (int) screenSize.getHeight();
-		int width = 452;
-		int height = 476;
+		int width = 200;
+		int height = 400;
 		
 		frame = new JFrame();
 		contentPane = new JPanel();
@@ -96,7 +96,7 @@ public class Launcher extends JFrame {
 		frame.getContentPane().add(ver);
 
 		JLabel title = new JLabel("");
-		title.setIcon(new ImageIcon("res/engine.png"));
+		title.setIcon(new ImageIcon("res/splash.png"));
 		title.setBounds(0, 0, width, height);
 		frame.getContentPane().add(title);
 		//frame.setVisible(true);

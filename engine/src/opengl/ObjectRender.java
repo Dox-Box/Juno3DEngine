@@ -34,7 +34,7 @@ import entity.Entity;
 import entity.Skybox;
 import utils.MathUtils;
 
-public class OBJRender {
+public class ObjectRender {
 	Display display;
 	private static final float FOV = 40;
 	private static final float NEAR_PLANE = 0.1f;
@@ -42,10 +42,10 @@ public class OBJRender {
 
 	protected Matrix4f projectionMatrix;
 	protected StaticShader shader;
-	private Map<Obj, List<Entity>> allObjects = new HashMap<Obj, List<Entity>>();
+	private Map<StaticMesh, List<Entity>> allObjects = new HashMap<StaticMesh, List<Entity>>();
 	private ArrayList<Light> lights;
 
-	public OBJRender(Display display, StaticShader shader) {
+	public ObjectRender(Display display, StaticShader shader) {
 		this.display = display;
 		this.shader = shader;
 		glEnable(GL_CULL_FACE);
@@ -81,20 +81,20 @@ public class OBJRender {
 
 	public void render(Entity object) {
 		glEnable(GL_DEPTH_TEST | GL_DEPTH_BUFFER_BIT);
-		Obj texturedObj = object.getTexturedObj();
-		RawObj obj = texturedObj.getRawObj();
-		glBindVertexArray(obj.getVaoID());
+		StaticMesh mesh = object.getMesh();
+		MeshData objData = mesh.getRawObj();
+		glBindVertexArray(objData.getVaoID());
 		glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
 		glEnableVertexAttribArray(2); // <------
 		Matrix4f transformationMatrix = MathUtils.createTransformationMatrix(object.getPosition(), object.getRotX(),
 				object.getRotY(),object.getRotZ(),object.getScale());
-		ObjTexture texture = object.getTexturedObj().getTexture();
+		Texture texture = object.getMesh().getTexture();
 		shader.loadTransformationMatrix(transformationMatrix);
 		shader.loadSpecularVariables(texture.getShineDamper(), texture.getReflectivity());
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texturedObj.getTexture().getID());
-		glDrawElements(GL_TRIANGLES, obj.getNumVertices(), GL_UNSIGNED_INT, 0);
+		glBindTexture(GL_TEXTURE_2D, mesh.getTexture().getID());
+		glDrawElements(GL_TRIANGLES, objData.getNumVertices(), GL_UNSIGNED_INT, 0);
 		glDisableVertexAttribArray(2); // <------
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
@@ -103,7 +103,7 @@ public class OBJRender {
 
 	/* a batch rendering method. Use case would be if using a large number of models/textures that are the same. */
 	public void batchRender(Entity object) {
-		Obj model = object.getTexturedObj();
+		StaticMesh model = object.getMesh();
 		List<Entity> batch = allObjects.get(model);
 		if(batch != null) {
 			batch.add(object);
@@ -116,8 +116,8 @@ public class OBJRender {
 
 
 	/*batch method: */
-	public void render(Map<Obj, List<Entity>> objects) {
-		for(Obj model : objects.keySet()) {
+	public void render(Map<StaticMesh, List<Entity>> objects) {
+		for(StaticMesh model : objects.keySet()) {
 			prepTexturedModel(model);
 			List<Entity> renderBatch = objects.get(model);
 			for(Entity object : renderBatch) {
@@ -129,16 +129,16 @@ public class OBJRender {
 		}
 	}
 
-	public void prepTexturedModel(Obj texturedObj) {
-		RawObj obj = texturedObj.getRawObj();
-		glBindVertexArray(obj.getVaoID());
+	public void prepTexturedModel(StaticMesh mesh) {
+		MeshData mData = mesh.getRawObj();
+		glBindVertexArray(mData.getVaoID());
 		glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
 		glEnableVertexAttribArray(2);
-		ObjTexture texture = texturedObj.getTexture();
+		Texture texture = mesh.getTexture();
 		shader.loadSpecularVariables(texture.getShineDamper(), texture.getReflectivity());
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texturedObj.getTexture().getID());
+		glBindTexture(GL_TEXTURE_2D, mesh.getTexture().getID());
 
 	}
 
@@ -152,7 +152,7 @@ public class OBJRender {
 	public void prepInstance(Entity object) {
 		Matrix4f transformationMatrix = MathUtils.createTransformationMatrix(object.getPosition(), object.getRotX(),
 				object.getRotY(),object.getRotZ(),object.getScale());
-		ObjTexture texture = object.getTexturedObj().getTexture();
+		Texture texture = object.getMesh().getTexture();
 		shader.loadTransformationMatrix(transformationMatrix);
 	}
 
@@ -161,8 +161,8 @@ public class OBJRender {
 	public void render(Skybox object,StaticShader shader) {
 		//shader.start();
 		glDisable(GL_DEPTH_TEST | GL_DEPTH_BUFFER_BIT);
-		Obj texturedObj = object.getTexturedObj();
-		RawObj obj = texturedObj.getRawObj();
+		StaticMesh texturedObj = object.getMesh();
+		MeshData obj = texturedObj.getRawObj();
 		glBindVertexArray(obj.getVaoID());
 		glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
@@ -184,15 +184,15 @@ public class OBJRender {
 
 	public void render(Entity object,StaticShader shader) {
 		glEnable(GL_DEPTH_TEST | GL_DEPTH_BUFFER_BIT);
-		Obj texturedObj = object.getTexturedObj();
-		RawObj obj = texturedObj.getRawObj();
+		StaticMesh texturedObj = object.getMesh();
+		MeshData obj = texturedObj.getRawObj();
 		glBindVertexArray(obj.getVaoID());
 		glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
 		glEnableVertexAttribArray(2);
 		Matrix4f transformationMatrix = MathUtils.createTransformationMatrix(object.getPosition(), object.getRotX(),
 				object.getRotY(),object.getRotZ(),object.getScale());
-		ObjTexture texture = object.getTexturedObj().getTexture();
+		Texture texture = object.getMesh().getTexture();
 		shader.loadTransformationMatrix(transformationMatrix);
 		shader.loadSpecularVariables(texture.getShineDamper(), texture.getReflectivity());
 		glActiveTexture(GL_TEXTURE0);

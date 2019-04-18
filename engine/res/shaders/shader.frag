@@ -22,20 +22,22 @@ void main(void){
 	float brightness = max(nDot1, 0.0);
 	vec3 resultDiffuse = brightness * lightColor[0];
 	
-	vec3 lightDirection = -unitLightVector;
-	vec3 reflectedLightDirection = reflect(lightDirection, unitNormal);
+	vec3 lightDir = -unitLightVector;
+	vec3 reflectedLightDir = reflect(lightDir, unitNormal);
 	
-	float specularFactor = dot(reflectedLightDirection, unitVectorToCamera); 
+	float specularFactor = dot(reflectedLightDir, unitVectorToCamera); 
+
 	specularFactor = max(specularFactor, 0.0);
+
 	float dampenedFactor = pow(specularFactor, shineDamper);
-	vec3 resultSpecular = dampenedFactor *reflectivity * lightColor[0];
+	vec3 resultSpecular = dampenedFactor * reflectivity * lightColor[0];
 	
 	vec4 textureColor = texture(textureSampler, pass_textureCoords);
 	if(textureColor.a<0.5){
 		discard;
 	}
-	brightness = max(brightness,0.2);
-	resultDiffuse = max(resultDiffuse,0.3);
+	brightness = max(brightness,0.3);
+	resultDiffuse = max(resultDiffuse,0.2);
 	out_color = vec4(resultDiffuse,1.0) * textureColor + vec4(resultSpecular, 1.0);	
 	
 	}

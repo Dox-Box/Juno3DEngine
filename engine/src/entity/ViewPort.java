@@ -2,6 +2,7 @@ package entity;
 
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_A;
 
+
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_D;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_DOWN;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_F;
@@ -17,9 +18,9 @@ import org.joml.Vector3f;
 
 import core.KeyboardHandler;
 import opengl.Display;
-import opengl.Obj;
+import opengl.StaticMesh;
 
-public class Focus extends Entity {
+public class ViewPort extends Entity {
 
 	KeyboardHandler keyboardHandler;
 
@@ -33,12 +34,11 @@ public class Focus extends Entity {
 	private float dRotX;
 	private float dRotY;
 	private float dRotZ;
-	private int id;
 
 
 
-	public Focus(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale, Display display) {
-		super(texturedObj, position, rotX, rotY, rotZ, scale);
+	public ViewPort(StaticMesh mesh, Vector3f position, Vector3f rotation, float scale, Display display) {
+		super(mesh, position, rotation, scale);
 		keyboardHandler = (display.getKeyboardHandler());
 		this.display = display;
 		deltaX = 0;
@@ -100,10 +100,7 @@ public class Focus extends Entity {
 
 	public void move() {
 
-		deltaX = -(float) (Math.sin(Math.toRadians(dRotX)) * MOVE_SPEED);
-		deltaZ = -(float) (Math.cos(Math.toRadians(dRotY)) * MOVE_SPEED);
-		deltaX += (float) (Math.cos(Math.toRadians(dRotX)) * MOVE_SPEED);
-		deltaZ += -(float) (Math.sin(Math.toRadians(dRotZ)) * MOVE_SPEED);
+
 
 
 	}

@@ -26,7 +26,7 @@ public class RenderMaster {
 
 	protected Matrix4f projectionMatrix;
 	protected BasicShader shader;
-	private Map<Obj, List<Entity>> allObjects = new HashMap<Obj, List<Entity>>();
+	private Map<StaticMesh, List<Entity>> allObjects = new HashMap<StaticMesh, List<Entity>>();
 	private ArrayList<Light> lights;
 
 	public RenderMaster(Display display, BasicShader shader) {
@@ -65,20 +65,20 @@ public class RenderMaster {
 
 	public void render(Entity object) {
 		GL11.glEnable(GL11.GL_DEPTH_TEST | GL11.GL_DEPTH_BUFFER_BIT);
-		Obj texturedObj = object.getTexturedObj();
-		RawObj obj = texturedObj.getRawObj();
-		GL30.glBindVertexArray(obj.getVaoID());
+		StaticMesh mesh = object.getMesh();
+		MeshData mData = mesh.getRawObj();
+		GL30.glBindVertexArray(mData.getVaoID());
 		GL20.glEnableVertexAttribArray(0);
 		GL20.glEnableVertexAttribArray(1);
 		GL20.glEnableVertexAttribArray(2); // <------
 		Matrix4f transformationMatrix = MathUtils.createTransformationMatrix(object.getPosition(), object.getRotX(),
 				object.getRotY(),object.getRotZ(),object.getScale());
-		ObjTexture texture = object.getTexturedObj().getTexture();
+		Texture texture = object.getMesh().getTexture();
 		shader.loadTransformationMatrix(transformationMatrix);
 		shader.loadSpecularVariables(texture.getShineDamper(), texture.getReflectivity());
 		GL13.glActiveTexture(GL13.GL_TEXTURE0);
-		GL11.glBindTexture(GL11.GL_TEXTURE_2D, texturedObj.getTexture().getID());
-		GL11.glDrawElements(GL11.GL_TRIANGLES, obj.getNumVertices(), GL11.GL_UNSIGNED_INT, 0);
+		GL11.glBindTexture(GL11.GL_TEXTURE_2D, mesh.getTexture().getID());
+		GL11.glDrawElements(GL11.GL_TRIANGLES, mData.getNumVertices(), GL11.GL_UNSIGNED_INT, 0);
 		GL20.glDisableVertexAttribArray(2); // <------
 		GL20.glDisableVertexAttribArray(0);
 		GL20.glDisableVertexAttribArray(1);
@@ -87,7 +87,7 @@ public class RenderMaster {
 
 	/* a batch rendering method. Use case would be if using a large number of models/textures that are the same. */
 	public void batchRender(Entity object) {
-		Obj model = object.getTexturedObj();
+		StaticMesh model = object.getMesh();
 		List<Entity> batch = allObjects.get(model);
 		if(batch != null) {
 			batch.add(object);
@@ -100,8 +100,8 @@ public class RenderMaster {
 
 
 	/*batch method: */
-	public void render(Map<Obj, List<Entity>> objects) {
-		for(Obj model : objects.keySet()) {
+	public void render(Map<StaticMesh, List<Entity>> objects) {
+		for(StaticMesh model : objects.keySet()) {
 			prepTexturedModel(model);
 			List<Entity> renderBatch = objects.get(model);
 			for(Entity object : renderBatch) {
@@ -113,16 +113,16 @@ public class RenderMaster {
 		}
 	}
 
-	public void prepTexturedModel(Obj texturedObj) {
-		RawObj obj = texturedObj.getRawObj();
+	public void prepTexturedModel(StaticMesh mesh) {
+		MeshData obj = mesh.getRawObj();
 		GL30.glBindVertexArray(obj.getVaoID());
 		GL20.glEnableVertexAttribArray(0);
 		GL20.glEnableVertexAttribArray(1);
 		GL20.glEnableVertexAttribArray(2);
-		ObjTexture texture = texturedObj.getTexture();
+		Texture texture = mesh.getTexture();
 		shader.loadSpecularVariables(texture.getShineDamper(), texture.getReflectivity());
 		GL13.glActiveTexture(GL13.GL_TEXTURE0);
-		GL11.glBindTexture(GL11.GL_TEXTURE_2D, texturedObj.getTexture().getID());
+		GL11.glBindTexture(GL11.GL_TEXTURE_2D, mesh.getTexture().getID());
 
 	}
 
@@ -136,7 +136,7 @@ public class RenderMaster {
 	public void prepInstance(Entity object) {
 		Matrix4f transformationMatrix = MathUtils.createTransformationMatrix(object.getPosition(), object.getRotX(),
 				object.getRotY(),object.getRotZ(),object.getScale());
-		ObjTexture texture = object.getTexturedObj().getTexture();
+		Texture texture = object.getMesh().getTexture();
 		shader.loadTransformationMatrix(transformationMatrix);
 	}
 
@@ -145,9 +145,9 @@ public class RenderMaster {
 	public void render(Skybox object,BasicShader shader) {
 		//shader.start();
 		GL11.glDisable(GL11.GL_DEPTH_TEST | GL11.GL_DEPTH_BUFFER_BIT);
-		Obj texturedObj = object.getTexturedObj();
-		RawObj obj = texturedObj.getRawObj();
-		GL30.glBindVertexArray(obj.getVaoID());
+		StaticMesh mesh = object.getMesh();
+		MeshData objData = mesh.getRawObj();
+		GL30.glBindVertexArray(objData.getVaoID());
 		GL20.glEnableVertexAttribArray(0);
 		GL20.glEnableVertexAttribArray(1);
 		GL20.glEnableVertexAttribArray(2);
@@ -156,8 +156,8 @@ public class RenderMaster {
 
 		shader.loadTransformationMatrix(transformationMatrix);
 		GL13.glActiveTexture(GL13.GL_TEXTURE0);
-		GL11.glBindTexture(GL11.GL_TEXTURE_2D, texturedObj.getTexture().getID());
-		GL11.glDrawElements(GL11.GL_TRIANGLES, obj.getNumVertices(), GL11.GL_UNSIGNED_INT, 0);
+		GL11.glBindTexture(GL11.GL_TEXTURE_2D, mesh.getTexture().getID());
+		GL11.glDrawElements(GL11.GL_TRIANGLES, objData.getNumVertices(), GL11.GL_UNSIGNED_INT, 0);
 		GL20.glDisableVertexAttribArray(0);
 		GL20.glDisableVertexAttribArray(1);
 		GL20.glDisableVertexAttribArray(2);
@@ -168,15 +168,15 @@ public class RenderMaster {
 
 	public void render(Entity object,BasicShader shader) {
 		GL11.glEnable(GL11.GL_DEPTH_TEST | GL11.GL_DEPTH_BUFFER_BIT);
-		Obj texturedObj = object.getTexturedObj();
-		RawObj obj = texturedObj.getRawObj();
+		StaticMesh texturedObj = object.getMesh();
+		MeshData obj = texturedObj.getRawObj();
 		GL30.glBindVertexArray(obj.getVaoID());
 		GL20.glEnableVertexAttribArray(0);
 		GL20.glEnableVertexAttribArray(1);
 		GL20.glEnableVertexAttribArray(2);
 		Matrix4f transformationMatrix = MathUtils.createTransformationMatrix(object.getPosition(), object.getRotX(),
 				object.getRotY(),object.getRotZ(),object.getScale());
-		ObjTexture texture = object.getTexturedObj().getTexture();
+		Texture texture = object.getMesh().getTexture();
 		shader.loadTransformationMatrix(transformationMatrix);
 		shader.loadSpecularVariables(texture.getShineDamper(), texture.getReflectivity());
 		GL13.glActiveTexture(GL13.GL_TEXTURE0);

@@ -2,12 +2,13 @@ package entity;
 
 import org.joml.Vector3f;
 
-import opengl.Obj;
+
+import opengl.StaticMesh;
 
 public class Skybox extends Entity {
 
-	public Skybox(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale) {
-		super(texturedObj, position, rotX, rotY, rotZ, scale);
+	public Skybox(StaticMesh mesh, Vector3f position, float rotX, float rotY, float rotZ, float scale) {
+		super(mesh, position, new Vector3f(rotX, rotY, rotZ), scale);
 
 	}
 

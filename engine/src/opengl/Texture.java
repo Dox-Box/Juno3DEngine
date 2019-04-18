@@ -1,12 +1,15 @@
 package opengl;
 
-public class ObjTexture {
+
+
+
+public class Texture {
 
 	private int textureID;
-	private float shineDamper = 1f;
-	private float reflectivity = 0;
+	private float shineDamper = 0.1f;
+	private float reflectivity = 0.9f;
 
-	public ObjTexture(int id) {
+	public Texture(int id) {
 		textureID = id;
 	}
 
@@ -30,4 +33,8 @@ public class ObjTexture {
 	public int getID() {
 		return textureID;
 	}
+	
+	
+	
 }
+

@@ -30,7 +30,7 @@ public class Launcher extends JFrame {
 	private JFrame frame;
 	
 	public static Launcher launcher;
-	public static final String VERSION_STR = "Build 0.1.7";
+	public static final String VERSION_STR = "Build 0.1.9";
 	private static String selectedProg;
 	private static boolean readyToStart;	
 	

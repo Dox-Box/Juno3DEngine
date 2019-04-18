@@ -41,36 +41,36 @@ import org.lwjgl.opengl.GL30;
 
 import de.matthiasmann.twl.utils.PNGDecoder;
 import de.matthiasmann.twl.utils.PNGDecoder.Format;
-import opengl.RawObj;
+import opengl.MeshData;
 
 
 public class AssetImporter {
 
 
 	private ArrayList<Integer> vaoIDs = new ArrayList<Integer>();
-	private ArrayList<Integer> vboIDs = new ArrayList<Integer>(); /* mem. management */
+	private ArrayList<Integer> vboIDs = new ArrayList<Integer>(); 						/* mem. management */
 	private ArrayList<Integer> textureIDs = new ArrayList<Integer>();
 
 	/* level of detail, negative is better */
-	private int LOD = 1;
+	private int LOD = 0;
 
 
 
-	public RawObj loadToVao(float[] positions, int[] indices,float[] normals, float[] textureCoords ) {
+	public MeshData loadToVao(float[] positions, int[] indices,float[] normals, float[] textureCoords ) {
 		int vaoID = createVAO();
 		bindIndicesBuffer(indices);
 		storeDataInAttribList(0,positions,3);
 		storeDataInAttribList(1,textureCoords,2);
 		storeDataInAttribList(2,normals,3);
 		unbindVAO();
-		return new RawObj(vaoID, indices.length); /* each vertex has 3 floats. */
+		return new MeshData(vaoID, indices.length); 									/* each vertex has 3 floats. */
 	}
 
-	public RawObj loadToVao(float[] positions) {
+	public MeshData loadToVao(float[] positions) {
 		int vaoID = createVAO();
 		this.storeDataInAttribList(0, positions, 2);
 		unbindVAO();
-		return new RawObj(vaoID,positions.length/2); /* using GL_DRAW_ARRAYS */
+		return new MeshData(vaoID,positions.length/2); 								/* using GL_DRAW_ARRAYS */
 
 	}
 	private int createVAO() {
@@ -93,7 +93,7 @@ public class AssetImporter {
 	private FloatBuffer storeDataInFloatBuffer(float[] data) {
 		FloatBuffer buffer = BufferUtils.createFloatBuffer(data.length);
 		buffer.put(data);
-		buffer.flip(); /* buffer needs to have order of floats reversed to be read from */
+		buffer.flip(); 															/* buffer needs to have order of floats reversed to be read from */
 		return buffer;
 	}
 
@@ -115,7 +115,7 @@ public class AssetImporter {
 
 
 	private void unbindVAO() {
-		GL30.glBindVertexArray(0); /* 0 unbinds the current vao */
+		GL30.glBindVertexArray(0); 											/* 0 unbinds the current vao */
 	}
 
 	public int loadTexture(String filePath) {
@@ -152,7 +152,7 @@ public class AssetImporter {
 
 
 
-	public RawObj loadObjModel(String filePath) {
+	public MeshData loadObjModel(String filePath) {
 		FileReader fr = null;
 		try {
 			fr = new FileReader(new File("res/"+filePath+".obj"));

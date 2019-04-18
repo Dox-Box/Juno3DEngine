@@ -1,9 +1,6 @@
-package core;
-
+package opengl;
 
 import static org.lwjgl.opengl.GL11.GL_NEAREST;
-
-
 import static org.lwjgl.opengl.GL11.GL_REPEAT;
 import static org.lwjgl.opengl.GL11.GL_RGBA;
 import static org.lwjgl.opengl.GL11.GL_TEXTURE_2D;
@@ -41,10 +38,9 @@ import org.lwjgl.opengl.GL30;
 
 import de.matthiasmann.twl.utils.PNGDecoder;
 import de.matthiasmann.twl.utils.PNGDecoder.Format;
-import opengl.RawObj;
 
 
-public class AssetLoader {
+public class ObjectLoader{
 
 
 	private ArrayList<Integer> vaoIDs = new ArrayList<Integer>();
@@ -55,22 +51,22 @@ public class AssetLoader {
 	private int LOD = 1;
 
 
-	/* load data to Vertex Array Object structure */
-	public RawObj loadToVao(float[] positions, int[] indices,float[] normals, float[] textureCoords ) {
+
+	public MeshData loadToVao(float[] positions, int[] indices,float[] normals, float[] textureCoords ) {
 		int vaoID = createVAO();
 		bindIndicesBuffer(indices);
 		storeDataInAttribList(0,positions,3);
 		storeDataInAttribList(1,textureCoords,2);
 		storeDataInAttribList(2,normals,3);
 		unbindVAO();
-		return new RawObj(vaoID, indices.length); /* each vertex has 3 floats. */
+		return new MeshData(vaoID, indices.length); /* each vertex has 3 floats. */
 	}
 
-	public RawObj loadToVao(float[] positions) {
+	public MeshData loadToVao(float[] positions) {
 		int vaoID = createVAO();
 		this.storeDataInAttribList(0, positions, 2);
 		unbindVAO();
-		return new RawObj(vaoID,positions.length/2); /* using GL_DRAW_ARRAYS */
+		return new MeshData(vaoID,positions.length/2); /* using GL_DRAW_ARRAYS */
 
 	}
 	private int createVAO() {
@@ -79,7 +75,7 @@ public class AssetLoader {
 		GL30.glBindVertexArray(vaoID);
 		return vaoID;
 	}
-	/* OpenGL attribute list */
+
 	private void storeDataInAttribList(int attribNumber, float[] data, int dimensions) {
 		int vboID = GL15.glGenBuffers();
 		vboIDs.add(vboID);
@@ -113,12 +109,11 @@ public class AssetLoader {
 		return buffer;
 	}
 
-	/* */
+
 	private void unbindVAO() {
 		GL30.glBindVertexArray(0); /* 0 unbinds the current vao */
 	}
 
-	/* loads .png format images */
 	public int loadTexture(String filePath) {
 		try {
 			File file = new File("res/"+filePath+".png");
@@ -152,8 +147,8 @@ public class AssetLoader {
 	}
 
 
-	/* Loads .obj format */
-	public RawObj loadObjModel(String filePath) {
+
+	public MeshData loadObjModel(String filePath) {
 		FileReader fr = null;
 		try {
 			fr = new FileReader(new File("res/"+filePath+".obj"));
@@ -216,7 +211,7 @@ public class AssetLoader {
 			reader.close();
 
 		}catch(Exception e) {
-			System.err.println("Invalid file format for .obj texture : " + filePath);
+			System.err.println("Invalid file format for .obj texture : "+filePath);
 			e.printStackTrace();
 		}
 
@@ -237,7 +232,6 @@ public class AssetLoader {
 
 	}
 
-	/*  */
 	private static void processVertex(String[] vertexData, ArrayList<Integer> indices, ArrayList<Vector2f> textures, ArrayList<Vector3f> normals, float[] textureArray, float[] normalsArray) {
 		int currentVertexPointer = Integer.parseInt(vertexData[0]) - 1;
 		indices.add(currentVertexPointer);

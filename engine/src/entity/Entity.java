@@ -2,12 +2,13 @@ package entity;
 
 import org.joml.Vector3f;
 
-import opengl.Obj;
+
+import opengl.StaticMesh;
 import physics.BoundingSphere;
 
 public class Entity {
 
-	private Obj texturedObj;
+	private StaticMesh mesh;
 	private Vector3f position;
 	private float rotX,rotY,rotZ;
 	private float deltaX,deltaY,deltaZ;
@@ -19,12 +20,12 @@ public class Entity {
 	private float mass;
 
 
-	public Entity(Obj texturedObj, Vector3f position, float rotX, float rotY, float rotZ, float scale) {
-		this.texturedObj = texturedObj;
+	public Entity(StaticMesh mesh, Vector3f position, Vector3f rotation, float scale) {
+		this.mesh = mesh;
 		this.position = position;
-		this.rotX = rotX;
-		this.rotY = rotY;
-		this.rotZ = rotZ;
+		this.rotX = rotation.x;
+		this.rotY = rotation.y;
+		this.rotZ = rotation.z;
 		this.scale = scale;
 		this.velocity = new Vector3f(0,0,0);
 		this.angularVel = new Vector3f(0,0,0);
@@ -32,7 +33,7 @@ public class Entity {
 		deltaX = 0;
 		deltaY = 0;
 		deltaZ = 0;
-		boundingSphere = new BoundingSphere(position, scale);
+		boundingSphere = new BoundingSphere(position, scale);								/* default collision mode */
 
 	}
 
@@ -100,11 +101,11 @@ public class Entity {
 		return boundingSphere;
 	}
 
-	public Obj getTexturedObj() {
-		return texturedObj;
+	public StaticMesh getMesh() {
+		return mesh;
 	}
-	public void setTexturedObj(Obj texturedObj) {
-		this.texturedObj = texturedObj;
+	public void setMesh(StaticMesh mesh) {
+		this.mesh = mesh;
 	}
 	public Vector3f getPosition() {
 		return position;
@@ -137,8 +138,7 @@ public class Entity {
 		this.scale = scale;
 	}
 
-
-	public float getRadius() {
+	public float getRadius() {						/* radius of bounding sphere */
 		return scale*4.5f;
 	}
 

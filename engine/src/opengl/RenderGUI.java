@@ -20,7 +20,7 @@ import core.AssetImporter;
 
 public class RenderGUI {
 	GUIShader shader;
-	private RawObj GUIquad;
+	private MeshData GUIquad;
 
 	public RenderGUI(AssetImporter loader) {
 		float[] positions = { -1,1, -1,-1, 1,1, 1, -1 };

@@ -1,10 +1,10 @@
 package opengl;
 
-public class RawObj {
+public class MeshData {
 	private int vaoID;
 	private int numVertices;
 
-	public RawObj(int id, int numVertices) {
+	public MeshData(int id, int numVertices) {
 		this.vaoID = id;
 		this.numVertices = numVertices;
 

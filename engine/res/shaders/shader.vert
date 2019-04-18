@@ -23,11 +23,11 @@ void main(void){
 	
 	surfaceNormal = (transformationMatrix * vec4(normal,0.0)).xyz; 
 	for(int i=0;i<3;i++){
-		toLightVector[i] = lightPosition[i] - worldPosition.xyz; 
+		toLightVector[i] += lightPosition[i] - worldPosition.xyz; 
 	}
 	
 	
-	toCameraVector = (inverse(viewMatrix) * vec4(0.0, 0.0, 0.0, -1.0)).xyz - worldPosition.xyz;
+	toCameraVector = (inverse(viewMatrix) * vec4(0.0, 0.0, 0.0, 1.0)).xyz - worldPosition.xyz;
 	
 	
 	}

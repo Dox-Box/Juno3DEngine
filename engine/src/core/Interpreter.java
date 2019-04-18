@@ -3,22 +3,23 @@ package core;
 import java.io.File;
 
 
+
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.joml.Vector3f;
 
-import entity.Focus;
+import entity.ViewPort;
 import entity.Light;
 import entity.Entity;
-import entity.Planet;
 import entity.Skybox;
 import core.AssetImporter;
 import opengl.Camera;
-import opengl.Obj;
-import opengl.ObjTexture;
-import opengl.RawObj;
+import opengl.MeshData;
+import opengl.Texture;
+import opengl.StaticMesh;
 
 
 public class Interpreter {
@@ -26,14 +27,13 @@ public class Interpreter {
 	ArrayList<String[]> physicsData = new ArrayList<String[]>();
 	ArrayList<Entity> PhysicalObjects = new ArrayList<Entity>();
 	ArrayList<Light> lights = new ArrayList<Light>();
-	RawObj rawPlayerModel;
-	ObjTexture playerTex;
-	Focus player;
-	ObjTexture skyboxTex;
+	StaticMesh pModel;
+	Texture playerTex;
+	ViewPort player;
+	Texture skyboxTex;
 	Skybox skybox;
 	Skybox skybox2;
 	Camera camera;
-	Planet planet;
 
 	private static int index = 0;
 
@@ -69,8 +69,8 @@ public class Interpreter {
 				continue;
 			}
 			if(data[0].equals("Skybox")) {
-				RawObj raw = objLoader.loadToVao(Skybox.getVertexData(), Skybox.getIndicesData(), Skybox.getNormalData(), Skybox.getTextureData());
-				ObjTexture skyTex = new ObjTexture(objLoader.loadTexture("textures/" + data[1]));
+				MeshData raw = objLoader.loadToVao(Skybox.getVertexData(), Skybox.getIndicesData(), Skybox.getNormalData(), Skybox.getTextureData());
+				Texture skyTex = new Texture(objLoader.loadTexture("textures/" + data[1]));
 				float x = Float.parseFloat(data[2]);
 				float y = Float.parseFloat(data[3]);
 				float z = Float.parseFloat(data[4]);
@@ -79,17 +79,17 @@ public class Interpreter {
 				float rz = Float.parseFloat(data[7]);
 				float sc = Float.parseFloat(data[8]);
 				if(skybox == null) {
-					skybox = new Skybox(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
+					skybox = new Skybox(new StaticMesh(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
 					continue;
 				}else {
-					skybox2 = new Skybox(new Obj(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
+					skybox2 = new Skybox(new StaticMesh(raw,skyTex),new Vector3f(x,y,z),rx,ry,rz,sc);
 					continue;
 				}
 			}
 
 			else if(data[0].equals("Object")) {
-				RawObj raw = objLoader.loadObjModel("models/" + data[1]);
-				ObjTexture texture = new ObjTexture(objLoader.loadTexture("textures/" + data[2]));
+				MeshData mData = objLoader.loadObjModel("models/" + data[1]);
+				Texture texture = new Texture(objLoader.loadTexture("textures/" + data[2]));
 				float x = Float.parseFloat(data[3]);
 				float y = Float.parseFloat(data[4]);
 				float z = Float.parseFloat(data[5]);
@@ -97,12 +97,12 @@ public class Interpreter {
 				float ry = Float.parseFloat(data[7]);
 				float rz = Float.parseFloat(data[8]);
 				float sc = Float.parseFloat(data[9]);
-				PhysicalObjects.add(new Entity(new Obj(raw,texture),new Vector3f(x,y,z),rx,ry,rz,sc));
+				PhysicalObjects.add(new Entity(new StaticMesh(mData,texture),new Vector3f(x,y,z),new Vector3f(rx, ry, rz),sc));
 				continue;
 
 			}
 
-			else if(data[0].equals("Phy")) {
+			else if(data[0].equals("Physics")) {
 				float mass = Float.parseFloat(data[1]);
 				float xVelo = Float.parseFloat(data[2]);
 				float yVelo = Float.parseFloat(data[3]);
@@ -134,18 +134,18 @@ public class Interpreter {
 
 
 
-	public ArrayList<Entity> getPhysicalObjects() {
+	public ArrayList<Entity> getEntities() {
 		return PhysicalObjects;
 	}
 
 
-	public ArrayList<Light> getLights() {
+	public ArrayList<Light> getLightSources() {
 		return lights;
 	}
 
 
 
-	public ObjTexture getSkyboxTex() {
+	public Texture getSkyboxTex() {
 		return skyboxTex;
 	}
 
@@ -179,6 +179,7 @@ public class Interpreter {
 
 
 
+	/* sequentially links mesh data and physics data, in the order entered in script. */
 	public void link() {
 		for(int i = 0; i< PhysicalObjects.size(); i++) {
 			String[] data = physicsData.get(i);

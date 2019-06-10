@@ -1,5 +1,5 @@
 # 3D Rendering on Linux, Windows, and macOS
-This engine can be used for physics simulations, or other 3D applications.
+This engine can be used for visualizing physics simulations, or for developing 3D applications.
 <br />Compatibile with Linux, Windows, and macOS <br />
 
 ![alt text](https://github.com/jimdox/DeltaV/blob/master/engine/res/splash.png)

@@ -23,8 +23,3 @@ The built-in editor uses this format (.orbt) to position objects in the world-sp
 
 
 <br />
-
-**Troubleshooting** 
-
-
-  If a white box appears on screen, or if you get a black screen on start, this is likely an GLSL (OpenGL shader) crash, and could also be due to out of date drivers.

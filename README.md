@@ -1,5 +1,5 @@
 # 3D Rendering on Linux, Windows, and macOS
-This engine can be used for visualizing physics simulations, or for developing 3D applications.
+This is a set of basic tools for building 3D programs, using the Java based LWJGL library.
 <br />Compatibile with Linux, Windows, and macOS <br />
 
 ![alt text](https://github.com/jimdox/DeltaV/blob/master/engine/res/wb_splash.png)

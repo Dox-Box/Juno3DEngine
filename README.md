@@ -12,7 +12,7 @@ This is a set of basic tools for building 3D programs, using the Java based LWJG
 # Getting Started:
 
 <br />
-To run the engine, run the Midnight.jar executable file inside the main directory.
+To run the engine, run the Example_1.jar executable file inside the main directory.
 <br />
 <br />
 User-generated runnable scripts for the program are stored inside engine/res/scripts. 

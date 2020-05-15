@@ -11,8 +11,6 @@ This is a set of basic tools for building 3D programs, using the Java based LWJG
 # Getting Started:
 
 <br />
-To run the program just execute Example_1.jar.
-<br />
 <br />
 User-generated runnable scripts for the program are stored inside engine/res/scripts. 
 The built-in editor uses this format (.orbt) to position objects in the world-space, and can also be used to adjust other settings, such as light characteristics.

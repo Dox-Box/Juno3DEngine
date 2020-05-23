@@ -1,4 +1,4 @@
-## Note: This Project no longer in active development.
+## Note: This project no longer in active development.
 
 # 3D Rendering on Linux, Windows, and macOS
 This is a set of basic tools for building 3D programs, using the Java based LWJGL library.
